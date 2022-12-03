@@ -1,0 +1,32 @@
+=============== Dec 2, 2022 (PST) ===============
+15:53:53.761309 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:53:53.765312 db@open opening
+15:53:53.765813 version@stat F·[] S·0B[] Sc·[]
+15:53:53.767500 db@janitor F·2 G·0
+15:53:53.767500 db@open done T·2.1879ms
+15:53:53.799341 db@close closing
+15:53:53.799843 db@close done T·501.2µs
+=============== Dec 2, 2022 (PST) ===============
+16:07:13.222654 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:07:13.223155 version@stat F·[] S·0B[] Sc·[]
+16:07:13.223155 db@open opening
+16:07:13.223155 journal@recovery F·1
+16:07:13.226658 journal@recovery recovering @1
+16:07:13.229660 memdb@flush created L0@2 N·621 S·51KiB "\x02d\xfc..\x19Ba,v428":"\xfe\x88\xcf..H\xef\xcc,v361"
+16:07:13.231162 version@stat F·[1] S·51KiB[51KiB] Sc·[0.25]
+16:07:13.236666 db@janitor F·3 G·0
+16:07:13.237167 db@open done T·14.012ms
+16:07:30.695568 db@close closing
+16:07:30.696068 db@close done T·500.3µs
+=============== Dec 2, 2022 (PST) ===============
+16:07:54.729581 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:07:54.730081 version@stat F·[1] S·51KiB[51KiB] Sc·[0.25]
+16:07:54.730081 db@open opening
+16:07:54.730582 journal@recovery F·1
+16:07:54.731583 journal@recovery recovering @3
+16:07:54.736086 memdb@flush created L0@5 N·267 S·10KiB "Dat..ion,v624":"unc..own,v629"
+16:07:54.737588 version@stat F·[2] S·62KiB[62KiB] Sc·[0.50]
+16:07:54.743593 db@janitor F·4 G·0
+16:07:54.743593 db@open done T·13.5117ms
+16:07:57.721635 db@close closing
+16:07:57.721635 db@close done T·0s
