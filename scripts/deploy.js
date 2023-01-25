@@ -4,14 +4,21 @@
 // You can also run a script with `npx hardhat run <script>`. If you do that, Hardhat
 // will compile your contracts, add the Hardhat Runtime Environment's members to the
 // global scope, and execute the script.
+const { ethers } = require("hardhat");
 const hre = require("hardhat");
 
 async function main() {
   const currentTimestampInSeconds = Math.round(Date.now() / 1000);
-  const ONE_YEAR_IN_SECS = 365 * 24 * 60 * 60;
-  const unlockTime = currentTimestampInSeconds + ONE_YEAR_IN_SECS;
+  const THREE_MIN_IN_SECS = 3 * 60;
+  const unlockTime = currentTimestampInSeconds + THREE_MIN_IN_SECS;
 
-  const lockedAmount = hre.ethers.utils.parseEther("1");
+  
+  const[developer] = await ethers.getSigners();
+  console.log("Deploying contracts with the account:", developer.address);
+  console.log("Acc balance:", (await developer.getBalance()));
+
+
+  const lockedAmount = hre.ethers.utils.parseEther("0");
 
   const Lock = await hre.ethers.getContractFactory("Lock");
   const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
@@ -19,7 +26,7 @@ async function main() {
   await lock.deployed();
 
   console.log(
-    `Lock with 1 ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
+    `Lock with ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
   );
 }
 

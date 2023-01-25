@@ -5,6 +5,7 @@ dotenv.config()
 module.exports = {
   solidity: "0.8.9",
   networks:{
+    hardhat:{},
     goerli: {
       url: process.env.RPCURL,
       accounts: [process.env.MetaP_Key]

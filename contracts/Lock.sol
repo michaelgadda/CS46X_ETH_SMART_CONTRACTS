@@ -12,9 +12,7 @@ contract Lock {
 
     constructor(uint _unlockTime) payable {
         require(
-            block.timestamp < _unlockTime,
-            "Unlock time should be in the future"
-        );
+        block.timestamp < _unlockTime, "Unlock time should be in the future");
 
         unlockTime = _unlockTime;
         owner = payable(msg.sender);
@@ -27,8 +25,8 @@ contract Lock {
         require(block.timestamp >= unlockTime, "You can't withdraw yet");
         require(msg.sender == owner, "You aren't the owner");
 
-        emit Withdrawal(address(this).balance, block.timestamp);
+        emit Withdrawal(address(this).balance/2, block.timestamp);
 
-        owner.transfer(address(this).balance);
+        owner.transfer(address(this).balance/2);
     }
 }
