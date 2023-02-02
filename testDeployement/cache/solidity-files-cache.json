@@ -35,6 +35,41 @@
       "artifacts": [
         "Lock"
       ]
+    },
+    "F:\\CS46X\\ETHSMARTCONTRACTSREP\\testDeployement\\contracts\\lenders.sol": {
+      "lastModificationDate": 1675373180446,
+      "contentHash": "ab09fe355fd3c3da1e8e9ad6961f1c33",
+      "sourceName": "contracts/lenders.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "Lending"
+      ]
     }
   }
 }
