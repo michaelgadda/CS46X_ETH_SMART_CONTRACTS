@@ -57,6 +57,7 @@ contract Lending {
         interestRate = _interestRate;
         loanPeriod = _loanPeriod;
         loanInstallmentPeriod = _loanInstallmentPeriod;
+        daysBetweenInstallments = _loanInstallmentPeriod;
         installmentAmount = _loanAmount/_loanInstallmentPeriod;
         loanStart = block.timestamp;
         loanEnd = block.timestamp + loanPeriod;
@@ -143,8 +144,31 @@ contract Lending {
         return address(this).balance;
     }
 
+    
+    function remainingLoanBalance() public view returns(uint) {
+        return loanAmountLeft;
+    }
 
-    //TODO
+        
+    function remainingInterestBalance() public view returns(uint) {
+        return interestLeft;
+    }
+
+    
+    function remainingTimeForCurrentInstallment() public view returns(uint) {
+        return daysBetweenInstallments - ((block.timestamp - previousLoanInstallmentDate) * 1 days);
+    }
+
+    function remainingTimeForLoan() public view returns(uint) {
+        return (loanEnd - block.timestamp) * 1 days;
+    }
+
+    
+    function checkPaidBalance() public view returns(uint) {
+        return totalReceivedAmount;
+    }
+
+
     function repayCustAmountLoan() public payable {
         require(msg.sender == lendee);
         require(msg.value >= 0);
