@@ -1,9 +1,9 @@
 pragma solidity >=0.7.0 <0.9.0;
 
 contract Lending {
-    loan[] private loans;
-    lendee[] private lendees; 
-    lender[] private lenders; 
+    loan[]  private loans;
+    lendee[] private  lendees; 
+    lender[] private  lenders; 
 
     struct lender {
         address payable lenderAddress;
@@ -16,9 +16,9 @@ contract Lending {
     }
 
     struct loan {
+        address payable lendee;
+        address payable lender;
         uint256 loanId; 
-        address  payable lender; 
-        address  payable lendee; 
         uint256  loanAmount;
         uint256  loanAmountLeft;
         uint256  totalReceivedAmount;
@@ -41,7 +41,7 @@ contract Lending {
         uint256  interestLeft;
         }
 
-        
+    uint nextLoanId;
     address public owner;
     bool private lenderDeposit; 
     bool private lenderWithdrawal;
@@ -55,62 +55,101 @@ contract Lending {
     event LoanDefaulted(address payable lender, address payable lendee);
     event LoanRepaidInFull(address payable lender, address payable lendee, uint256 interestPayed, uint256 principleLoanPayed);
     event InterestRepaid(address payable lender, address payable lendee, uint256 interestLeft, uint256 InterestRepaid, uint256 totalReceivedAmount);
-
-
+    event basicString(string basicString);
+    event amountLeft(uint loanId, uint amountLeft);
     constructor()  {
         owner = msg.sender;
-
+        nextLoanId = 0;
     }
 
     //unfortunateley there is no real way to do continuous payments based off of time, at least not natively, however I added some code in here that will be used as a pretend
     //monthly payment plan -- loanInstallmentPeriod, loanInstallmentAmount
-    function checkIfLenderExists(address payable lenderAddress){
-
-
+    //DEPRECATED
+    // function addLendeeToLoan(address payable lendeeAddress, uint loanId) public {
+    //     require(msg.sender == owner);
+    //     loans[loanId].lendees.push(lendeeAddress);
+    //     emit basicString("You succesfully added a lendee to the loan!");
+    // }
+    //DEPRECATED
+    // function addLenderToLoan(address payable lenderAddress, uint loanId) public {
+    //     require(msg.sender == owner);
+    //      loans[loanId].lenders.push(lenderAddress);
+    //      emit basicString("You succesfully added a lender to the loan!");
+    // }
+    
+    function getLenderArrayIndex(address payable lenderAddress) private returns (uint){
+        for (uint i = 0; i < lenders.length; i++) {
+            if(lenders[i].lenderAddress == lenderAddress) {
+                return i; 
+            }
+        }
+        return 999999999;
     }
 
-    function checkifLendeeExists(address payable lenderAddress){
-
-
-
+    function getLendeeArrayIndex(address payable lendeeAddress) private returns (uint){
+        for (uint i = 0; i < lendees.length; i++) {
+            if(lendees[i].lendeeAddress == lendeeAddress) {
+                return i; 
+            }
+        }
+        return 999999999;
     }
 
-    function checkifLoanExists(uint loanId){
-
-
-
+    function checkifLoanExistsInArray(uint loanId) private returns(bool){
+        for (uint i = 0; i < loans.length; i++) {
+            if(loans[i].loanId == loanId) {
+                return true; 
+            }
+        }
+        return false;
     }
 
-    function addNewLenderToDataBase(address payable lenderAddress){
-
-
+    function addNewLenderToDataBase(address payable lenderAddress) private{
+        lender memory newLender;
+        newLender.lenderAddress = lenderAddress; 
+        lenders.push(newLender);
     }
 
-    function addNewLendeeToDataBase(address payable lendeeAddress){
-
-
+    function addNewLendeeToDataBase(address payable lendeeAddress) private{
+        lendee memory newLendee; 
+        newLendee.lendeeAddress = lendeeAddress; 
+        lendees.push(newLendee);
     }
 
-    function checkIfLendeeHasAccessToLoan(address payable lendeeAddress){
 
-
-
+    function checkIfLendeeHasAccessToLoan(address payable lendeeAddress, uint loanId) private returns(bool){
+        uint lendeeIndex = getLendeeArrayIndex(lendeeAddress);
+        require(lendeeIndex != 999999999, "This lendee does not exist!");
+        for (uint i = 0; i < lendees[lendeeIndex].loanIds.length; i++) {
+            if (loanId == lendees[lendeeIndex].loanIds[i]) {
+                return true;
+            }
+        }
+        return false;
     }
 
-    function checkifLenderHasAccessToLoan(address payable lenderAddress){
-
-
-
+    function checkifLenderHasAccessToLoan(address payable lenderAddress, uint loanId) private returns(bool){
+        uint lenderIndex = getLenderArrayIndex(lenderAddress);
+        require(lenderIndex != 999999999, "This lendee does not exist!");
+        for (uint i = 0; i < lenders[lenderIndex].loanIds.length; i++) {
+            if (loanId == lenders[lenderIndex].loanIds[i]) {
+                return true;
+            }
+        }
+        return false;
+    
     }
 
 
     function createLoan(address payable _lendee, address payable _lender, uint256 _loanAmount, uint256 _interestRate, uint256 _loanPeriod, uint256 _loanInstallmentPeriod) public {
-        require(msg.sender == lender);
+        require(msg.sender == _lender);
         require(_loanAmount > 0);
         require(_interestRate > 0 && _interestRate <= 100);
         require(_loanPeriod > 0);
-        loan newLoan;
-        newLoan.lendee = _lendee;
+        loan memory newLoan;
+        newLoan.loanId = nextLoanId; 
+        nextLoanId += 1;
+        newLoan.lender = _lendee;
         newLoan.lender = _lender;
         newLoan.loanAmount = _loanAmount;
         newLoan.interestRate = _interestRate;
@@ -127,126 +166,145 @@ contract Lending {
         newLoan.principleLoanPayed = 0;
         newLoan.interestPayed = 0;
         newLoan.previousLoanInstallmentDate = block.timestamp;
-        loans.push(newLoan)
-        lenderDeposit = true; 
-        emit LoanCreated(lender, lendee, loanAmount, interestRate, loanPeriod, loanInstallmentPeriod, installmentAmount);
+        loans.push(newLoan);
+        lenderDeposit = true;
+        uint lenderArrayIndex = getLenderArrayIndex(_lender);
+        if (lenderArrayIndex != 999999999) {
+            lenders[lenderArrayIndex].loanIds.push(newLoan.loanId);
+        } 
+        uint lendeeArrayIndex = getLendeeArrayIndex(_lendee);
+        if (lendeeArrayIndex != 999999999) {
+            lendees[lendeeArrayIndex].loanIds.push(newLoan.loanId);
+        } 
+        emit LoanCreated(newLoan.lender, newLoan.lendee, newLoan.loanAmount, newLoan.interestRate, newLoan.loanPeriod, newLoan.loanInstallmentPeriod, newLoan.installmentAmount);
     }
 
     function deposit(address walletAddress) payable public {}
 
 
 
-    function lendLoan() public payable {
-        require(msg.sender == lender);
-        require(msg.value >= loanAmount);
+    function lendLoan(loan memory newLoan) public payable {
+        require(msg.sender == newLoan.lender);
+        require(msg.value >= newLoan.loanAmount);
         require(lenderDeposit == true);
         this.deposit(address(this));
         //equire(msg.value == loanAmount);
-        lendee.transfer(loanAmount);
-        emit Lended(lendee, lender, loanAmount);
+        newLoan.lendee.transfer(newLoan.loanAmount);
+        emit Lended(newLoan.lendee, newLoan.lender, newLoan.loanAmount);
         }
     
 
-    function repayInstallment() public payable {
-        require(msg.sender == lendee);
-        require(msg.value >= installmentAmount);
-        uint256 currTimeBwInstallments = block.timestamp - previousLoanInstallmentDate; 
-        if (currTimeBwInstallments > daysBetweenInstallments * 1 days) {
+    function repayInstallment(uint loanId) public payable {
+        bool lendeeHasAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender), loanId);
+        require(lendeeHasAccess == true);
+        require(msg.value >= loans[loanId].installmentAmount);
+        uint256 currTimeBwInstallments = block.timestamp - loans[loanId].previousLoanInstallmentDate; 
+        if (currTimeBwInstallments > loans[loanId].daysBetweenInstallments * 1 days) {
             this.deposit(address(this));
-            require(msg.value >= installmentAmount + lateFee);
-            lender.transfer(installmentAmount + lateFee);
-            loanAmountLeft = loanAmountLeft - msg.value;
-            totalReceivedAmount += msg.value  + lateFee; 
-            principleLoanPayed += msg.value;
-            previousLoanInstallmentDate = block.timestamp;
-            emit LoanLate(lender, lendee);
-        } else if (currTimeBwInstallments - daysBetweenInstallments * 1 days > daysBetweenInstallments || block.timestamp > loanEnd) {
-            emit LoanDefaulted(lender, lendee);
-            this.defaultLoan();
-            selfdestruct(lender);
+            require(msg.value >= loans[loanId].installmentAmount + loans[loanId].lateFee);
+            loans[loanId].lender.transfer(loans[loanId].installmentAmount + loans[loanId].lateFee);
+            loans[loanId].loanAmountLeft = loans[loanId].loanAmountLeft - msg.value;
+            loans[loanId].totalReceivedAmount += msg.value  + loans[loanId].lateFee; 
+            loans[loanId].principleLoanPayed += msg.value;
+            loans[loanId].previousLoanInstallmentDate = block.timestamp;
+            emit LoanLate(loans[loanId].lender, loans[loanId].lendee);
+        } else if (currTimeBwInstallments - loans[loanId].daysBetweenInstallments * 1 days > loans[loanId].daysBetweenInstallments || block.timestamp > loans[loanId].loanEnd) {
+            emit LoanDefaulted(loans[loanId].lender, loans[loanId].lendee);
+            this.defaultLoan(loanId);
         } else {
             this.deposit(address(this));
-            lender.transfer(installmentAmount);
+            loans[loanId].lender.transfer(loans[loanId].installmentAmount);
         }
-        if (loanAmountLeft == 0 || interestLeft == 0) {
-            loanRepaid = true;
-            selfdestruct(lender);
-            emit LoanRepaidInFull(lender, lendee, interestPayed, principleLoanPayed);
+        if (loans[loanId].loanAmountLeft == 0 || loans[loanId].interestLeft == 0) {
+            loans[loanId].loanRepaid = true;
+            emit LoanRepaidInFull(loans[loanId].lender, loans[loanId].lendee, loans[loanId].interestPayed, loans[loanId].principleLoanPayed);
         }
-        emit InstallmentRepaid(lender, lendee, loanAmountLeft, totalReceivedAmount, principleLoanPayed, loanRepaid);
+        emit InstallmentRepaid(loans[loanId].lender, loans[loanId].lendee, loans[loanId].loanAmountLeft, loans[loanId].totalReceivedAmount, loans[loanId].principleLoanPayed, loans[loanId].loanRepaid);
         
     }
 
-    function repayInterest() public payable {
-        require(msg.sender == lendee);
+    function repayInterest(uint loanId) public payable {
+        bool lendeeHasAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender), loanId);
+        require(lendeeHasAccess == true);
         require(msg.value >= 0);
-        if (block.timestamp > loanEnd) {
-            this.defaultLoan();
-            emit LoanDefaulted(lender, lendee);
-            selfdestruct(lender);
-        } else if (msg.value <= interestLeft) {
+        if (block.timestamp > loans[loanId].loanEnd) {
+            this.defaultLoan(loanId);
+            emit LoanDefaulted(loans[loanId].lender, loans[loanId].lendee);
+        } else if (msg.value <= loans[loanId].interestLeft) {
             this.deposit(address(this));
-            lender.transfer(msg.value);
-            interestPayed += msg.value; 
-            interestLeft -= msg.value;
-            totalReceivedAmount += msg.value;
+            loans[loanId].lender.transfer(msg.value);
+            loans[loanId].interestPayed += msg.value; 
+            loans[loanId].interestLeft -= msg.value;
+            loans[loanId].totalReceivedAmount += msg.value;
         } 
-        if (loanAmountLeft == 0 || interestLeft == 0) {
-            loanRepaid = true;
-            emit LoanRepaidInFull(lender, lendee, interestPayed, principleLoanPayed);
-            selfdestruct(lender);
+        if (loans[loanId].loanAmountLeft == 0 || loans[loanId].interestLeft == 0) {
+            loans[loanId].loanRepaid = true;
+            emit LoanRepaidInFull(loans[loanId].lender, loans[loanId].lendee, loans[loanId].interestPayed, loans[loanId].principleLoanPayed);
         }
-        emit InterestRepaid(lender, lendee, interestLeft, interestPayed, totalReceivedAmount);
+        emit InterestRepaid(loans[loanId].lender, loans[loanId].lendee, loans[loanId].interestLeft, loans[loanId].interestPayed, loans[loanId].totalReceivedAmount);
         
     }
 
     function balanceOf() public view returns(uint) {
+        require(msg.sender == owner);
         return address(this).balance;
     }
 
     
-    function remainingLoanBalance() public view returns(uint) {
-        return loanAmountLeft;
+    function remainingLoanBalance(uint loanId) public returns(uint) {
+        bool lendeeAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender),  loanId);
+        bool lenderAccess =  checkifLenderHasAccessToLoan(payable(msg.sender),  loanId);
+        require(lendeeAccess == true || lenderAccess == true, "You do not have access to this loan.");
+        emit amountLeft(loanId, loans[loanId].loanAmountLeft);
+        return loans[loanId].loanAmountLeft;
     }
 
         
-    function remainingInterestBalance() public view returns(uint) {
-        return interestLeft;
+    function remainingInterestBalance(uint loanId) public returns(uint) {
+        bool lendeeAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender),  loanId);
+        bool lenderAccess =  checkifLenderHasAccessToLoan(payable(msg.sender),  loanId);
+        require(lendeeAccess == true || lenderAccess == true, "You do not have access to this loan.");
+        emit amountLeft(loanId, loans[loanId].interestLeft);
+        return loans[loanId].interestLeft;
     }
 
     
-    function remainingTimeForCurrentInstallment() public view returns(uint) {
-        return daysBetweenInstallments - ((block.timestamp - previousLoanInstallmentDate) * 1 days);
+    function remainingTimeForCurrentInstallment(uint loanId) public returns(uint) {
+        bool lendeeAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender),  loanId);
+        bool lenderAccess =  checkifLenderHasAccessToLoan(payable(msg.sender),  loanId);
+        require(lendeeAccess == true || lenderAccess == true, "You do not have access to this loan.");
+        emit amountLeft(loanId, (loans[loanId].daysBetweenInstallments - ((block.timestamp - loans[loanId].previousLoanInstallmentDate) * 1 days)));
+        return loans[loanId].daysBetweenInstallments - ((block.timestamp - loans[loanId].previousLoanInstallmentDate) * 1 days);
     }
 
-    function remainingTimeForLoan() public view returns(uint) {
-        return (loanEnd - block.timestamp) * 1 days;
+    function remainingTimeForLoan(uint loanId) public returns(uint) {
+        bool lendeeAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender),  loanId);
+        bool lenderAccess =  checkifLenderHasAccessToLoan(payable(msg.sender),  loanId);
+        require(lendeeAccess == true || lenderAccess == true, "You do not have access to this loan.");
+        emit amountLeft(loanId, (loans[loanId].loanEnd - block.timestamp) * 1 days);
+        return (loans[loanId].loanEnd - block.timestamp) * 1 days;
     }
 
     
-    function checkPaidBalance() public view returns(uint) {
-        return totalReceivedAmount;
+    function checkPaidBalance(uint loanId) public returns(uint) {
+        bool lendeeAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender),  loanId);
+        bool lenderAccess =  checkifLenderHasAccessToLoan(payable(msg.sender),  loanId);
+        require(lendeeAccess == true || lenderAccess == true, "You do not have access to this loan.");
+        return loans[loanId].totalReceivedAmount;
     }
 
 
-    function repayCustAmountLoan() public payable {
-        require(msg.sender == lendee);
+    function repayCustAmountLoan(uint loanId) public payable {
+        bool lendeeAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender),  loanId);
+        require(lendeeAccess == true, "You do not have access to this loan.");
+        require(lendeeAccess == true);
         require(msg.value >= 0);
-        this.deposit(address(this));
-        lender.transfer(msg.value);
-        
-
-            //emit LoanRepaid(lender, lendee);
+        this.deposit(loans[loanId].lender);
+        loans[loanId].lender.transfer(msg.value);
         }
         
-    
-
-    function defaultLoan() public {
-        //require(msg.sender == lender);
-        //require(block.timestamp > loanEnd + gracePeriod);
-        require(!loanRepaid);
-        //lendee.transfer(defaultAmount);
-        //possibly want to add some collateral or something that would be transferred.. something..
-        emit LoanDefaulted(lender, lendee);
+    function defaultLoan(uint loanId) public {
+        require(!loans[loanId].loanRepaid);
+        emit LoanDefaulted(loans[loanId].lender, loans[loanId].lendee);
     }
 }
