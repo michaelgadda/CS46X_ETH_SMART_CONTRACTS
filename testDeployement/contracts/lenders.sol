@@ -1,29 +1,48 @@
-pragma solidity ^0.8.9;
+pragma solidity >=0.7.0 <0.9.0;
 
 contract Lending {
+    loan[] private loans;
+    lendee[] private lendees; 
+    lender[] private lenders; 
+
+    struct lender {
+        address payable lenderAddress;
+        uint256[] loanIds; 
+    }
+
+    struct lendee {
+        address payable lendeeAddress;
+        uint256[] loanIds; 
+    }
+
+    struct loan {
+        uint256 loanId; 
+        address  payable lender; 
+        address  payable lendee; 
+        uint256  loanAmount;
+        uint256  loanAmountLeft;
+        uint256  totalReceivedAmount;
+        uint256  totalInterest;
+        uint256  principleLoanPayed;
+        uint256  interestPayed;
+        uint256  interestRate;
+        uint256  loanPeriod;
+        uint256  loanInstallmentPeriod;
+        uint256  loanStart;
+        uint256  loanEnd;
+        bool  loanRepaid;
+        bool  interestRepaid;
+        uint256  lateFee;
+        uint256  gracePeriod;
+        uint256  defaultAmount;
+        uint256  installmentAmount;
+        uint256  previousLoanInstallmentDate; 
+        uint256  daysBetweenInstallments;
+        uint256  interestLeft;
+        }
+
+        
     address public owner;
-    address payable public lender;
-    address payable public lendee;
-    uint256 public loanAmount;
-    uint256 public loanAmountLeft;
-    uint256 public totalReceivedAmount;
-    uint256 public totalInterest;
-    uint256 public principleLoanPayed;
-    uint256 public interestPayed;
-    uint256 public interestRate;
-    uint256 public loanPeriod;
-    uint256 public loanInstallmentPeriod;
-    uint256 public loanStart;
-    uint256 public loanEnd;
-    bool public loanRepaid;
-    bool public interestRepaid;
-    uint256 public lateFee;
-    uint256 public gracePeriod;
-    uint256 public defaultAmount;
-    uint256 public installmentAmount;
-    uint256 public previousLoanInstallmentDate; 
-    uint256 public daysBetweenInstallments;
-    uint256 public interestLeft;
     bool private lenderDeposit; 
     bool private lenderWithdrawal;
     bool private lendeeDeposit;
@@ -45,29 +64,70 @@ contract Lending {
 
     //unfortunateley there is no real way to do continuous payments based off of time, at least not natively, however I added some code in here that will be used as a pretend
     //monthly payment plan -- loanInstallmentPeriod, loanInstallmentAmount
+    function checkIfLenderExists(address payable lenderAddress){
+
+
+    }
+
+    function checkifLendeeExists(address payable lenderAddress){
+
+
+
+    }
+
+    function checkifLoanExists(uint loanId){
+
+
+
+    }
+
+    function addNewLenderToDataBase(address payable lenderAddress){
+
+
+    }
+
+    function addNewLendeeToDataBase(address payable lendeeAddress){
+
+
+    }
+
+    function checkIfLendeeHasAccessToLoan(address payable lendeeAddress){
+
+
+
+    }
+
+    function checkifLenderHasAccessToLoan(address payable lenderAddress){
+
+
+
+    }
+
 
     function createLoan(address payable _lendee, address payable _lender, uint256 _loanAmount, uint256 _interestRate, uint256 _loanPeriod, uint256 _loanInstallmentPeriod) public {
         require(msg.sender == lender);
         require(_loanAmount > 0);
         require(_interestRate > 0 && _interestRate <= 100);
         require(_loanPeriod > 0);
-        lendee = _lendee;
-        lender = _lender;
-        loanAmount = _loanAmount;
-        interestRate = _interestRate;
-        loanPeriod = _loanPeriod;
-        loanInstallmentPeriod = _loanInstallmentPeriod;
-        daysBetweenInstallments = _loanInstallmentPeriod;
-        installmentAmount = _loanAmount/_loanInstallmentPeriod;
-        loanStart = block.timestamp;
-        loanEnd = block.timestamp + loanPeriod;
-        totalInterest = loanAmount*interestRate/100;
-        interestLeft = totalInterest;
-        loanAmountLeft = _loanAmount;
-        totalReceivedAmount = 0;
-        principleLoanPayed = 0;
-        interestPayed = 0;
-        previousLoanInstallmentDate = block.timestamp;
+        loan newLoan;
+        newLoan.lendee = _lendee;
+        newLoan.lender = _lender;
+        newLoan.loanAmount = _loanAmount;
+        newLoan.interestRate = _interestRate;
+        newLoan.loanPeriod = _loanPeriod;
+        newLoan.loanInstallmentPeriod = _loanInstallmentPeriod;
+        newLoan.daysBetweenInstallments = _loanInstallmentPeriod;
+        newLoan.installmentAmount = _loanAmount/_loanInstallmentPeriod;
+        newLoan.loanStart = block.timestamp;
+        newLoan.loanEnd = block.timestamp + _loanPeriod;
+        newLoan.totalInterest = _loanAmount*_interestRate/100;
+        newLoan.interestLeft = newLoan.totalInterest;
+        newLoan.loanAmountLeft = _loanAmount;
+        newLoan.totalReceivedAmount = 0;
+        newLoan.principleLoanPayed = 0;
+        newLoan.interestPayed = 0;
+        newLoan.previousLoanInstallmentDate = block.timestamp;
+        loans.push(newLoan)
         lenderDeposit = true; 
         emit LoanCreated(lender, lendee, loanAmount, interestRate, loanPeriod, loanInstallmentPeriod, installmentAmount);
     }
