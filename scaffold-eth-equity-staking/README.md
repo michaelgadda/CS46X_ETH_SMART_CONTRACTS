@@ -1,11 +1,18 @@
 Project Contracts in: `packages/hardhat/contracts`
 
+```
 `packages/hardhat/contracts/Lock.sol` (Hardhat Sample)
+
 `packages/hardhat/contracts/lenders.sol`
+
 `packages/hardhat/contracts/tollBasedInfrastructure.sol`
+
 `packages/hardhat/contracts/Staker.sol`
+
 `packages/hardhat/contracts/ExampleExternalContract.sol` (REMOVE AFTER SUCCESSFUL TESTING: STAKER > LENDERS)
+
 `packages/hardhat/node_modules/@openzeppelin/contracts` (openzeppelin library of financial helper contracts)
+```
 
 ```
 yarn install
