@@ -4,7 +4,7 @@ pragma solidity ^0.8.4;
 import "hardhat/console.sol";
 //import "../node_modules/hardhat/console.sol";
 import "./ExampleExternalContract.sol";
-import "./Lenders.sol";
+import "./lenders.sol";
 
 
 /**
@@ -15,7 +15,7 @@ contract Staker {
 
   // External contract that will hold funds
   ExampleExternalContract public exampleExternalContract;
-  Lenders public Lenders;
+  Lenders public lenders;
 
   // Balances of the user's staked funds
   mapping(address => uint256) public balances;
