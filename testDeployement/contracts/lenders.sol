@@ -59,6 +59,7 @@ contract Lending {
     event amountLeft(uint loanId, uint amountLeft);
     event myActiveLoans(string message, uint256[] _loanIds, uint256[] loanIds);
     event thisSCAddress(string message, address scAddress);
+    event emitUint(uint blank);
 
     constructor()  {
         owner = msg.sender;
@@ -83,28 +84,37 @@ contract Lending {
     function getLenderArrayIndex(address payable lenderAddress) private returns (uint){
         for (uint i = 0; i < lenders.length; i++) {
             if(lenders[i].lenderAddress == lenderAddress) {
-                return i; 
-            }
+                emit emitUint(i); 
+                return i;
+            } 
         }
-        return 999999999;
+                return 999999999;
+            
     }
 
     function getLendeeArrayIndex(address payable lendeeAddress) private returns (uint){
         for (uint i = 0; i < lendees.length; i++) {
             if(lendees[i].lendeeAddress == lendeeAddress) {
+                emit emitUint(i); 
                 return i; 
-            }
+            } 
         }
         return 999999999;
+        
     }
 
     function checkifLoanExistsInArray(uint loanId) private returns(bool){
+        bool returnedTrue = false;
         for (uint i = 0; i < loans.length; i++) {
             if(loans[i].loanId == loanId) {
                 return true; 
+                returnedTrue = true;
             }
         }
-        return false;
+        if (returnedTrue == false) {
+            return false;
+        }
+        
     }
 
     function addNewLenderToDataBase(address payable lenderAddress) private{
@@ -122,24 +132,34 @@ contract Lending {
 
     function checkIfLendeeHasAccessToLoan(address payable lendeeAddress, uint loanId) private returns(bool){
         uint lendeeIndex = getLendeeArrayIndex(lendeeAddress);
-        require(lendeeIndex != 999999999, "This lendee does not exist!");
+        bool returnedTrue = false;
+        if (lendeeIndex == 999999999) {return false;}
+        //require(lendeeIndex != 999999999, "This lendee does not exist!");
         for (uint i = 0; i < lendees[lendeeIndex].loanIds.length; i++) {
             if (loanId == lendees[lendeeIndex].loanIds[i]) {
                 return true;
+                returnedTrue = true;
             }
         }
-        return false;
+        if (returnedTrue == false) {
+            return false;
+        }
     }
 
     function checkifLenderHasAccessToLoan(address payable lenderAddress, uint loanId) private returns(bool){
         uint lenderIndex = getLenderArrayIndex(lenderAddress);
-        require(lenderIndex != 999999999, "This lendee does not exist!");
+        bool returnedTrue = false;
+        //require(lenderIndex != 999999999, "This lendee does not exist!");
+        if (lenderIndex == 999999999) {return false;}
         for (uint i = 0; i < lenders[lenderIndex].loanIds.length; i++) {
             if (loanId == lenders[lenderIndex].loanIds[i]) {
                 return true;
+                returnedTrue = true;
             }
         }
-        return false;
+        if (returnedTrue == false) {
+            return false;
+        }
     
     }
 
@@ -174,11 +194,17 @@ contract Lending {
         uint lenderArrayIndex = getLenderArrayIndex(_lender);
         if (lenderArrayIndex != 999999999) {
             lenders[lenderArrayIndex].loanIds.push(newLoan.loanId);
-        } 
+        } else {
+            addNewLenderToDataBase(_lender);
+            lenders[getLenderArrayIndex(_lender)].loanIds.push(newLoan.loanId);
+        }
         uint lendeeArrayIndex = getLendeeArrayIndex(_lendee);
         if (lendeeArrayIndex != 999999999) {
             lendees[lendeeArrayIndex].loanIds.push(newLoan.loanId);
-        } 
+        } else {
+            addNewLendeeToDataBase(_lendee);
+            lendees[getLendeeArrayIndex(_lendee)].loanIds.push(newLoan.loanId);
+        }
         emit LoanCreated("Please write down your loanId so you can access it at a later date.", newLoan.loanId, newLoan.lender, newLoan.lendee, newLoan.loanAmount, newLoan.interestRate, newLoan.loanPeriod, newLoan.loanInstallmentPeriod, newLoan.installmentAmount);
     }
 
@@ -186,14 +212,14 @@ contract Lending {
 
 
 
-    function lendLoan(loan memory newLoan) public payable {
-        require(msg.sender == newLoan.lender);
-        require(msg.value >= newLoan.loanAmount);
+    function lendLoan(uint256 loanId) public payable {
+        require(msg.sender == loans[loanId].lender);
+        require(msg.value >= loans[loanId].loanAmount);
         require(lenderDeposit == true);
         this.deposit(address(this));
-        //equire(msg.value == loanAmount);
-        newLoan.lendee.transfer(newLoan.loanAmount);
-        emit Lended(newLoan.lendee, newLoan.lender, newLoan.loanAmount);
+        //require(msg.value == loans[loanId].loanAmount);
+        loans[loanId].lendee.transfer(loans[loanId].loanAmount);
+        emit Lended(loans[loanId].lendee, loans[loanId].lender, loans[loanId].loanAmount);
         }
     
 
@@ -202,7 +228,7 @@ contract Lending {
         require(lendeeHasAccess == true);
         require(msg.value >= loans[loanId].installmentAmount);
         uint256 currTimeBwInstallments = block.timestamp - loans[loanId].previousLoanInstallmentDate; 
-        if (currTimeBwInstallments > loans[loanId].daysBetweenInstallments * 1 days) {
+        if (currTimeBwInstallments * 1 days > loans[loanId].daysBetweenInstallments ) {
             this.deposit(address(this));
             require(msg.value >= loans[loanId].installmentAmount + loans[loanId].lateFee);
             loans[loanId].lender.transfer(loans[loanId].installmentAmount + loans[loanId].lateFee);
@@ -211,7 +237,7 @@ contract Lending {
             loans[loanId].principleLoanPayed += msg.value;
             loans[loanId].previousLoanInstallmentDate = block.timestamp;
             emit LoanLate(loans[loanId].lender, loans[loanId].lendee);
-        } else if (currTimeBwInstallments - loans[loanId].daysBetweenInstallments * 1 days > loans[loanId].daysBetweenInstallments || block.timestamp > loans[loanId].loanEnd) {
+        } else if (currTimeBwInstallments * 1 days - loans[loanId].daysBetweenInstallments  > loans[loanId].daysBetweenInstallments || block.timestamp > loans[loanId].loanEnd) {
             emit LoanDefaulted(loans[loanId].lender, loans[loanId].lendee);
             this.defaultLoan(loanId);
         } else {
@@ -254,38 +280,38 @@ contract Lending {
     }
 
     
-    function remainingLoanBalance(uint loanId) public returns(uint) {
+    function remainingLoanBalance(uint loanId) public {
         bool lendeeAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender),  loanId);
         bool lenderAccess =  checkifLenderHasAccessToLoan(payable(msg.sender),  loanId);
         require(lendeeAccess == true || lenderAccess == true, "You do not have access to this loan.");
         emit amountLeft(loanId, loans[loanId].loanAmountLeft);
-        return loans[loanId].loanAmountLeft;
+        //return loans[loanId].loanAmountLeft;
     }
 
         
-    function remainingInterestBalance(uint loanId) public returns(uint) {
+    function remainingInterestBalance(uint loanId) public {
         bool lendeeAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender),  loanId);
         bool lenderAccess =  checkifLenderHasAccessToLoan(payable(msg.sender),  loanId);
         require(lendeeAccess == true || lenderAccess == true, "You do not have access to this loan.");
         emit amountLeft(loanId, loans[loanId].interestLeft);
-        return loans[loanId].interestLeft;
+        //return loans[loanId].interestLeft;
     }
 
     
-    function remainingTimeForCurrentInstallment(uint loanId) public returns(uint) {
+    function remainingTimeForCurrentInstallment(uint loanId) private {
         bool lendeeAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender),  loanId);
         bool lenderAccess =  checkifLenderHasAccessToLoan(payable(msg.sender),  loanId);
         require(lendeeAccess == true || lenderAccess == true, "You do not have access to this loan.");
         emit amountLeft(loanId, (loans[loanId].daysBetweenInstallments - ((block.timestamp - loans[loanId].previousLoanInstallmentDate) * 1 days)));
-        return loans[loanId].daysBetweenInstallments - ((block.timestamp - loans[loanId].previousLoanInstallmentDate) * 1 days);
+        //return loans[loanId].daysBetweenInstallments - ((block.timestamp - loans[loanId].previousLoanInstallmentDate) * 1 days);
     }
 
-    function remainingTimeForLoan(uint loanId) public returns(uint) {
+    function remainingTimeForLoan(uint loanId) public {
         bool lendeeAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender),  loanId);
         bool lenderAccess =  checkifLenderHasAccessToLoan(payable(msg.sender),  loanId);
         require(lendeeAccess == true || lenderAccess == true, "You do not have access to this loan.");
-        emit amountLeft(loanId, (loans[loanId].loanEnd - block.timestamp) * 1 days);
-        return (loans[loanId].loanEnd - block.timestamp) * 1 days;
+        emit amountLeft(loanId, (loans[loanId].loanEnd - block.timestamp));
+        //return (loans[loanId].loanEnd - block.timestamp) * 1 days;
     }
 
     
@@ -300,9 +326,11 @@ contract Lending {
     function repayCustAmountLoan(uint loanId) public payable {
         bool lendeeAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender),  loanId);
         require(lendeeAccess == true, "You do not have access to this loan.");
-        require(lendeeAccess == true);
         require(msg.value >= 0);
-        this.deposit(loans[loanId].lender);
+        loans[loanId].loanAmountLeft = loans[loanId].loanAmountLeft - msg.value;
+        loans[loanId].totalReceivedAmount += msg.value  + loans[loanId].lateFee; 
+        loans[loanId].principleLoanPayed += msg.value;
+        this.deposit(address(this));
         loans[loanId].lender.transfer(msg.value);
         }
         
