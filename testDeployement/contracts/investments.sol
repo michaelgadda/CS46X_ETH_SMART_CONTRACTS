@@ -14,39 +14,38 @@ contract Lending {
     }
 
     struct attachedInfratructure {
-        invdividualInvestor[]: investors, 
-        cotractor[] contractors, 
-        infrastructureId, 
-        uint: totalInvestmentPrincipleValue,
-        uint: totalRevenueGeneratedFromInf, 
-        uint: withdrawableFunds, 
-        uint: withdrawedFunds, 
-        uint: currentFunds, 
-        uint: totalTokensReleased
+        individualInvestor[] investors; 
+        contractor[] contractors;
+        uint totalInvestmentPrincipleValue;
+        uint totalRevenueGeneratedFromInf;
+        uint withdrawableFunds; 
+        uint withdrawedFunds; 
+        uint currentFunds; 
+        uint totalTokensReleased;
 
     }
     constructor()  {
-            owner = msg.sender;
+            address owner = msg.sender;
         }
 
 
     function deposit(address walletAddress) payable public {}
 
-    function sellEquity(uint: percToSell) {}
+    function sellEquity(uint percToSell) public{}
 
-    function buyEQuity(uint: percToBuy) {}
+    function buyEQuity(uint percToBuy) public {}
 
     function checkEquityValue() public returns(uint) {}
 
-    function withdrawFunds(uint amountToWithdraw) public() {}
+    function withdrawFunds(uint amountToWithdraw) public {}
     
     function getTotalREvenueGenerated() public {}
 
     function getTotalInvestmentPrincipleValue() public {}
 
-    function getAllInvestors() {}
+    function getAllInvestors() public{}
 
-    function getAllContractors() {}
+    function getAllContractors() public{}
 
 
 
