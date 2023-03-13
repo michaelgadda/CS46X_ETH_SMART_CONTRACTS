@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.7.0 <0.9.0;
 
-contract Lenders {
+import "hardhat/console.sol";
+
+contract Lending {
     loan[]  private loans;
     lendee[] private  lendees; 
     lender[] private  lenders; 
@@ -49,7 +51,7 @@ contract Lenders {
     bool private lendeeDeposit;
     bool private lendeeWithdrawal;
 
-    event LoanCreated(address payable lender, address payable lendee, uint256 loanAmount, uint256 interestRate, uint256 loanPeriod, uint256 loanInstallmentPeriod, uint256 installmentAmount);
+    event LoanCreated(string message, uint loanId, address payable lender, address payable lendee, uint256 loanAmount, uint256 interestRate, uint256 loanPeriod, uint256 loanInstallmentPeriod, uint256 installmentAmount);
     event Lended(address payable lendee, address payable lender, uint256 loanAmount);
     event InstallmentRepaid(address payable lender, address payable lendee, uint256 loanAmountLeft, uint256 totalReceivedAmount, uint256 principleLoanPayed, bool LoanRepaid);
     event LoanLate(address payable lender, address payable lendee);
@@ -58,6 +60,9 @@ contract Lenders {
     event InterestRepaid(address payable lender, address payable lendee, uint256 interestLeft, uint256 InterestRepaid, uint256 totalReceivedAmount);
     event basicString(string basicString);
     event amountLeft(uint loanId, uint amountLeft);
+    event myActiveLoans(string message, uint256[] _loanIds, uint256[] loanIds);
+    event thisSCAddress(string message, address scAddress);
+
     constructor()  {
         owner = msg.sender;
         nextLoanId = 0;
@@ -177,15 +182,13 @@ contract Lenders {
         if (lendeeArrayIndex != 999999999) {
             lendees[lendeeArrayIndex].loanIds.push(newLoan.loanId);
         } 
-        emit LoanCreated(newLoan.lender, newLoan.lendee, newLoan.loanAmount, newLoan.interestRate, newLoan.loanPeriod, newLoan.loanInstallmentPeriod, newLoan.installmentAmount);
+        emit LoanCreated("Please write down your loanId so you can access it at a later date.", newLoan.loanId, newLoan.lender, newLoan.lendee, newLoan.loanAmount, newLoan.interestRate, newLoan.loanPeriod, newLoan.loanInstallmentPeriod, newLoan.installmentAmount);
     }
 
-    function deposit(address walletAddress) payable public {
-
-        // External contract with contract funds calls function here.
-        // Next call createLoan w/ apppropriate loan fields?
-    }
-
+    function deposit(address walletAddress) payable public {}
+    //
+    // External contract with contract funds calls function here.
+    // Next call createLoan w/ apppropriate loan fields?
 
 
     function lendLoan(loan memory newLoan) public payable {
@@ -311,5 +314,27 @@ contract Lenders {
     function defaultLoan(uint loanId) public {
         require(!loans[loanId].loanRepaid);
         emit LoanDefaulted(loans[loanId].lender, loans[loanId].lendee);
+    }
+
+    // loan[]  private loans;
+    // lendee[] private  lendees; 
+    // lender[] private  lenders; 
+    function getMyActiveLoans() public {
+        uint[] memory fakeLoans;
+        uint posLenderIndex = getLenderArrayIndex(payable(msg.sender));
+        uint posLendeeIndex = getLendeeArrayIndex(payable(msg.sender));
+        require(posLenderIndex != 999999999 || posLendeeIndex != 999999999, "This address is neither connected to a lender or lendee in our database; make sure you are using the correct wallet.");
+        if (posLendeeIndex == 999999999) {
+            emit myActiveLoans("You are a lender, here are your loanIds", lenders[posLenderIndex].loanIds, fakeLoans);
+        } else if (posLenderIndex == 999999999) {
+            emit myActiveLoans("You are a lendee, here are your loanIds", lendees[posLendeeIndex].loanIds, fakeLoans);
+
+        } else {
+            emit myActiveLoans("You are both a lendee and lender, here are your loanIds (The first series of Ids is for you lendee persona, the second is for your lender persona). ", lendees[posLendeeIndex].loanIds, lenders[posLenderIndex].loanIds);
+        }
+    }
+
+    function getThisSmartContractAddress() public {
+        emit thisSCAddress("Here is the address of this smart contract", address(this));
     }
 }

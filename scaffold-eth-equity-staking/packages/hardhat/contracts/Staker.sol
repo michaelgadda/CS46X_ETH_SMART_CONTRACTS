@@ -15,7 +15,7 @@ contract Staker {
 
   // External contract that will hold funds
   ExampleExternalContract public exampleExternalContract;
-  Lenders public lenders;
+  Lending public lenders;
 
   // Balances of the user's staked funds
   mapping(address => uint256) public balances;
@@ -60,10 +60,10 @@ contract Staker {
 
   /**
   * @notice Contract Constructor
-  * @param LendersAddress Address of the external contract that will hold funds
+  * @param ExampleExternalContractAddress Address of the external contract that will hold funds
   */
-  constructor(address LendersAddress) {
-    Lenders = Lenders(LendersAddress);
+  constructor(address ExampleExternalContractAddress) {
+    exampleExternalContract = ExampleExternalContract(ExampleExternalContractAddress);
   }
 
 
@@ -79,7 +79,7 @@ contract Staker {
     // Execute external contract, transfer entire balance
 
     // (bool sent, bytes memory data) = exampleExternalContract.complete{value: contractBalance}();
-    (bool sent,) = address(Lenders).call{value: contractBalance}(abi.encodeWithSignature("deposit()"));
+    (bool sent,) = address(exampleExternalContract).call{value: contractBalance}(abi.encodeWithSignature("deposit()"));
     require(sent, "Lenders.deposit failed");
   }
 
