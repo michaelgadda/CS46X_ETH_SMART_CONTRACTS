@@ -5,15 +5,18 @@ contract Lending {
     lendee[] private  lendees; 
     lender[] private  lenders; 
 
+
     struct lender {
         address payable lenderAddress;
         uint256[] loanIds; 
     }
 
+
     struct lendee {
         address payable lendeeAddress;
         uint256[] loanIds; 
     }
+
 
     struct loan {
         address payable lendee;
@@ -39,7 +42,8 @@ contract Lending {
         uint256  previousLoanInstallmentDate; 
         uint256  daysBetweenInstallments;
         uint256  interestLeft;
-        }
+    }
+
 
     uint nextLoanId;
     address public owner;
@@ -47,6 +51,7 @@ contract Lending {
     bool private lenderWithdrawal;
     bool private lendeeDeposit;
     bool private lendeeWithdrawal;
+
 
     event LoanCreated(string message, uint loanId, address payable lender, address payable lendee, uint256 loanAmount, uint256 interestRate, uint256 loanPeriod, uint256 loanInstallmentPeriod, uint256 installmentAmount);
     event Lended(address payable lendee, address payable lender, uint256 loanAmount);
@@ -60,6 +65,7 @@ contract Lending {
     event myActiveLoans(string message, uint256[] _loanIds, uint256[] loanIds);
     event thisSCAddress(string message, address scAddress);
     event emitUint(uint blank);
+
 
     constructor()  {
         owner = msg.sender;
@@ -92,6 +98,7 @@ contract Lending {
             
     }
 
+
     function getLendeeArrayIndex(address payable lendeeAddress) private returns (uint){
         for (uint i = 0; i < lendees.length; i++) {
             if(lendees[i].lendeeAddress == lendeeAddress) {
@@ -102,6 +109,7 @@ contract Lending {
         return 999999999;
         
     }
+
 
     function checkifLoanExistsInArray(uint loanId) private returns(bool){
         bool returnedTrue = false;
@@ -117,11 +125,13 @@ contract Lending {
         
     }
 
+
     function addNewLenderToDataBase(address payable lenderAddress) private{
         lender memory newLender;
         newLender.lenderAddress = lenderAddress; 
         lenders.push(newLender);
     }
+
 
     function addNewLendeeToDataBase(address payable lendeeAddress) private{
         lendee memory newLendee; 
@@ -145,6 +155,7 @@ contract Lending {
             return false;
         }
     }
+
 
     function checkifLenderHasAccessToLoan(address payable lenderAddress, uint loanId) private returns(bool){
         uint lenderIndex = getLenderArrayIndex(lenderAddress);
@@ -211,8 +222,8 @@ contract Lending {
         emit LoanCreated("Please write down your loanId so you can access it at a later date.", newLoan.loanId, newLoan.lender, newLoan.lendee, newLoan.loanAmount, newLoan.interestRate, newLoan.loanPeriod, newLoan.loanInstallmentPeriod, newLoan.installmentAmount);
     }
 
-    function deposit(address walletAddress) payable public {}
 
+    function deposit(address walletAddress) payable public {}
 
 
     function lendLoan(uint256 loanId) public payable {
@@ -223,8 +234,8 @@ contract Lending {
         //require(msg.value == loans[loanId].loanAmount);
         loans[loanId].lendee.transfer(loans[loanId].loanAmount);
         emit Lended(loans[loanId].lendee, loans[loanId].lender, loans[loanId].loanAmount);
-        }
-    
+    }
+
 
     function repayInstallment(uint loanId) public payable {
         bool lendeeHasAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender), loanId);
@@ -255,6 +266,7 @@ contract Lending {
         
     }
 
+
     function repayInterest(uint loanId) public payable {
         bool lendeeHasAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender), loanId);
         require(lendeeHasAccess == true);
@@ -277,12 +289,13 @@ contract Lending {
         
     }
 
+
     function balanceOf() public view returns(uint) {
         require(msg.sender == owner);
         return address(this).balance;
     }
 
-    
+
     function remainingLoanBalance(uint loanId) public {
         bool lendeeAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender),  loanId);
         bool lenderAccess =  checkifLenderHasAccessToLoan(payable(msg.sender),  loanId);
@@ -290,8 +303,8 @@ contract Lending {
         emit amountLeft(loanId, loans[loanId].loanAmountLeft);
         //return loans[loanId].loanAmountLeft;
     }
+  
 
-        
     function remainingInterestBalance(uint loanId) public {
         bool lendeeAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender),  loanId);
         bool lenderAccess =  checkifLenderHasAccessToLoan(payable(msg.sender),  loanId);
@@ -309,6 +322,7 @@ contract Lending {
         //return loans[loanId].daysBetweenInstallments - ((block.timestamp - loans[loanId].previousLoanInstallmentDate) * 1 days);
     }
 
+
     function remainingTimeForLoan(uint loanId) public {
         bool lendeeAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender),  loanId);
         bool lenderAccess =  checkifLenderHasAccessToLoan(payable(msg.sender),  loanId);
@@ -317,7 +331,7 @@ contract Lending {
         //return (loans[loanId].loanEnd - block.timestamp) * 1 days;
     }
 
-    
+
     function checkPaidBalance(uint loanId) public returns(uint) {
         bool lendeeAccess = checkIfLendeeHasAccessToLoan(payable(msg.sender),  loanId);
         bool lenderAccess =  checkifLenderHasAccessToLoan(payable(msg.sender),  loanId);
@@ -335,12 +349,14 @@ contract Lending {
         loans[loanId].principleLoanPayed += msg.value;
         this.deposit(address(this));
         loans[loanId].lender.transfer(msg.value);
-        }
-        
+    }
+
+
     function defaultLoan(uint loanId) public {
         require(!loans[loanId].loanRepaid);
         emit LoanDefaulted(loans[loanId].lender, loans[loanId].lendee);
     }
+
 
     // loan[]  private loans;
     // lendee[] private  lendees; 
@@ -359,6 +375,7 @@ contract Lending {
             emit myActiveLoans("You are both a lendee and lender, here are your loanIds (The first series of Ids is for you lendee persona, the second is for your lender persona). ", lendees[posLendeeIndex].loanIds, lenders[posLenderIndex].loanIds);
         }
     }
+
 
     function getThisSmartContractAddress() public {
         emit thisSCAddress("Here is the address of this smart contract", address(this));
