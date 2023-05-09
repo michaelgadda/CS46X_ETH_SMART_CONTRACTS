@@ -5,7 +5,7 @@ pragma solidity ^0.4.24;
 //CREDIT https://www.quicknode.com/guides/ethereum-development/smart-contracts/how-to-create-and-deploy-an-erc20-token/#:~:text=Open%20Metamask%20and%20click%20on,the%20assets%20section%20in%20Metamask.
 
 contract SafeMath {
- 
+
     function safeAdd(uint a, uint b) public pure returns (uint c) {
         c = a + b;
         require(c >= a);

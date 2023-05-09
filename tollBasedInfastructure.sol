@@ -1,5 +1,4 @@
-// SPDX-License-Identifier: GPL-3.0
-
+// SPDX-License-Identifier: MIT
 pragma solidity >=0.7.0 <0.9.0;
 
 import "hardhat/console.sol";
@@ -21,6 +20,7 @@ contract tollInfrastructure {
         uint totalPayed; 
         string infName;
     }
+    
     //we could either have 1 SC for all infrastructures or each infrastructure gets its own sc
     struct infrastructure {
         address payable infWallet; 
@@ -36,6 +36,7 @@ contract tollInfrastructure {
         uint totalVisits;  
     }
 
+
     event CreateAccount(string accountWarning);
     event noInfFound(string infNotFoundWarning);
     event userPaymentSuccess(uint userCost, string firstName, string lastName , string infName);
@@ -44,6 +45,7 @@ contract tollInfrastructure {
     event insufficientFunds(uint amountToWithdraw, uint withdrawableRevenue, string infName, address payable infWallet);
     event successfulWithdrawal(string infName, address payable wallet, string successMessage);
     event sendCost(string costString, uint userCost);
+    
     constructor()  {
         owner = msg.sender;
     }
@@ -104,6 +106,7 @@ contract tollInfrastructure {
         emit CreateAccount(accountWarning);
         return nullUser; 
     }
+
     //need a way to determine the informaiton for th
     function addUserToDataBase(string memory firstname, string memory lastname, string memory infName) public {
         require(keccak256(bytes(firstname)) != keccak256(bytes("NULL")));
@@ -140,6 +143,7 @@ contract tollInfrastructure {
         return NullInf; 
 
     }
+
     //depending on how much they spend their cost may become lower
     function updateUserType(individualUser memory currUser, infrastructure memory currInf) private {
         for (uint i = 0; i < userStructArray.length; i++){
@@ -209,7 +213,6 @@ contract tollInfrastructure {
             }
         }
     }
-
 
     function withdrawRevenue(uint amountToWithdraw) public {
         require(amountToWithdraw > 0, "Please enter a number greater than 0 to withdraw!");

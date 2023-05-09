@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 pragma solidity >=0.7.0 <0.9.0;
 
 contract Lending { 
@@ -25,16 +26,16 @@ contract Lending {
         uint: totalTokensReleased
 
     }
+
     constructor()  {
-            owner = msg.sender;
-        }
-
-
+        owner = msg.sender;
+    }
+    
     function deposit(address walletAddress) payable public {}
 
     function sellEquity(uint: percToSell) {}
 
-    function buyEQuity(uint: percToBuy) {}
+    function buyEquity(uint: percToBuy) {}
 
     function checkEquityValue() public returns(uint) {}
 
@@ -47,9 +48,4 @@ contract Lending {
     function getAllInvestors() {}
 
     function getAllContractors() {}
-
-
-
-
-
 }

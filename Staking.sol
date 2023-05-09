@@ -1,6 +1,7 @@
+// SPDX-License-Identifier: MIT
 pragma solidity >=0.7.0 <0.9.0;
 
-contract StakingRewards {
+contract Staking {
     struct Investment {
         address payable investor;
         uint256 amount;
@@ -10,6 +11,7 @@ contract StakingRewards {
     mapping(address => Investment) public investments;
     address payable[] public investors;
 
+
     function invest(address payable _investor, uint256 _amount) public {
         investments[_investor].investor = _investor;
         investments[_investor].amount = _amount;
@@ -17,13 +19,14 @@ contract StakingRewards {
         investors.push(_investor);
     }
 
-    function calculatePayout(uint256 _amount, uint256 duration) internal view returns (uint256) {
+    function calculatePayout(uint256 _amount, uint256 duration) internal pure returns (uint256) {
         return _amount/1000;
     }
 
     function getUserBalance(address _owner) external view returns (uint) {
         return address(_owner).balance;
     }
+
     function payout() public {
         for (uint256 i = 0; i < investors.length; i++) {
             address payable investor = investors[i];
