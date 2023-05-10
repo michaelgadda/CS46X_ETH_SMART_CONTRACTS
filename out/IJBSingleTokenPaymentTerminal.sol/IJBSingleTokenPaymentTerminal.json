@@ -552,7 +552,7 @@
     "id": 28348,
     "exportedSymbols": {
       "IERC165": [
-        29280
+        35439
       ],
       "IJBPaymentTerminal": [
         27801
@@ -789,7 +789,7 @@
         "linearizedBaseContracts": [
           28347,
           27801,
-          29280
+          35439
         ],
         "name": "IJBSingleTokenPaymentTerminal",
         "nameLocation": "103:29:33",

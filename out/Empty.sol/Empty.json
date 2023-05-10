@@ -92,17 +92,17 @@
   },
   "ast": {
     "absolutePath": "src/Empty.sol",
-    "id": 35153,
+    "id": 35658,
     "exportedSymbols": {
       "Empty": [
-        35152
+        35657
       ]
     },
     "nodeType": "SourceUnit",
     "src": "32:100:80",
     "nodes": [
       {
-        "id": 35143,
+        "id": 35648,
         "nodeType": "PragmaDirective",
         "src": "32:24:80",
         "nodes": [],
@@ -114,17 +114,17 @@
         ]
       },
       {
-        "id": 35152,
+        "id": 35657,
         "nodeType": "ContractDefinition",
         "src": "58:73:80",
         "nodes": [
           {
-            "id": 35147,
+            "id": 35652,
             "nodeType": "FunctionDefinition",
             "src": "79:16:80",
             "nodes": [],
             "body": {
-              "id": 35146,
+              "id": 35651,
               "nodeType": "Block",
               "src": "93:2:80",
               "nodes": [],
@@ -136,29 +136,29 @@
             "name": "",
             "nameLocation": "-1:-1:-1",
             "parameters": {
-              "id": 35144,
+              "id": 35649,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "90:2:80"
             },
             "returnParameters": {
-              "id": 35145,
+              "id": 35650,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "93:0:80"
             },
-            "scope": 35152,
+            "scope": 35657,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 35151,
+            "id": 35656,
             "nodeType": "FunctionDefinition",
             "src": "101:28:80",
             "nodes": [],
             "body": {
-              "id": 35150,
+              "id": 35655,
               "nodeType": "Block",
               "src": "127:2:80",
               "nodes": [],
@@ -171,18 +171,18 @@
             "name": "empty",
             "nameLocation": "110:5:80",
             "parameters": {
-              "id": 35148,
+              "id": 35653,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "115:2:80"
             },
             "returnParameters": {
-              "id": 35149,
+              "id": 35654,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "127:0:80"
             },
-            "scope": 35152,
+            "scope": 35657,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -195,11 +195,11 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          35152
+          35657
         ],
         "name": "Empty",
         "nameLocation": "67:5:80",
-        "scope": 35153,
+        "scope": 35658,
         "usedErrors": []
       }
     ],

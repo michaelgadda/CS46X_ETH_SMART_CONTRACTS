@@ -292,17 +292,17 @@
   },
   "ast": {
     "absolutePath": "src/investments.sol",
-    "id": 35391,
+    "id": 35896,
     "exportedSymbols": {
       "Lending": [
-        35390
+        35895
       ]
     },
     "nodeType": "SourceUnit",
     "src": "32:1301:82",
     "nodes": [
       {
-        "id": 35295,
+        "id": 35800,
         "nodeType": "PragmaDirective",
         "src": "32:23:82",
         "nodes": [],
@@ -314,12 +314,12 @@
         ]
       },
       {
-        "id": 35390,
+        "id": 35895,
         "nodeType": "ContractDefinition",
         "src": "57:1275:82",
         "nodes": [
           {
-            "id": 35297,
+            "id": 35802,
             "nodeType": "VariableDeclaration",
             "src": "80:20:82",
             "nodes": [],
@@ -328,7 +328,7 @@
             "mutability": "mutable",
             "name": "owner",
             "nameLocation": "95:5:82",
-            "scope": 35390,
+            "scope": 35895,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -336,7 +336,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 35296,
+              "id": 35801,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "80:7:82",
@@ -349,7 +349,7 @@
             "visibility": "public"
           },
           {
-            "id": 35307,
+            "id": 35812,
             "nodeType": "StructDefinition",
             "src": "107:187:82",
             "nodes": [],
@@ -357,12 +357,12 @@
             "members": [
               {
                 "constant": false,
-                "id": 35299,
+                "id": 35804,
                 "mutability": "mutable",
                 "name": "InvestorAddress",
                 "nameLocation": "159:15:82",
                 "nodeType": "VariableDeclaration",
-                "scope": 35307,
+                "scope": 35812,
                 "src": "143:31:82",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -371,7 +371,7 @@
                   "typeString": "address payable"
                 },
                 "typeName": {
-                  "id": 35298,
+                  "id": 35803,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "143:15:82",
@@ -385,36 +385,36 @@
               },
               {
                 "constant": false,
-                "id": 35302,
+                "id": 35807,
                 "mutability": "mutable",
                 "name": "attachedInf",
                 "nameLocation": "206:11:82",
                 "nodeType": "VariableDeclaration",
-                "scope": 35307,
+                "scope": 35812,
                 "src": "184:33:82",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_attachedInfratructure_$35334_storage_ptr",
+                  "typeIdentifier": "t_struct$_attachedInfratructure_$35839_storage_ptr",
                   "typeString": "struct Lending.attachedInfratructure"
                 },
                 "typeName": {
-                  "id": 35301,
+                  "id": 35806,
                   "nodeType": "UserDefinedTypeName",
                   "pathNode": {
-                    "id": 35300,
+                    "id": 35805,
                     "name": "attachedInfratructure",
                     "nameLocations": [
                       "184:21:82"
                     ],
                     "nodeType": "IdentifierPath",
-                    "referencedDeclaration": 35334,
+                    "referencedDeclaration": 35839,
                     "src": "184:21:82"
                   },
-                  "referencedDeclaration": 35334,
+                  "referencedDeclaration": 35839,
                   "src": "184:21:82",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_attachedInfratructure_$35334_storage_ptr",
+                    "typeIdentifier": "t_struct$_attachedInfratructure_$35839_storage_ptr",
                     "typeString": "struct Lending.attachedInfratructure"
                   }
                 },
@@ -422,12 +422,12 @@
               },
               {
                 "constant": false,
-                "id": 35304,
+                "id": 35809,
                 "mutability": "mutable",
                 "name": "totalAmountInvested",
                 "nameLocation": "235:19:82",
                 "nodeType": "VariableDeclaration",
-                "scope": 35307,
+                "scope": 35812,
                 "src": "227:27:82",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -436,7 +436,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 35303,
+                  "id": 35808,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "227:7:82",
@@ -449,12 +449,12 @@
               },
               {
                 "constant": false,
-                "id": 35306,
+                "id": 35811,
                 "mutability": "mutable",
                 "name": "ownedEquityPerc",
                 "nameLocation": "272:15:82",
                 "nodeType": "VariableDeclaration",
-                "scope": 35307,
+                "scope": 35812,
                 "src": "264:23:82",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -463,7 +463,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 35305,
+                  "id": 35810,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "264:7:82",
@@ -477,11 +477,11 @@
             ],
             "name": "individualInvestor",
             "nameLocation": "114:18:82",
-            "scope": 35390,
+            "scope": 35895,
             "visibility": "public"
           },
           {
-            "id": 35313,
+            "id": 35818,
             "nodeType": "StructDefinition",
             "src": "300:111:82",
             "nodes": [],
@@ -489,12 +489,12 @@
             "members": [
               {
                 "constant": false,
-                "id": 35309,
+                "id": 35814,
                 "mutability": "mutable",
                 "name": "contractorAddress",
                 "nameLocation": "344:17:82",
                 "nodeType": "VariableDeclaration",
-                "scope": 35313,
+                "scope": 35818,
                 "src": "328:33:82",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -503,7 +503,7 @@
                   "typeString": "address payable"
                 },
                 "typeName": {
-                  "id": 35308,
+                  "id": 35813,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "328:15:82",
@@ -517,36 +517,36 @@
               },
               {
                 "constant": false,
-                "id": 35312,
+                "id": 35817,
                 "mutability": "mutable",
                 "name": "attachedInf",
                 "nameLocation": "393:11:82",
                 "nodeType": "VariableDeclaration",
-                "scope": 35313,
+                "scope": 35818,
                 "src": "371:33:82",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_attachedInfratructure_$35334_storage_ptr",
+                  "typeIdentifier": "t_struct$_attachedInfratructure_$35839_storage_ptr",
                   "typeString": "struct Lending.attachedInfratructure"
                 },
                 "typeName": {
-                  "id": 35311,
+                  "id": 35816,
                   "nodeType": "UserDefinedTypeName",
                   "pathNode": {
-                    "id": 35310,
+                    "id": 35815,
                     "name": "attachedInfratructure",
                     "nameLocations": [
                       "371:21:82"
                     ],
                     "nodeType": "IdentifierPath",
-                    "referencedDeclaration": 35334,
+                    "referencedDeclaration": 35839,
                     "src": "371:21:82"
                   },
-                  "referencedDeclaration": 35334,
+                  "referencedDeclaration": 35839,
                   "src": "371:21:82",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_attachedInfratructure_$35334_storage_ptr",
+                    "typeIdentifier": "t_struct$_attachedInfratructure_$35839_storage_ptr",
                     "typeString": "struct Lending.attachedInfratructure"
                   }
                 },
@@ -555,11 +555,11 @@
             ],
             "name": "contractor",
             "nameLocation": "307:10:82",
-            "scope": 35390,
+            "scope": 35895,
             "visibility": "public"
           },
           {
-            "id": 35334,
+            "id": 35839,
             "nodeType": "StructDefinition",
             "src": "417:366:82",
             "nodes": [],
@@ -567,45 +567,45 @@
             "members": [
               {
                 "constant": false,
-                "id": 35317,
+                "id": 35822,
                 "mutability": "mutable",
                 "name": "investors",
                 "nameLocation": "477:9:82",
                 "nodeType": "VariableDeclaration",
-                "scope": 35334,
+                "scope": 35839,
                 "src": "456:30:82",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_array$_t_struct$_individualInvestor_$35307_storage_$dyn_storage_ptr",
+                  "typeIdentifier": "t_array$_t_struct$_individualInvestor_$35812_storage_$dyn_storage_ptr",
                   "typeString": "struct Lending.individualInvestor[]"
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 35315,
+                    "id": 35820,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 35314,
+                      "id": 35819,
                       "name": "individualInvestor",
                       "nameLocations": [
                         "456:18:82"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 35307,
+                      "referencedDeclaration": 35812,
                       "src": "456:18:82"
                     },
-                    "referencedDeclaration": 35307,
+                    "referencedDeclaration": 35812,
                     "src": "456:18:82",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_individualInvestor_$35307_storage_ptr",
+                      "typeIdentifier": "t_struct$_individualInvestor_$35812_storage_ptr",
                       "typeString": "struct Lending.individualInvestor"
                     }
                   },
-                  "id": 35316,
+                  "id": 35821,
                   "nodeType": "ArrayTypeName",
                   "src": "456:20:82",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_individualInvestor_$35307_storage_$dyn_storage_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_individualInvestor_$35812_storage_$dyn_storage_ptr",
                     "typeString": "struct Lending.individualInvestor[]"
                   }
                 },
@@ -613,45 +613,45 @@
               },
               {
                 "constant": false,
-                "id": 35321,
+                "id": 35826,
                 "mutability": "mutable",
                 "name": "contractors",
                 "nameLocation": "509:11:82",
                 "nodeType": "VariableDeclaration",
-                "scope": 35334,
+                "scope": 35839,
                 "src": "496:24:82",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_array$_t_struct$_contractor_$35313_storage_$dyn_storage_ptr",
+                  "typeIdentifier": "t_array$_t_struct$_contractor_$35818_storage_$dyn_storage_ptr",
                   "typeString": "struct Lending.contractor[]"
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 35319,
+                    "id": 35824,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 35318,
+                      "id": 35823,
                       "name": "contractor",
                       "nameLocations": [
                         "496:10:82"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 35313,
+                      "referencedDeclaration": 35818,
                       "src": "496:10:82"
                     },
-                    "referencedDeclaration": 35313,
+                    "referencedDeclaration": 35818,
                     "src": "496:10:82",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_contractor_$35313_storage_ptr",
+                      "typeIdentifier": "t_struct$_contractor_$35818_storage_ptr",
                       "typeString": "struct Lending.contractor"
                     }
                   },
-                  "id": 35320,
+                  "id": 35825,
                   "nodeType": "ArrayTypeName",
                   "src": "496:12:82",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_contractor_$35313_storage_$dyn_storage_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_contractor_$35818_storage_$dyn_storage_ptr",
                     "typeString": "struct Lending.contractor[]"
                   }
                 },
@@ -659,12 +659,12 @@
               },
               {
                 "constant": false,
-                "id": 35323,
+                "id": 35828,
                 "mutability": "mutable",
                 "name": "totalInvestmentPrincipleValue",
                 "nameLocation": "566:29:82",
                 "nodeType": "VariableDeclaration",
-                "scope": 35334,
+                "scope": 35839,
                 "src": "558:37:82",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -673,7 +673,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 35322,
+                  "id": 35827,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "558:7:82",
@@ -686,12 +686,12 @@
               },
               {
                 "constant": false,
-                "id": 35325,
+                "id": 35830,
                 "mutability": "mutable",
                 "name": "totalRevenueGeneratedFromInf",
                 "nameLocation": "613:28:82",
                 "nodeType": "VariableDeclaration",
-                "scope": 35334,
+                "scope": 35839,
                 "src": "605:36:82",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -700,7 +700,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 35324,
+                  "id": 35829,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "605:7:82",
@@ -713,12 +713,12 @@
               },
               {
                 "constant": false,
-                "id": 35327,
+                "id": 35832,
                 "mutability": "mutable",
                 "name": "withdrawableFunds",
                 "nameLocation": "659:17:82",
                 "nodeType": "VariableDeclaration",
-                "scope": 35334,
+                "scope": 35839,
                 "src": "651:25:82",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -727,7 +727,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 35326,
+                  "id": 35831,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "651:7:82",
@@ -740,12 +740,12 @@
               },
               {
                 "constant": false,
-                "id": 35329,
+                "id": 35834,
                 "mutability": "mutable",
                 "name": "withdrawedFunds",
                 "nameLocation": "694:15:82",
                 "nodeType": "VariableDeclaration",
-                "scope": 35334,
+                "scope": 35839,
                 "src": "686:23:82",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -754,7 +754,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 35328,
+                  "id": 35833,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "686:7:82",
@@ -767,12 +767,12 @@
               },
               {
                 "constant": false,
-                "id": 35331,
+                "id": 35836,
                 "mutability": "mutable",
                 "name": "currentFunds",
                 "nameLocation": "727:12:82",
                 "nodeType": "VariableDeclaration",
-                "scope": 35334,
+                "scope": 35839,
                 "src": "719:20:82",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -781,7 +781,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 35330,
+                  "id": 35835,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "719:7:82",
@@ -794,12 +794,12 @@
               },
               {
                 "constant": false,
-                "id": 35333,
+                "id": 35838,
                 "mutability": "mutable",
                 "name": "totalTokensReleased",
                 "nameLocation": "757:19:82",
                 "nodeType": "VariableDeclaration",
-                "scope": 35334,
+                "scope": 35839,
                 "src": "749:27:82",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -808,7 +808,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 35332,
+                  "id": 35837,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "749:7:82",
@@ -822,33 +822,33 @@
             ],
             "name": "attachedInfratructure",
             "nameLocation": "424:21:82",
-            "scope": 35390,
+            "scope": 35895,
             "visibility": "public"
           },
           {
-            "id": 35343,
+            "id": 35848,
             "nodeType": "FunctionDefinition",
             "src": "789:49:82",
             "nodes": [],
             "body": {
-              "id": 35342,
+              "id": 35847,
               "nodeType": "Block",
               "src": "803:35:82",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
-                    "id": 35340,
+                    "id": 35845,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 35337,
+                      "id": 35842,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 35297,
+                      "referencedDeclaration": 35802,
                       "src": "813:5:82",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -859,7 +859,7 @@
                     "operator": "=",
                     "rightHandSide": {
                       "expression": {
-                        "id": 35338,
+                        "id": 35843,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -870,7 +870,7 @@
                           "typeString": "msg"
                         }
                       },
-                      "id": 35339,
+                      "id": 35844,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -890,7 +890,7 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 35341,
+                  "id": 35846,
                   "nodeType": "ExpressionStatement",
                   "src": "813:18:82"
                 }
@@ -902,29 +902,29 @@
             "name": "",
             "nameLocation": "-1:-1:-1",
             "parameters": {
-              "id": 35335,
+              "id": 35840,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "800:2:82"
             },
             "returnParameters": {
-              "id": 35336,
+              "id": 35841,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "803:0:82"
             },
-            "scope": 35390,
+            "scope": 35895,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 35349,
+            "id": 35854,
             "nodeType": "FunctionDefinition",
             "src": "844:57:82",
             "nodes": [],
             "body": {
-              "id": 35348,
+              "id": 35853,
               "nodeType": "Block",
               "src": "899:2:82",
               "nodes": [],
@@ -937,17 +937,17 @@
             "name": "deposit",
             "nameLocation": "853:7:82",
             "parameters": {
-              "id": 35346,
+              "id": 35851,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 35345,
+                  "id": 35850,
                   "mutability": "mutable",
                   "name": "walletAddress",
                   "nameLocation": "869:13:82",
                   "nodeType": "VariableDeclaration",
-                  "scope": 35349,
+                  "scope": 35854,
                   "src": "861:21:82",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -956,7 +956,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 35344,
+                    "id": 35849,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "861:7:82",
@@ -972,23 +972,23 @@
               "src": "860:23:82"
             },
             "returnParameters": {
-              "id": 35347,
+              "id": 35852,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "899:0:82"
             },
-            "scope": 35390,
+            "scope": 35895,
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 35355,
+            "id": 35860,
             "nodeType": "FunctionDefinition",
             "src": "907:49:82",
             "nodes": [],
             "body": {
-              "id": 35354,
+              "id": 35859,
               "nodeType": "Block",
               "src": "954:2:82",
               "nodes": [],
@@ -1001,17 +1001,17 @@
             "name": "sellEquity",
             "nameLocation": "916:10:82",
             "parameters": {
-              "id": 35352,
+              "id": 35857,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 35351,
+                  "id": 35856,
                   "mutability": "mutable",
                   "name": "percToSell",
                   "nameLocation": "935:10:82",
                   "nodeType": "VariableDeclaration",
-                  "scope": 35355,
+                  "scope": 35860,
                   "src": "927:18:82",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1020,7 +1020,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 35350,
+                    "id": 35855,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "927:7:82",
@@ -1035,23 +1035,23 @@
               "src": "926:20:82"
             },
             "returnParameters": {
-              "id": 35353,
+              "id": 35858,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "954:0:82"
             },
-            "scope": 35390,
+            "scope": 35895,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 35361,
+            "id": 35866,
             "nodeType": "FunctionDefinition",
             "src": "962:47:82",
             "nodes": [],
             "body": {
-              "id": 35360,
+              "id": 35865,
               "nodeType": "Block",
               "src": "1007:2:82",
               "nodes": [],
@@ -1064,17 +1064,17 @@
             "name": "buyEquity",
             "nameLocation": "971:9:82",
             "parameters": {
-              "id": 35358,
+              "id": 35863,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 35357,
+                  "id": 35862,
                   "mutability": "mutable",
                   "name": "percToBuy",
                   "nameLocation": "989:9:82",
                   "nodeType": "VariableDeclaration",
-                  "scope": 35361,
+                  "scope": 35866,
                   "src": "981:17:82",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1083,7 +1083,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 35356,
+                    "id": 35861,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "981:7:82",
@@ -1098,23 +1098,23 @@
               "src": "980:19:82"
             },
             "returnParameters": {
-              "id": 35359,
+              "id": 35864,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1007:0:82"
             },
-            "scope": 35390,
+            "scope": 35895,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 35367,
+            "id": 35872,
             "nodeType": "FunctionDefinition",
             "src": "1015:55:82",
             "nodes": [],
             "body": {
-              "id": 35366,
+              "id": 35871,
               "nodeType": "Block",
               "src": "1068:2:82",
               "nodes": [],
@@ -1127,23 +1127,23 @@
             "name": "checkEquityValue",
             "nameLocation": "1024:16:82",
             "parameters": {
-              "id": 35362,
+              "id": 35867,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1040:2:82"
             },
             "returnParameters": {
-              "id": 35365,
+              "id": 35870,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 35364,
+                  "id": 35869,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 35367,
+                  "scope": 35872,
                   "src": "1059:7:82",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1152,7 +1152,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 35363,
+                    "id": 35868,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1059:7:82",
@@ -1166,18 +1166,18 @@
               ],
               "src": "1058:9:82"
             },
-            "scope": 35390,
+            "scope": 35895,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 35373,
+            "id": 35878,
             "nodeType": "FunctionDefinition",
             "src": "1076:58:82",
             "nodes": [],
             "body": {
-              "id": 35372,
+              "id": 35877,
               "nodeType": "Block",
               "src": "1132:2:82",
               "nodes": [],
@@ -1190,17 +1190,17 @@
             "name": "withdrawFunds",
             "nameLocation": "1085:13:82",
             "parameters": {
-              "id": 35370,
+              "id": 35875,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 35369,
+                  "id": 35874,
                   "mutability": "mutable",
                   "name": "amountToWithdraw",
                   "nameLocation": "1107:16:82",
                   "nodeType": "VariableDeclaration",
-                  "scope": 35373,
+                  "scope": 35878,
                   "src": "1099:24:82",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1209,7 +1209,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 35368,
+                    "id": 35873,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1099:7:82",
@@ -1224,23 +1224,23 @@
               "src": "1098:26:82"
             },
             "returnParameters": {
-              "id": 35371,
+              "id": 35876,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1132:0:82"
             },
-            "scope": 35390,
+            "scope": 35895,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 35377,
+            "id": 35882,
             "nodeType": "FunctionDefinition",
             "src": "1140:45:82",
             "nodes": [],
             "body": {
-              "id": 35376,
+              "id": 35881,
               "nodeType": "Block",
               "src": "1183:2:82",
               "nodes": [],
@@ -1253,29 +1253,29 @@
             "name": "getTotalREvenueGenerated",
             "nameLocation": "1149:24:82",
             "parameters": {
-              "id": 35374,
+              "id": 35879,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1173:2:82"
             },
             "returnParameters": {
-              "id": 35375,
+              "id": 35880,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1183:0:82"
             },
-            "scope": 35390,
+            "scope": 35895,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 35381,
+            "id": 35886,
             "nodeType": "FunctionDefinition",
             "src": "1191:53:82",
             "nodes": [],
             "body": {
-              "id": 35380,
+              "id": 35885,
               "nodeType": "Block",
               "src": "1242:2:82",
               "nodes": [],
@@ -1288,29 +1288,29 @@
             "name": "getTotalInvestmentPrincipleValue",
             "nameLocation": "1200:32:82",
             "parameters": {
-              "id": 35378,
+              "id": 35883,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1232:2:82"
             },
             "returnParameters": {
-              "id": 35379,
+              "id": 35884,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1242:0:82"
             },
-            "scope": 35390,
+            "scope": 35895,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 35385,
+            "id": 35890,
             "nodeType": "FunctionDefinition",
             "src": "1250:36:82",
             "nodes": [],
             "body": {
-              "id": 35384,
+              "id": 35889,
               "nodeType": "Block",
               "src": "1284:2:82",
               "nodes": [],
@@ -1323,29 +1323,29 @@
             "name": "getAllInvestors",
             "nameLocation": "1259:15:82",
             "parameters": {
-              "id": 35382,
+              "id": 35887,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1274:2:82"
             },
             "returnParameters": {
-              "id": 35383,
+              "id": 35888,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1284:0:82"
             },
-            "scope": 35390,
+            "scope": 35895,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 35389,
+            "id": 35894,
             "nodeType": "FunctionDefinition",
             "src": "1292:38:82",
             "nodes": [],
             "body": {
-              "id": 35388,
+              "id": 35893,
               "nodeType": "Block",
               "src": "1328:2:82",
               "nodes": [],
@@ -1358,18 +1358,18 @@
             "name": "getAllContractors",
             "nameLocation": "1301:17:82",
             "parameters": {
-              "id": 35386,
+              "id": 35891,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1318:2:82"
             },
             "returnParameters": {
-              "id": 35387,
+              "id": 35892,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1328:0:82"
             },
-            "scope": 35390,
+            "scope": 35895,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
@@ -1382,11 +1382,11 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          35390
+          35895
         ],
         "name": "Lending",
         "nameLocation": "66:7:82",
-        "scope": 35391,
+        "scope": 35896,
         "usedErrors": []
       }
     ],

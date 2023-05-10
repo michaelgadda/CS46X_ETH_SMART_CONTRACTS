@@ -255,17 +255,17 @@
   },
   "ast": {
     "absolutePath": "src/Staking.sol",
-    "id": 35294,
+    "id": 35799,
     "exportedSymbols": {
       "Staking": [
-        35293
+        35798
       ]
     },
     "nodeType": "SourceUnit",
     "src": "32:1273:81",
     "nodes": [
       {
-        "id": 35154,
+        "id": 35659,
         "nodeType": "PragmaDirective",
         "src": "32:23:81",
         "nodes": [],
@@ -277,12 +277,12 @@
         ]
       },
       {
-        "id": 35293,
+        "id": 35798,
         "nodeType": "ContractDefinition",
         "src": "57:1247:81",
         "nodes": [
           {
-            "id": 35161,
+            "id": 35666,
             "nodeType": "StructDefinition",
             "src": "80:111:81",
             "nodes": [],
@@ -290,12 +290,12 @@
             "members": [
               {
                 "constant": false,
-                "id": 35156,
+                "id": 35661,
                 "mutability": "mutable",
                 "name": "investor",
                 "nameLocation": "124:8:81",
                 "nodeType": "VariableDeclaration",
-                "scope": 35161,
+                "scope": 35666,
                 "src": "108:24:81",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -304,7 +304,7 @@
                   "typeString": "address payable"
                 },
                 "typeName": {
-                  "id": 35155,
+                  "id": 35660,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "108:15:81",
@@ -318,12 +318,12 @@
               },
               {
                 "constant": false,
-                "id": 35158,
+                "id": 35663,
                 "mutability": "mutable",
                 "name": "amount",
                 "nameLocation": "150:6:81",
                 "nodeType": "VariableDeclaration",
-                "scope": 35161,
+                "scope": 35666,
                 "src": "142:14:81",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -332,7 +332,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 35157,
+                  "id": 35662,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "142:7:81",
@@ -345,12 +345,12 @@
               },
               {
                 "constant": false,
-                "id": 35160,
+                "id": 35665,
                 "mutability": "mutable",
                 "name": "lastPayout",
                 "nameLocation": "174:10:81",
                 "nodeType": "VariableDeclaration",
-                "scope": 35161,
+                "scope": 35666,
                 "src": "166:18:81",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -359,7 +359,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 35159,
+                  "id": 35664,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "166:7:81",
@@ -373,11 +373,11 @@
             ],
             "name": "Investment",
             "nameLocation": "87:10:81",
-            "scope": 35293,
+            "scope": 35798,
             "visibility": "public"
           },
           {
-            "id": 35166,
+            "id": 35671,
             "nodeType": "VariableDeclaration",
             "src": "197:49:81",
             "nodes": [],
@@ -386,19 +386,19 @@
             "mutability": "mutable",
             "name": "investments",
             "nameLocation": "235:11:81",
-            "scope": 35293,
+            "scope": 35798,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Investment_$35161_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Investment_$35666_storage_$",
               "typeString": "mapping(address => struct Staking.Investment)"
             },
             "typeName": {
-              "id": 35165,
+              "id": 35670,
               "keyName": "",
               "keyNameLocation": "-1:-1:-1",
               "keyType": {
-                "id": 35162,
+                "id": 35667,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "205:7:81",
@@ -410,28 +410,28 @@
               "nodeType": "Mapping",
               "src": "197:30:81",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Investment_$35161_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Investment_$35666_storage_$",
                 "typeString": "mapping(address => struct Staking.Investment)"
               },
               "valueName": "",
               "valueNameLocation": "-1:-1:-1",
               "valueType": {
-                "id": 35164,
+                "id": 35669,
                 "nodeType": "UserDefinedTypeName",
                 "pathNode": {
-                  "id": 35163,
+                  "id": 35668,
                   "name": "Investment",
                   "nameLocations": [
                     "216:10:81"
                   ],
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 35161,
+                  "referencedDeclaration": 35666,
                   "src": "216:10:81"
                 },
-                "referencedDeclaration": 35161,
+                "referencedDeclaration": 35666,
                 "src": "216:10:81",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Investment_$35161_storage_ptr",
+                  "typeIdentifier": "t_struct$_Investment_$35666_storage_ptr",
                   "typeString": "struct Staking.Investment"
                 }
               }
@@ -439,7 +439,7 @@
             "visibility": "public"
           },
           {
-            "id": 35169,
+            "id": 35674,
             "nodeType": "VariableDeclaration",
             "src": "252:34:81",
             "nodes": [],
@@ -448,7 +448,7 @@
             "mutability": "mutable",
             "name": "investors",
             "nameLocation": "277:9:81",
-            "scope": 35293,
+            "scope": 35798,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -457,7 +457,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 35167,
+                "id": 35672,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "252:15:81",
@@ -467,7 +467,7 @@
                   "typeString": "address payable"
                 }
               },
-              "id": 35168,
+              "id": 35673,
               "nodeType": "ArrayTypeName",
               "src": "252:17:81",
               "typeDescriptions": {
@@ -478,19 +478,19 @@
             "visibility": "public"
           },
           {
-            "id": 35205,
+            "id": 35710,
             "nodeType": "FunctionDefinition",
             "src": "293:272:81",
             "nodes": [],
             "body": {
-              "id": 35204,
+              "id": 35709,
               "nodeType": "Block",
               "src": "360:205:81",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
-                    "id": 35181,
+                    "id": 35686,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -498,24 +498,24 @@
                     "leftHandSide": {
                       "expression": {
                         "baseExpression": {
-                          "id": 35176,
+                          "id": 35681,
                           "name": "investments",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 35166,
+                          "referencedDeclaration": 35671,
                           "src": "370:11:81",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Investment_$35161_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Investment_$35666_storage_$",
                             "typeString": "mapping(address => struct Staking.Investment storage ref)"
                           }
                         },
-                        "id": 35178,
+                        "id": 35683,
                         "indexExpression": {
-                          "id": 35177,
+                          "id": 35682,
                           "name": "_investor",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 35171,
+                          "referencedDeclaration": 35676,
                           "src": "382:9:81",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address_payable",
@@ -529,11 +529,11 @@
                         "nodeType": "IndexAccess",
                         "src": "370:22:81",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Investment_$35161_storage",
+                          "typeIdentifier": "t_struct$_Investment_$35666_storage",
                           "typeString": "struct Staking.Investment storage ref"
                         }
                       },
-                      "id": 35179,
+                      "id": 35684,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
@@ -541,7 +541,7 @@
                       "memberLocation": "393:8:81",
                       "memberName": "investor",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 35156,
+                      "referencedDeclaration": 35661,
                       "src": "370:31:81",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address_payable",
@@ -551,11 +551,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 35180,
+                      "id": 35685,
                       "name": "_investor",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 35171,
+                      "referencedDeclaration": 35676,
                       "src": "404:9:81",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address_payable",
@@ -568,13 +568,13 @@
                       "typeString": "address payable"
                     }
                   },
-                  "id": 35182,
+                  "id": 35687,
                   "nodeType": "ExpressionStatement",
                   "src": "370:43:81"
                 },
                 {
                   "expression": {
-                    "id": 35188,
+                    "id": 35693,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -582,24 +582,24 @@
                     "leftHandSide": {
                       "expression": {
                         "baseExpression": {
-                          "id": 35183,
+                          "id": 35688,
                           "name": "investments",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 35166,
+                          "referencedDeclaration": 35671,
                           "src": "423:11:81",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Investment_$35161_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Investment_$35666_storage_$",
                             "typeString": "mapping(address => struct Staking.Investment storage ref)"
                           }
                         },
-                        "id": 35185,
+                        "id": 35690,
                         "indexExpression": {
-                          "id": 35184,
+                          "id": 35689,
                           "name": "_investor",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 35171,
+                          "referencedDeclaration": 35676,
                           "src": "435:9:81",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address_payable",
@@ -613,11 +613,11 @@
                         "nodeType": "IndexAccess",
                         "src": "423:22:81",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Investment_$35161_storage",
+                          "typeIdentifier": "t_struct$_Investment_$35666_storage",
                           "typeString": "struct Staking.Investment storage ref"
                         }
                       },
-                      "id": 35186,
+                      "id": 35691,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
@@ -625,7 +625,7 @@
                       "memberLocation": "446:6:81",
                       "memberName": "amount",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 35158,
+                      "referencedDeclaration": 35663,
                       "src": "423:29:81",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -635,11 +635,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 35187,
+                      "id": 35692,
                       "name": "_amount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 35173,
+                      "referencedDeclaration": 35678,
                       "src": "455:7:81",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -652,13 +652,13 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 35189,
+                  "id": 35694,
                   "nodeType": "ExpressionStatement",
                   "src": "423:39:81"
                 },
                 {
                   "expression": {
-                    "id": 35196,
+                    "id": 35701,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -666,24 +666,24 @@
                     "leftHandSide": {
                       "expression": {
                         "baseExpression": {
-                          "id": 35190,
+                          "id": 35695,
                           "name": "investments",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 35166,
+                          "referencedDeclaration": 35671,
                           "src": "472:11:81",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Investment_$35161_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Investment_$35666_storage_$",
                             "typeString": "mapping(address => struct Staking.Investment storage ref)"
                           }
                         },
-                        "id": 35192,
+                        "id": 35697,
                         "indexExpression": {
-                          "id": 35191,
+                          "id": 35696,
                           "name": "_investor",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 35171,
+                          "referencedDeclaration": 35676,
                           "src": "484:9:81",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address_payable",
@@ -697,11 +697,11 @@
                         "nodeType": "IndexAccess",
                         "src": "472:22:81",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Investment_$35161_storage",
+                          "typeIdentifier": "t_struct$_Investment_$35666_storage",
                           "typeString": "struct Staking.Investment storage ref"
                         }
                       },
-                      "id": 35193,
+                      "id": 35698,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
@@ -709,7 +709,7 @@
                       "memberLocation": "495:10:81",
                       "memberName": "lastPayout",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 35160,
+                      "referencedDeclaration": 35665,
                       "src": "472:33:81",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -720,7 +720,7 @@
                     "operator": "=",
                     "rightHandSide": {
                       "expression": {
-                        "id": 35194,
+                        "id": 35699,
                         "name": "block",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -731,7 +731,7 @@
                           "typeString": "block"
                         }
                       },
-                      "id": 35195,
+                      "id": 35700,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -751,7 +751,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 35197,
+                  "id": 35702,
                   "nodeType": "ExpressionStatement",
                   "src": "472:51:81"
                 },
@@ -759,11 +759,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 35201,
+                        "id": 35706,
                         "name": "_investor",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 35171,
+                        "referencedDeclaration": 35676,
                         "src": "548:9:81",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
@@ -779,18 +779,18 @@
                         }
                       ],
                       "expression": {
-                        "id": 35198,
+                        "id": 35703,
                         "name": "investors",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 35169,
+                        "referencedDeclaration": 35674,
                         "src": "533:9:81",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_payable_$dyn_storage",
                           "typeString": "address payable[] storage ref"
                         }
                       },
-                      "id": 35200,
+                      "id": 35705,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -804,7 +804,7 @@
                         "typeString": "function (address payable[] storage pointer,address payable)"
                       }
                     },
-                    "id": 35202,
+                    "id": 35707,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -820,7 +820,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 35203,
+                  "id": 35708,
                   "nodeType": "ExpressionStatement",
                   "src": "533:25:81"
                 }
@@ -833,17 +833,17 @@
             "name": "invest",
             "nameLocation": "302:6:81",
             "parameters": {
-              "id": 35174,
+              "id": 35679,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 35171,
+                  "id": 35676,
                   "mutability": "mutable",
                   "name": "_investor",
                   "nameLocation": "325:9:81",
                   "nodeType": "VariableDeclaration",
-                  "scope": 35205,
+                  "scope": 35710,
                   "src": "309:25:81",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -852,7 +852,7 @@
                     "typeString": "address payable"
                   },
                   "typeName": {
-                    "id": 35170,
+                    "id": 35675,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "309:15:81",
@@ -866,12 +866,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 35173,
+                  "id": 35678,
                   "mutability": "mutable",
                   "name": "_amount",
                   "nameLocation": "344:7:81",
                   "nodeType": "VariableDeclaration",
-                  "scope": 35205,
+                  "scope": 35710,
                   "src": "336:15:81",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -880,7 +880,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 35172,
+                    "id": 35677,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "336:7:81",
@@ -895,23 +895,23 @@
               "src": "308:44:81"
             },
             "returnParameters": {
-              "id": 35175,
+              "id": 35680,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "360:0:81"
             },
-            "scope": 35293,
+            "scope": 35798,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 35219,
+            "id": 35724,
             "nodeType": "FunctionDefinition",
             "src": "571:130:81",
             "nodes": [],
             "body": {
-              "id": 35218,
+              "id": 35723,
               "nodeType": "Block",
               "src": "663:38:81",
               "nodes": [],
@@ -922,17 +922,17 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 35216,
+                    "id": 35721,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 35214,
+                      "id": 35719,
                       "name": "_amount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 35207,
+                      "referencedDeclaration": 35712,
                       "src": "680:7:81",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -943,7 +943,7 @@
                     "operator": "/",
                     "rightExpression": {
                       "hexValue": "31303030",
-                      "id": 35215,
+                      "id": 35720,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -963,8 +963,8 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 35213,
-                  "id": 35217,
+                  "functionReturnParameters": 35718,
+                  "id": 35722,
                   "nodeType": "Return",
                   "src": "673:21:81"
                 }
@@ -976,17 +976,17 @@
             "name": "calculatePayout",
             "nameLocation": "580:15:81",
             "parameters": {
-              "id": 35210,
+              "id": 35715,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 35207,
+                  "id": 35712,
                   "mutability": "mutable",
                   "name": "_amount",
                   "nameLocation": "604:7:81",
                   "nodeType": "VariableDeclaration",
-                  "scope": 35219,
+                  "scope": 35724,
                   "src": "596:15:81",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -995,7 +995,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 35206,
+                    "id": 35711,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "596:7:81",
@@ -1008,12 +1008,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 35209,
+                  "id": 35714,
                   "mutability": "mutable",
                   "name": "duration",
                   "nameLocation": "621:8:81",
                   "nodeType": "VariableDeclaration",
-                  "scope": 35219,
+                  "scope": 35724,
                   "src": "613:16:81",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1022,7 +1022,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 35208,
+                    "id": 35713,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "613:7:81",
@@ -1037,17 +1037,17 @@
               "src": "595:35:81"
             },
             "returnParameters": {
-              "id": 35213,
+              "id": 35718,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 35212,
+                  "id": 35717,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 35219,
+                  "scope": 35724,
                   "src": "654:7:81",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1056,7 +1056,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 35211,
+                    "id": 35716,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "654:7:81",
@@ -1070,18 +1070,18 @@
               ],
               "src": "653:9:81"
             },
-            "scope": 35293,
+            "scope": 35798,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 35233,
+            "id": 35738,
             "nodeType": "FunctionDefinition",
             "src": "707:119:81",
             "nodes": [],
             "body": {
-              "id": 35232,
+              "id": 35737,
               "nodeType": "Block",
               "src": "779:47:81",
               "nodes": [],
@@ -1091,11 +1091,11 @@
                     "expression": {
                       "arguments": [
                         {
-                          "id": 35228,
+                          "id": 35733,
                           "name": "_owner",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 35221,
+                          "referencedDeclaration": 35726,
                           "src": "804:6:81",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1110,7 +1110,7 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 35227,
+                        "id": 35732,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1122,14 +1122,14 @@
                           "typeString": "type(address)"
                         },
                         "typeName": {
-                          "id": 35226,
+                          "id": 35731,
                           "name": "address",
                           "nodeType": "ElementaryTypeName",
                           "src": "796:7:81",
                           "typeDescriptions": {}
                         }
                       },
-                      "id": 35229,
+                      "id": 35734,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1145,7 +1145,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 35230,
+                    "id": 35735,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1159,8 +1159,8 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 35225,
-                  "id": 35231,
+                  "functionReturnParameters": 35730,
+                  "id": 35736,
                   "nodeType": "Return",
                   "src": "789:30:81"
                 }
@@ -1173,17 +1173,17 @@
             "name": "getUserBalance",
             "nameLocation": "716:14:81",
             "parameters": {
-              "id": 35222,
+              "id": 35727,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 35221,
+                  "id": 35726,
                   "mutability": "mutable",
                   "name": "_owner",
                   "nameLocation": "739:6:81",
                   "nodeType": "VariableDeclaration",
-                  "scope": 35233,
+                  "scope": 35738,
                   "src": "731:14:81",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1192,7 +1192,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 35220,
+                    "id": 35725,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "731:7:81",
@@ -1208,17 +1208,17 @@
               "src": "730:16:81"
             },
             "returnParameters": {
-              "id": 35225,
+              "id": 35730,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 35224,
+                  "id": 35729,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 35233,
+                  "scope": 35738,
                   "src": "770:7:81",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1227,7 +1227,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 35223,
+                    "id": 35728,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "770:7:81",
@@ -1241,41 +1241,41 @@
               ],
               "src": "769:9:81"
             },
-            "scope": 35293,
+            "scope": 35798,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 35292,
+            "id": 35797,
             "nodeType": "FunctionDefinition",
             "src": "832:470:81",
             "nodes": [],
             "body": {
-              "id": 35291,
+              "id": 35796,
               "nodeType": "Block",
               "src": "857:445:81",
               "nodes": [],
               "statements": [
                 {
                   "body": {
-                    "id": 35289,
+                    "id": 35794,
                     "nodeType": "Block",
                     "src": "914:382:81",
                     "statements": [
                       {
                         "assignments": [
-                          35248
+                          35753
                         ],
                         "declarations": [
                           {
                             "constant": false,
-                            "id": 35248,
+                            "id": 35753,
                             "mutability": "mutable",
                             "name": "investor",
                             "nameLocation": "944:8:81",
                             "nodeType": "VariableDeclaration",
-                            "scope": 35289,
+                            "scope": 35794,
                             "src": "928:24:81",
                             "stateVariable": false,
                             "storageLocation": "default",
@@ -1284,7 +1284,7 @@
                               "typeString": "address payable"
                             },
                             "typeName": {
-                              "id": 35247,
+                              "id": 35752,
                               "name": "address",
                               "nodeType": "ElementaryTypeName",
                               "src": "928:15:81",
@@ -1297,27 +1297,27 @@
                             "visibility": "internal"
                           }
                         ],
-                        "id": 35252,
+                        "id": 35757,
                         "initialValue": {
                           "baseExpression": {
-                            "id": 35249,
+                            "id": 35754,
                             "name": "investors",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 35169,
+                            "referencedDeclaration": 35674,
                             "src": "955:9:81",
                             "typeDescriptions": {
                               "typeIdentifier": "t_array$_t_address_payable_$dyn_storage",
                               "typeString": "address payable[] storage ref"
                             }
                           },
-                          "id": 35251,
+                          "id": 35756,
                           "indexExpression": {
-                            "id": 35250,
+                            "id": 35755,
                             "name": "i",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 35237,
+                            "referencedDeclaration": 35742,
                             "src": "965:1:81",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1340,68 +1340,68 @@
                       },
                       {
                         "assignments": [
-                          35255
+                          35760
                         ],
                         "declarations": [
                           {
                             "constant": false,
-                            "id": 35255,
+                            "id": 35760,
                             "mutability": "mutable",
                             "name": "investment",
                             "nameLocation": "1000:10:81",
                             "nodeType": "VariableDeclaration",
-                            "scope": 35289,
+                            "scope": 35794,
                             "src": "981:29:81",
                             "stateVariable": false,
                             "storageLocation": "storage",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Investment_$35161_storage_ptr",
+                              "typeIdentifier": "t_struct$_Investment_$35666_storage_ptr",
                               "typeString": "struct Staking.Investment"
                             },
                             "typeName": {
-                              "id": 35254,
+                              "id": 35759,
                               "nodeType": "UserDefinedTypeName",
                               "pathNode": {
-                                "id": 35253,
+                                "id": 35758,
                                 "name": "Investment",
                                 "nameLocations": [
                                   "981:10:81"
                                 ],
                                 "nodeType": "IdentifierPath",
-                                "referencedDeclaration": 35161,
+                                "referencedDeclaration": 35666,
                                 "src": "981:10:81"
                               },
-                              "referencedDeclaration": 35161,
+                              "referencedDeclaration": 35666,
                               "src": "981:10:81",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Investment_$35161_storage_ptr",
+                                "typeIdentifier": "t_struct$_Investment_$35666_storage_ptr",
                                 "typeString": "struct Staking.Investment"
                               }
                             },
                             "visibility": "internal"
                           }
                         ],
-                        "id": 35259,
+                        "id": 35764,
                         "initialValue": {
                           "baseExpression": {
-                            "id": 35256,
+                            "id": 35761,
                             "name": "investments",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 35166,
+                            "referencedDeclaration": 35671,
                             "src": "1013:11:81",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Investment_$35161_storage_$",
+                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Investment_$35666_storage_$",
                               "typeString": "mapping(address => struct Staking.Investment storage ref)"
                             }
                           },
-                          "id": 35258,
+                          "id": 35763,
                           "indexExpression": {
-                            "id": 35257,
+                            "id": 35762,
                             "name": "investor",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 35248,
+                            "referencedDeclaration": 35753,
                             "src": "1025:8:81",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address_payable",
@@ -1415,7 +1415,7 @@
                           "nodeType": "IndexAccess",
                           "src": "1013:21:81",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Investment_$35161_storage",
+                            "typeIdentifier": "t_struct$_Investment_$35666_storage",
                             "typeString": "struct Staking.Investment storage ref"
                           }
                         },
@@ -1424,17 +1424,17 @@
                       },
                       {
                         "assignments": [
-                          35261
+                          35766
                         ],
                         "declarations": [
                           {
                             "constant": false,
-                            "id": 35261,
+                            "id": 35766,
                             "mutability": "mutable",
                             "name": "duration",
                             "nameLocation": "1056:8:81",
                             "nodeType": "VariableDeclaration",
-                            "scope": 35289,
+                            "scope": 35794,
                             "src": "1048:16:81",
                             "stateVariable": false,
                             "storageLocation": "default",
@@ -1443,7 +1443,7 @@
                               "typeString": "uint256"
                             },
                             "typeName": {
-                              "id": 35260,
+                              "id": 35765,
                               "name": "uint256",
                               "nodeType": "ElementaryTypeName",
                               "src": "1048:7:81",
@@ -1455,20 +1455,20 @@
                             "visibility": "internal"
                           }
                         ],
-                        "id": 35267,
+                        "id": 35772,
                         "initialValue": {
                           "commonType": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           },
-                          "id": 35266,
+                          "id": 35771,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftExpression": {
                             "expression": {
-                              "id": 35262,
+                              "id": 35767,
                               "name": "block",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
@@ -1479,7 +1479,7 @@
                                 "typeString": "block"
                               }
                             },
-                            "id": 35263,
+                            "id": 35768,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1497,18 +1497,18 @@
                           "operator": "-",
                           "rightExpression": {
                             "expression": {
-                              "id": 35264,
+                              "id": 35769,
                               "name": "investment",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 35255,
+                              "referencedDeclaration": 35760,
                               "src": "1085:10:81",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Investment_$35161_storage_ptr",
+                                "typeIdentifier": "t_struct$_Investment_$35666_storage_ptr",
                                 "typeString": "struct Staking.Investment storage pointer"
                               }
                             },
-                            "id": 35265,
+                            "id": 35770,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
@@ -1516,7 +1516,7 @@
                             "memberLocation": "1096:10:81",
                             "memberName": "lastPayout",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 35160,
+                            "referencedDeclaration": 35665,
                             "src": "1085:21:81",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1534,17 +1534,17 @@
                       },
                       {
                         "assignments": [
-                          35269
+                          35774
                         ],
                         "declarations": [
                           {
                             "constant": false,
-                            "id": 35269,
+                            "id": 35774,
                             "mutability": "mutable",
                             "name": "payoutAmount",
                             "nameLocation": "1128:12:81",
                             "nodeType": "VariableDeclaration",
-                            "scope": 35289,
+                            "scope": 35794,
                             "src": "1120:20:81",
                             "stateVariable": false,
                             "storageLocation": "default",
@@ -1553,7 +1553,7 @@
                               "typeString": "uint256"
                             },
                             "typeName": {
-                              "id": 35268,
+                              "id": 35773,
                               "name": "uint256",
                               "nodeType": "ElementaryTypeName",
                               "src": "1120:7:81",
@@ -1565,23 +1565,23 @@
                             "visibility": "internal"
                           }
                         ],
-                        "id": 35275,
+                        "id": 35780,
                         "initialValue": {
                           "arguments": [
                             {
                               "expression": {
-                                "id": 35271,
+                                "id": 35776,
                                 "name": "investment",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 35255,
+                                "referencedDeclaration": 35760,
                                 "src": "1159:10:81",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_Investment_$35161_storage_ptr",
+                                  "typeIdentifier": "t_struct$_Investment_$35666_storage_ptr",
                                   "typeString": "struct Staking.Investment storage pointer"
                                 }
                               },
-                              "id": 35272,
+                              "id": 35777,
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
@@ -1589,7 +1589,7 @@
                               "memberLocation": "1170:6:81",
                               "memberName": "amount",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 35158,
+                              "referencedDeclaration": 35663,
                               "src": "1159:17:81",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1597,11 +1597,11 @@
                               }
                             },
                             {
-                              "id": 35273,
+                              "id": 35778,
                               "name": "duration",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 35261,
+                              "referencedDeclaration": 35766,
                               "src": "1178:8:81",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1620,18 +1620,18 @@
                                 "typeString": "uint256"
                               }
                             ],
-                            "id": 35270,
+                            "id": 35775,
                             "name": "calculatePayout",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 35219,
+                            "referencedDeclaration": 35724,
                             "src": "1143:15:81",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
                               "typeString": "function (uint256,uint256) pure returns (uint256)"
                             }
                           },
-                          "id": 35274,
+                          "id": 35779,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1654,11 +1654,11 @@
                         "expression": {
                           "arguments": [
                             {
-                              "id": 35279,
+                              "id": 35784,
                               "name": "payoutAmount",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 35269,
+                              "referencedDeclaration": 35774,
                               "src": "1219:12:81",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1674,18 +1674,18 @@
                               }
                             ],
                             "expression": {
-                              "id": 35276,
+                              "id": 35781,
                               "name": "investor",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 35248,
+                              "referencedDeclaration": 35753,
                               "src": "1201:8:81",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address_payable",
                                 "typeString": "address payable"
                               }
                             },
-                            "id": 35278,
+                            "id": 35783,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1699,7 +1699,7 @@
                               "typeString": "function (uint256)"
                             }
                           },
-                          "id": 35280,
+                          "id": 35785,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1715,31 +1715,31 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 35281,
+                        "id": 35786,
                         "nodeType": "ExpressionStatement",
                         "src": "1201:31:81"
                       },
                       {
                         "expression": {
-                          "id": 35287,
+                          "id": 35792,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftHandSide": {
                             "expression": {
-                              "id": 35282,
+                              "id": 35787,
                               "name": "investment",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 35255,
+                              "referencedDeclaration": 35760,
                               "src": "1246:10:81",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Investment_$35161_storage_ptr",
+                                "typeIdentifier": "t_struct$_Investment_$35666_storage_ptr",
                                 "typeString": "struct Staking.Investment storage pointer"
                               }
                             },
-                            "id": 35284,
+                            "id": 35789,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
@@ -1747,7 +1747,7 @@
                             "memberLocation": "1257:10:81",
                             "memberName": "lastPayout",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 35160,
+                            "referencedDeclaration": 35665,
                             "src": "1246:21:81",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1758,7 +1758,7 @@
                           "operator": "=",
                           "rightHandSide": {
                             "expression": {
-                              "id": 35285,
+                              "id": 35790,
                               "name": "block",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
@@ -1769,7 +1769,7 @@
                                 "typeString": "block"
                               }
                             },
-                            "id": 35286,
+                            "id": 35791,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1789,7 +1789,7 @@
                             "typeString": "uint256"
                           }
                         },
-                        "id": 35288,
+                        "id": 35793,
                         "nodeType": "ExpressionStatement",
                         "src": "1246:39:81"
                       }
@@ -1800,17 +1800,17 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 35243,
+                    "id": 35748,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 35240,
+                      "id": 35745,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 35237,
+                      "referencedDeclaration": 35742,
                       "src": "887:1:81",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1821,18 +1821,18 @@
                     "operator": "<",
                     "rightExpression": {
                       "expression": {
-                        "id": 35241,
+                        "id": 35746,
                         "name": "investors",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 35169,
+                        "referencedDeclaration": 35674,
                         "src": "891:9:81",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_payable_$dyn_storage",
                           "typeString": "address payable[] storage ref"
                         }
                       },
-                      "id": 35242,
+                      "id": 35747,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1852,20 +1852,20 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 35290,
+                  "id": 35795,
                   "initializationExpression": {
                     "assignments": [
-                      35237
+                      35742
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 35237,
+                        "id": 35742,
                         "mutability": "mutable",
                         "name": "i",
                         "nameLocation": "880:1:81",
                         "nodeType": "VariableDeclaration",
-                        "scope": 35290,
+                        "scope": 35795,
                         "src": "872:9:81",
                         "stateVariable": false,
                         "storageLocation": "default",
@@ -1874,7 +1874,7 @@
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 35236,
+                          "id": 35741,
                           "name": "uint256",
                           "nodeType": "ElementaryTypeName",
                           "src": "872:7:81",
@@ -1886,10 +1886,10 @@
                         "visibility": "internal"
                       }
                     ],
-                    "id": 35239,
+                    "id": 35744,
                     "initialValue": {
                       "hexValue": "30",
-                      "id": 35238,
+                      "id": 35743,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1908,7 +1908,7 @@
                   },
                   "loopExpression": {
                     "expression": {
-                      "id": 35245,
+                      "id": 35750,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1918,11 +1918,11 @@
                       "prefix": false,
                       "src": "909:3:81",
                       "subExpression": {
-                        "id": 35244,
+                        "id": 35749,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 35237,
+                        "referencedDeclaration": 35742,
                         "src": "909:1:81",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1934,7 +1934,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 35246,
+                    "id": 35751,
                     "nodeType": "ExpressionStatement",
                     "src": "909:3:81"
                   },
@@ -1950,18 +1950,18 @@
             "name": "payout",
             "nameLocation": "841:6:81",
             "parameters": {
-              "id": 35234,
+              "id": 35739,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "847:2:81"
             },
             "returnParameters": {
-              "id": 35235,
+              "id": 35740,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "857:0:81"
             },
-            "scope": 35293,
+            "scope": 35798,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
@@ -1974,11 +1974,11 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          35293
+          35798
         ],
         "name": "Staking",
         "nameLocation": "66:7:81",
-        "scope": 35294,
+        "scope": 35799,
         "usedErrors": []
       }
     ],

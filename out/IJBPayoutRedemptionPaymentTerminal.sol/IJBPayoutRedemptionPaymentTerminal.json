@@ -3234,10 +3234,10 @@
     "id": 28135,
     "exportedSymbols": {
       "IERC165": [
-        29280
+        35439
       ],
       "IERC721": [
-        29268
+        35427
       ],
       "IJBAllowanceTerminal": [
         27036
@@ -7491,7 +7491,7 @@
           27036,
           28154,
           27801,
-          29280
+          35439
         ],
         "name": "IJBPayoutRedemptionPaymentTerminal",
         "nameLocation": "507:34:26",
