@@ -1,0 +1,2793 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "log",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "log_address",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256[]",
+          "name": "val",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "log_array",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "int256[]",
+          "name": "val",
+          "type": "int256[]"
+        }
+      ],
+      "name": "log_array",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address[]",
+          "name": "val",
+          "type": "address[]"
+        }
+      ],
+      "name": "log_array",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "name": "log_bytes",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "log_bytes32",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "name": "log_int",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "val",
+          "type": "address"
+        }
+      ],
+      "name": "log_named_address",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256[]",
+          "name": "val",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "log_named_array",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "int256[]",
+          "name": "val",
+          "type": "int256[]"
+        }
+      ],
+      "name": "log_named_array",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "address[]",
+          "name": "val",
+          "type": "address[]"
+        }
+      ],
+      "name": "log_named_array",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "val",
+          "type": "bytes"
+        }
+      ],
+      "name": "log_named_bytes",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "val",
+          "type": "bytes32"
+        }
+      ],
+      "name": "log_named_bytes32",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "int256",
+          "name": "val",
+          "type": "int256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "decimals",
+          "type": "uint256"
+        }
+      ],
+      "name": "log_named_decimal_int",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "val",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "decimals",
+          "type": "uint256"
+        }
+      ],
+      "name": "log_named_decimal_uint",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "int256",
+          "name": "val",
+          "type": "int256"
+        }
+      ],
+      "name": "log_named_int",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "val",
+          "type": "string"
+        }
+      ],
+      "name": "log_named_string",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "val",
+          "type": "uint256"
+        }
+      ],
+      "name": "log_named_uint",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "log_string",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "log_uint",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "name": "logs",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "IS_TEST",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "failed",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "setUp",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "testTest",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x60806040526000805460ff1916600117905534801561001d57600080fd5b5061097c8061002d6000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80630a9254e4146100515780633dd21e5c1461005b578063ba414fa614610063578063fa7626d41461007f575b600080fd5b61005961008c565b005b6100596104c0565b61006b61056a565b604051901515815260200160405180910390f35b60005461006b9060ff1681565b60405163261a000d60e21b815260206004820152601860248201527f68747470733a2f2f7270632e616e6b722e636f6d2f65746800000000000000006044820152737109709ecfa91a80626ff3989d68f67f5b1dd12d906398680034906064016020604051808303816000875af115801561010b573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061012f9190610730565b506040516360f9bb1160e01b815260206004820152605560248201527f2e2f6e6f64655f6d6f64756c65732f406a62782d70726f746f636f6c2f6a756960448201527f63652d636f6e7472616374732d76332f6465706c6f796d656e74732f6d61696e6064820152743732ba17a52121b7b73a3937b63632b9173539b7b760591b608482015261024390737109709ecfa91a80626ff3989d68f67f5b1dd12d906360f9bb119060a4015b600060405180830381865afa1580156101f6573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f1916820160405261021e91908101906107f7565b604051806040016040528060078152602001666164647265737360c81b815250610695565b601380546001600160a01b0319166001600160a01b03929092169190911790556040516360f9bb1160e01b815260206004820152605d60248201527f2e2f6e6f64655f6d6f64756c65732f406a62782d70726f746f636f6c2f6a756960448201527f63652d636f6e7472616374732d76332f6465706c6f796d656e74732f6d61696e60648201527f6e65742f4a424554485061796d656e745465726d696e616c2e6a736f6e000000608482015261031890737109709ecfa91a80626ff3989d68f67f5b1dd12d906360f9bb119060a4016101d9565b601680546001600160a01b0319166001600160a01b03928316179055601354604080516331070bc960e21b81529051919092169163c41c2f249160048083019260209291908290030181865afa158015610376573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061039a9190610860565b601480546001600160a01b0319166001600160a01b039283161790556013546040805163557e715560e01b81529051919092169163557e71559160048083019260209291908290030181865afa1580156103f8573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061041c9190610860565b601580546001600160a01b0319166001600160a01b03928316179055601354604080516322de550f60e21b815290519190921691638b79543c9160048083019260209291908290030181865afa15801561047a573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061049e9190610860565b601780546001600160a01b0319166001600160a01b0392909216919091179055565b601354604080516331070bc960e21b815290517f7ae74c527414ae135fd97047b12921a5ec3911b804197855d67e25c7b75ee6f3926001600160a01b03169163c41c2f249160048083019260209291908290030181865afa158015610529573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061054d9190610860565b6040516001600160a01b03909116815260200160405180910390a1565b60008054610100900460ff161561058a5750600054610100900460ff1690565b6000737109709ecfa91a80626ff3989d68f67f5b1dd12d3b156106905760408051737109709ecfa91a80626ff3989d68f67f5b1dd12d602082018190526519985a5b195960d21b82840152825180830384018152606083019093526000929091610618917f667f9d70ca411d70ead50d8d5c22070dafc36ad75f3dcf5e7237b22ade9aecc49160800161087d565b60408051601f1981840301815290829052610632916108ae565b6000604051808303816000865af19150503d806000811461066f576040519150601f19603f3d011682016040523d82523d6000602084013e610674565b606091505b509150508080602001905181019061068c91906108ca565b9150505b919050565b6040516385940ef160e01b8152600090737109709ecfa91a80626ff3989d68f67f5b1dd12d906385940ef1906106d19086908690600401610918565b600060405180830381865afa1580156106ee573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f1916820160405261071691908101906107f7565b8060200190518101906107299190610860565b9392505050565b60006020828403121561074257600080fd5b5051919050565b634e487b7160e01b600052604160045260246000fd5b60005b8381101561077a578181015183820152602001610762565b50506000910152565b600067ffffffffffffffff8084111561079e5761079e610749565b604051601f8501601f19908116603f011681019082821181831017156107c6576107c6610749565b816040528093508581528686860111156107df57600080fd5b6107ed86602083018761075f565b5050509392505050565b60006020828403121561080957600080fd5b815167ffffffffffffffff81111561082057600080fd5b8201601f8101841361083157600080fd5b61084084825160208401610783565b949350505050565b6001600160a01b038116811461085d57600080fd5b50565b60006020828403121561087257600080fd5b815161072981610848565b6001600160e01b03198316815281516000906108a081600485016020870161075f565b919091016004019392505050565b600082516108c081846020870161075f565b9190910192915050565b6000602082840312156108dc57600080fd5b8151801515811461072957600080fd5b6000815180845261090481602086016020860161075f565b601f01601f19169290920160200192915050565b60408152600061092b60408301856108ec565b828103602084015261093d81856108ec565b9594505050505056fea2646970667358221220f3768071e1082d1007393971a7057d57cce4b8b597876b03e16571f34a5d49b464736f6c63430008130033",
+    "sourceMap": "551:1222:86:-:0;;;1609:26:0;;;-1:-1:-1;;1609:26:0;1631:4;1609:26;;;551:1222:86;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80630a9254e4146100515780633dd21e5c1461005b578063ba414fa614610063578063fa7626d41461007f575b600080fd5b61005961008c565b005b6100596104c0565b61006b61056a565b604051901515815260200160405180910390f35b60005461006b9060ff1681565b60405163261a000d60e21b815260206004820152601860248201527f68747470733a2f2f7270632e616e6b722e636f6d2f65746800000000000000006044820152737109709ecfa91a80626ff3989d68f67f5b1dd12d906398680034906064016020604051808303816000875af115801561010b573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061012f9190610730565b506040516360f9bb1160e01b815260206004820152605560248201527f2e2f6e6f64655f6d6f64756c65732f406a62782d70726f746f636f6c2f6a756960448201527f63652d636f6e7472616374732d76332f6465706c6f796d656e74732f6d61696e6064820152743732ba17a52121b7b73a3937b63632b9173539b7b760591b608482015261024390737109709ecfa91a80626ff3989d68f67f5b1dd12d906360f9bb119060a4015b600060405180830381865afa1580156101f6573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f1916820160405261021e91908101906107f7565b604051806040016040528060078152602001666164647265737360c81b815250610695565b601380546001600160a01b0319166001600160a01b03929092169190911790556040516360f9bb1160e01b815260206004820152605d60248201527f2e2f6e6f64655f6d6f64756c65732f406a62782d70726f746f636f6c2f6a756960448201527f63652d636f6e7472616374732d76332f6465706c6f796d656e74732f6d61696e60648201527f6e65742f4a424554485061796d656e745465726d696e616c2e6a736f6e000000608482015261031890737109709ecfa91a80626ff3989d68f67f5b1dd12d906360f9bb119060a4016101d9565b601680546001600160a01b0319166001600160a01b03928316179055601354604080516331070bc960e21b81529051919092169163c41c2f249160048083019260209291908290030181865afa158015610376573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061039a9190610860565b601480546001600160a01b0319166001600160a01b039283161790556013546040805163557e715560e01b81529051919092169163557e71559160048083019260209291908290030181865afa1580156103f8573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061041c9190610860565b601580546001600160a01b0319166001600160a01b03928316179055601354604080516322de550f60e21b815290519190921691638b79543c9160048083019260209291908290030181865afa15801561047a573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061049e9190610860565b601780546001600160a01b0319166001600160a01b0392909216919091179055565b601354604080516331070bc960e21b815290517f7ae74c527414ae135fd97047b12921a5ec3911b804197855d67e25c7b75ee6f3926001600160a01b03169163c41c2f249160048083019260209291908290030181865afa158015610529573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061054d9190610860565b6040516001600160a01b03909116815260200160405180910390a1565b60008054610100900460ff161561058a5750600054610100900460ff1690565b6000737109709ecfa91a80626ff3989d68f67f5b1dd12d3b156106905760408051737109709ecfa91a80626ff3989d68f67f5b1dd12d602082018190526519985a5b195960d21b82840152825180830384018152606083019093526000929091610618917f667f9d70ca411d70ead50d8d5c22070dafc36ad75f3dcf5e7237b22ade9aecc49160800161087d565b60408051601f1981840301815290829052610632916108ae565b6000604051808303816000865af19150503d806000811461066f576040519150601f19603f3d011682016040523d82523d6000602084013e610674565b606091505b509150508080602001905181019061068c91906108ca565b9150505b919050565b6040516385940ef160e01b8152600090737109709ecfa91a80626ff3989d68f67f5b1dd12d906385940ef1906106d19086908690600401610918565b600060405180830381865afa1580156106ee573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f1916820160405261071691908101906107f7565b8060200190518101906107299190610860565b9392505050565b60006020828403121561074257600080fd5b5051919050565b634e487b7160e01b600052604160045260246000fd5b60005b8381101561077a578181015183820152602001610762565b50506000910152565b600067ffffffffffffffff8084111561079e5761079e610749565b604051601f8501601f19908116603f011681019082821181831017156107c6576107c6610749565b816040528093508581528686860111156107df57600080fd5b6107ed86602083018761075f565b5050509392505050565b60006020828403121561080957600080fd5b815167ffffffffffffffff81111561082057600080fd5b8201601f8101841361083157600080fd5b61084084825160208401610783565b949350505050565b6001600160a01b038116811461085d57600080fd5b50565b60006020828403121561087257600080fd5b815161072981610848565b6001600160e01b03198316815281516000906108a081600485016020870161075f565b919091016004019392505050565b600082516108c081846020870161075f565b9190910192915050565b6000602082840312156108dc57600080fd5b8151801515811461072957600080fd5b6000815180845261090481602086016020860161075f565b601f01601f19169290920160200192915050565b60408152600061092b60408301856108ec565b828103602084015261093d81856108ec565b9594505050505056fea2646970667358221220f3768071e1082d1007393971a7057d57cce4b8b597876b03e16571f34a5d49b464736f6c63430008130033",
+    "sourceMap": "551:1222:86:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;780:890;;;:::i;:::-;;1676:95;;;:::i;1865:600:0:-;;;:::i;:::-;;;179:14:87;;172:22;154:41;;142:2;127:18;1865:600:0;;;;;;;1609:26;;;;;;;;;780:890:86;814:47;;-1:-1:-1;;;814:47:86;;408:2:87;814:47:86;;;390:21:87;447:2;427:18;;;420:30;486:26;466:18;;;459:54;814:19:86;;;;530:18:87;;814:47:86;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;1044:100:86;;-1:-1:-1;;;1044:100:86;;950:2:87;1044:100:86;;;932:21:87;989:2;969:18;;;962:30;1028:34;1008:18;;;1001:62;1099:34;1079:18;;;1072:62;-1:-1:-1;;;1150:19:87;;;1143:52;1007:178:86;;1044:11;;;;1212:19:87;;1044:100:86;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;1044:100:86;;;;;;;;;;;;:::i;:::-;1007:178;;;;;;;;;;;;;-1:-1:-1;;;1007:178:86;;;:19;:178::i;:::-;965:12;:230;;-1:-1:-1;;;;;;965:230:86;-1:-1:-1;;;;;965:230:86;;;;;;;;;;1307:146;;-1:-1:-1;;;1307:146:86;;2915:2:87;1307:146:86;;;2897:21:87;2954:2;2934:18;;;2927:30;2993:34;2973:18;;;2966:62;3064:34;3044:18;;;3037:62;3136:31;3115:19;;;3108:60;1270:224:86;;1307:11;;;;3185:19:87;;1307:146:86;2713:497:87;1270:224:86;1206:13;:298;;-1:-1:-1;;;;;;1206:298:86;-1:-1:-1;;;;;1206:298:86;;;;;;1529:12;;:24;;;-1:-1:-1;;;1529:24:86;;;;:12;;;;;:22;;:24;;;;;;;;;;;;;;:12;:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1515:11;:38;;-1:-1:-1;;;;;;1515:38:86;-1:-1:-1;;;;;1515:38:86;;;;;;1585:12;;:32;;;-1:-1:-1;;;1585:32:86;;;;:12;;;;;:30;;:32;;;;;;;;;;;;;;:12;:32;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1563:19;:54;;-1:-1:-1;;;;;;1563:54:86;-1:-1:-1;;;;;1563:54:86;;;;;;1640:12;;:23;;;-1:-1:-1;;;1640:23:86;;;;:12;;;;;:21;;:23;;;;;;;;;;;;;;:12;:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1627:10;:36;;-1:-1:-1;;;;;;1627:36:86;-1:-1:-1;;;;;1627:36:86;;;;;;;;;;780:890::o;1676:95::-;1738:12;;:24;;;-1:-1:-1;;;1738:24:86;;;;1718:46;;-1:-1:-1;;;;;1738:12:86;;:22;;:24;;;;;;;;;;;;;;:12;:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1718:46;;-1:-1:-1;;;;;4412:32:87;;;4394:51;;4382:2;4367:18;1718:46:86;;;;;;;1676:95::o;1865:600:0:-;1899:4;1920:7;;;;;;;1916:542;;;-1:-1:-1;1951:7:0;;;;;;;;1865:600::o;1916:542::-;1991:17;3070:42;3058:55;3141:16;2031:382;;2251:43;;;1712:64;2251:43;;;4630:51:87;;;-1:-1:-1;;;4697:18:87;;;4690:34;2251:43:0;;;;;;;;;4603:18:87;;;2251:43:0;;;-1:-1:-1;;1712:64:0;;2139:178;;2189:34;;2139:178;;;:::i;:::-;;;;-1:-1:-1;;2139:178:0;;;;;;;;;;2099:237;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2072:264;;;2381:7;2370:27;;;;;;;;;;;;:::i;:::-;2355:42;;2053:360;2031:382;2434:12;1865:600;-1:-1:-1;1865:600:0:o;2556:164:7:-;2677:23;;-1:-1:-1;;;2677:23:7;;2639:7;;2677:12;;;;:23;;2690:4;;2696:3;;2677:23;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;2677:23:7;;;;;;;;;;;;:::i;:::-;2666:46;;;;;;;;;;;;:::i;:::-;2659:53;2556:164;-1:-1:-1;;;2556:164:7:o;559:184:87:-;629:6;682:2;670:9;661:7;657:23;653:32;650:52;;;698:1;695;688:12;650:52;-1:-1:-1;721:16:87;;559:184;-1:-1:-1;559:184:87:o;1242:127::-;1303:10;1298:3;1294:20;1291:1;1284:31;1334:4;1331:1;1324:15;1358:4;1355:1;1348:15;1374:250;1459:1;1469:113;1483:6;1480:1;1477:13;1469:113;;;1559:11;;;1553:18;1540:11;;;1533:39;1505:2;1498:10;1469:113;;;-1:-1:-1;;1616:1:87;1598:16;;1591:27;1374:250::o;1629:615::-;1705:5;1735:18;1776:2;1768:6;1765:14;1762:40;;;1782:18;;:::i;:::-;1857:2;1851:9;1825:2;1911:15;;-1:-1:-1;;1907:24:87;;;1933:2;1903:33;1899:42;1887:55;;;1957:18;;;1977:22;;;1954:46;1951:72;;;2003:18;;:::i;:::-;2043:10;2039:2;2032:22;2072:6;2063:15;;2102:6;2094;2087:22;2142:3;2133:6;2128:3;2124:16;2121:25;2118:45;;;2159:1;2156;2149:12;2118:45;2172:66;2231:6;2224:4;2216:6;2212:17;2207:3;2172:66;:::i;:::-;;;;1629:615;;;;;:::o;2249:459::-;2329:6;2382:2;2370:9;2361:7;2357:23;2353:32;2350:52;;;2398:1;2395;2388:12;2350:52;2431:9;2425:16;2464:18;2456:6;2453:30;2450:50;;;2496:1;2493;2486:12;2450:50;2519:22;;2572:4;2564:13;;2560:27;-1:-1:-1;2550:55:87;;2601:1;2598;2591:12;2550:55;2624:78;2694:7;2689:2;2683:9;2678:2;2674;2670:11;2624:78;:::i;:::-;2614:88;2249:459;-1:-1:-1;;;;2249:459:87:o;3215:145::-;-1:-1:-1;;;;;3304:31:87;;3294:42;;3284:70;;3350:1;3347;3340:12;3284:70;3215:145;:::o;3365:287::-;3457:6;3510:2;3498:9;3489:7;3485:23;3481:32;3478:52;;;3526:1;3523;3516:12;3478:52;3558:9;3552:16;3577:45;3616:5;3577:45;:::i;4735:384::-;-1:-1:-1;;;;;;4920:33:87;;4908:46;;4977:13;;4890:3;;4999:74;4977:13;5062:1;5053:11;;5046:4;5034:17;;4999:74;:::i;:::-;5093:16;;;;5111:1;5089:24;;4735:384;-1:-1:-1;;;4735:384:87:o;5124:287::-;5253:3;5291:6;5285:13;5307:66;5366:6;5361:3;5354:4;5346:6;5342:17;5307:66;:::i;:::-;5389:16;;;;;5124:287;-1:-1:-1;;5124:287:87:o;5416:277::-;5483:6;5536:2;5524:9;5515:7;5511:23;5507:32;5504:52;;;5552:1;5549;5542:12;5504:52;5584:9;5578:16;5637:5;5630:13;5623:21;5616:5;5613:32;5603:60;;5659:1;5656;5649:12;5698:271;5740:3;5778:5;5772:12;5805:6;5800:3;5793:19;5821:76;5890:6;5883:4;5878:3;5874:14;5867:4;5860:5;5856:16;5821:76;:::i;:::-;5951:2;5930:15;-1:-1:-1;;5926:29:87;5917:39;;;;5958:4;5913:50;;5698:271;-1:-1:-1;;5698:271:87:o;5974:383::-;6171:2;6160:9;6153:21;6134:4;6197:45;6238:2;6227:9;6223:18;6215:6;6197:45;:::i;:::-;6290:9;6282:6;6278:22;6273:2;6262:9;6258:18;6251:50;6318:33;6344:6;6336;6318:33;:::i;:::-;6310:41;5974:383;-1:-1:-1;;;;;5974:383:87:o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "IS_TEST()": "fa7626d4",
+    "failed()": "ba414fa6",
+    "setUp()": "0a9254e4",
+    "testTest()": "3dd21e5c"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"log\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"log_address\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"val\",\"type\":\"uint256[]\"}],\"name\":\"log_array\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"int256[]\",\"name\":\"val\",\"type\":\"int256[]\"}],\"name\":\"log_array\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address[]\",\"name\":\"val\",\"type\":\"address[]\"}],\"name\":\"log_array\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"log_bytes\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"log_bytes32\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"name\":\"log_int\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"val\",\"type\":\"address\"}],\"name\":\"log_named_address\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"val\",\"type\":\"uint256[]\"}],\"name\":\"log_named_array\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"int256[]\",\"name\":\"val\",\"type\":\"int256[]\"}],\"name\":\"log_named_array\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"address[]\",\"name\":\"val\",\"type\":\"address[]\"}],\"name\":\"log_named_array\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"val\",\"type\":\"bytes\"}],\"name\":\"log_named_bytes\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"val\",\"type\":\"bytes32\"}],\"name\":\"log_named_bytes32\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"val\",\"type\":\"int256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"decimals\",\"type\":\"uint256\"}],\"name\":\"log_named_decimal_int\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"val\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"decimals\",\"type\":\"uint256\"}],\"name\":\"log_named_decimal_uint\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"val\",\"type\":\"int256\"}],\"name\":\"log_named_int\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"val\",\"type\":\"string\"}],\"name\":\"log_named_string\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"val\",\"type\":\"uint256\"}],\"name\":\"log_named_uint\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"log_string\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"log_uint\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"logs\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"IS_TEST\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"failed\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"setUp\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"testTest\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/Fork.t.sol\":\"EmptyTest_Fork\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@jbx-protocol/=node_modules/@jbx-protocol/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@paulrberg/=node_modules/@paulrberg/\",\":ds-test/=lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":prb-math/=node_modules/prb-math/\"]},\"sources\":{\"lib/ds-test/src/test.sol\":{\"keccak256\":\"0xd4cc3f57e7af003954200ec4ee92e8f189885cba55ae9cf87e7a59985d8e963e\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://64df22826aa96e9c9eaebb698f5940ecafe95d72782b60b8f6fd68f6cd023bda\",\"dweb:/ipfs/QmSJGqC4GyyHdMUc2ViatN6wKZNBiaxRzntKH7JwM2UQ8R\"]},\"lib/forge-std/src/Base.sol\":{\"keccak256\":\"0x88b585aa59e3e902707a99ca0e59a85adbe623c138b6410e6c8b536de965089a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5e199ff9217b07e9f59f72cc4b85a301bb37ce9cda7aea8ed30369e60d747450\",\"dweb:/ipfs/QmSmsTeuzawFLCmyVCKntQYfnXvjRcLLrvtapeVJ73hUUg\"]},\"lib/forge-std/src/StdAssertions.sol\":{\"keccak256\":\"0x33e455816737368f5e6379b8d3d24704e9ad75129351b25ef662839d81644262\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6c94eabfa5bce4698279240a46b1167c063306267b355680921f6474dd8ec649\",\"dweb:/ipfs/QmVEFpsP2ccYUbyKHNRNELve8g7CFRYLLLJTSsQjMn2vfw\"]},\"lib/forge-std/src/StdChains.sol\":{\"keccak256\":\"0xcc3da026001a33a622acab639e9b517fb8695595a927e04e5905ae085890dd5e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d21956628088a2efee2ecc1b4ae1ce262dcc56c1d9f884fae9981d2333ede99b\",\"dweb:/ipfs/QmdschSxVDKX2w3QcqhTRa9XfAyAytDS9kkWY8DYyE6pbR\"]},\"lib/forge-std/src/StdCheats.sol\":{\"keccak256\":\"0x27c6de283cd8e16c3afc47e1219955b4de917faa90d08f2fdfa67acd34a64ab8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://948e3ded108e03a5bc4b5cfee639895cff96748f4fa769964326e387d3750495\",\"dweb:/ipfs/QmVPLEJQbKRbRWuBGtACkiWYkgd2cZvCqMyjbbGmawhLwg\"]},\"lib/forge-std/src/StdError.sol\":{\"keccak256\":\"0xce23c8ef835f3e9163487858105ebef195f9d42de5ae79e56417cfe66914c701\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e6c82a6bf10b9c9d92a0dbba09a88adab28ffe7c3a23bd83eb13ceff1358681b\",\"dweb:/ipfs/QmQR6HQ7QGGeH8TPXrFz9vSb7wvoCnwmuBJ4vGpCmLmPb6\"]},\"lib/forge-std/src/StdJson.sol\":{\"keccak256\":\"0xd0f8d1886007276d0af4a197670b711aac0d583b926a71f321debe4e92180514\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d2ba4a2cc2cab807e72e5a4229d08e234980a46e96c642ecf1dfafa5e0d199c3\",\"dweb:/ipfs/QmRwLCagD4gjkWr3XfL6JBLtV7K8rU3VFfrBnvT7pALDw1\"]},\"lib/forge-std/src/StdMath.sol\":{\"keccak256\":\"0x2937c68a288dbb54c9bb4209119817ea197ffbed21167c493f14dcbbc327c399\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a222d841d2d7e9bb92cf1fb0018a2b8f56d7829a7cab0dba8aa1ca6e7ef693a8\",\"dweb:/ipfs/QmUvKzRrjPthS5m4rKrs7zGq38xgjWRrQpKMLQJrHkAgX6\"]},\"lib/forge-std/src/StdStorage.sol\":{\"keccak256\":\"0x5a0b30c49be6f9380a2cee0f227b51a984f8b75f6e28e28560eee14d1f1bc681\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e2f1b6aa8fa11d044a8a1ed92dee3a8c1e82c8d955972fb16dcd9a829d4d5ddd\",\"dweb:/ipfs/QmPhgwgED3nZioET7kuK1xQfQrnuzKjtKyiH6YaCAiFHNd\"]},\"lib/forge-std/src/StdUtils.sol\":{\"keccak256\":\"0x6253d3be4a8c975a97fed6d4bbd3ef2bb436eb1b6002a0b42c07b4d99e931ed8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6ced003a77268ca44768af0954e177543c6652a5c13c213940dd1dc988e07c10\",\"dweb:/ipfs/QmbPUB2bZZEhZHFqVLn26FMz323DHWc2LjKbndf9Zh84rE\"]},\"lib/forge-std/src/Test.sol\":{\"keccak256\":\"0xf4af87a604a5189d491c3e4cead9edfe78e63c94bc006fe475340a4a51dd2917\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://981b97a727f38849ff7ffec4bf17964f6fc562134128b39914e85159e7295406\",\"dweb:/ipfs/QmUqLQtsDg5yEVD8szFV2D4RN61YGcBB2fDStxxnCe9ark\"]},\"lib/forge-std/src/Vm.sol\":{\"keccak256\":\"0x9f5b969304be23b7d48c5ff8184db6d272aed5f9f70ab98db7f1bccd92683146\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://967a1b5bf30ef0f6dcdbf779c520f6c505e1c99565139d9ca36f15e1b126feaa\",\"dweb:/ipfs/QmUCoVrXJK6roJBFSE51TtqBAWrd6py2pJShGHEisixnEU\"]},\"lib/forge-std/src/console.sol\":{\"keccak256\":\"0xbbdc11ec3a00e6b8c6c76e7f0ea46581239faee116324de4184dd0af011dd837\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://10581f46c044a7561d25d8ea203f4e89e13a807b40bf9d87520f69407447de42\",\"dweb:/ipfs/QmSFVUzcDB9QtNyjJ5fLzi3kqKhtEbDD7TZMgbzJ9wiC63\"]},\"lib/forge-std/src/console2.sol\":{\"keccak256\":\"0x3a9f913b929362c5ae23101a19d72df5f8dc4e357ff895e6d546c9e549117273\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5ac891596c301064567a367cccf41a89d4803612819c3bd9e830adeda330e4c0\",\"dweb:/ipfs/QmacNFCYH9fnhRoRSYBzApC7byhs5p9LoGCvBDBdzPmjqN\"]},\"lib/forge-std/src/interfaces/IMulticall3.sol\":{\"keccak256\":\"0x1313e079d13b9f3a47177eff1d226c41b0b51c0802c248d47d038eb65a084307\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2b51e2203055cda450dc04ce55644f209f67e208fc143a1f118cff66de010f20\",\"dweb:/ipfs/QmVtQjmG6YnHaDt81TvJM74TvzEh3SULR3HyzxVQFM59xZ\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/enums/JBBallotState.sol\":{\"keccak256\":\"0x891fcac63470398b3a11239da7feba6b07d640809fcefd2404303b823d7378f8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6e6adfceaf284b669a8c1cbcf2da7f18ab31a2d1066f9db8bc914349e7401de7\",\"dweb:/ipfs/QmXLHVRPPZdXUkgAHQbHUtEzAvCJk1P6rJ7wrwfTcfW6fw\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBAllowanceTerminal.sol\":{\"keccak256\":\"0x139d7628da9fc8510f53482d592cd4074d21c0cb6d72510ff2743076f3b17533\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9a24aae1fe774b6568e108ccc7b8805a4b0f2c02e3f5fb0d9fb8ff15d1670647\",\"dweb:/ipfs/QmcmZ3y3aUXWKdGXJ7kZvbYcs2x3RakUh2kLqFtnzU129S\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBController.sol\":{\"keccak256\":\"0xb1ee4b41f2a06f28f69c74cb729b8964f2e75f3c545a68f85bd9082b5575bc85\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://160aef4e645dde9524564b2bd302e7c766bdf1f67c4fa58516ed59d1dbb7c2a6\",\"dweb:/ipfs/QmaTpyWKi4itYaaxTKU6JUarJHRmxCMP65cp2NJ6ejJDZW\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBDirectory.sol\":{\"keccak256\":\"0x715321646db00514d1355ed43c40cd3f01e94959552fd07797b315d9c49cdb1d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c34c9e1c727ffc63dd42fb6e6ffb3116c8ba15d6a322a300f10f29478974768d\",\"dweb:/ipfs/QmYToaGrbMyyWAuyepYcDd8M6KcmosY8AWhT3uJmPM6Pvy\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBFeeGauge.sol\":{\"keccak256\":\"0x8e19959617191320fe1210760860e668a57319258c0c74fcfabac829ae0222c0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3dd8a4e26f3abc19f1b0580b02d894bd91d31f8d72d8ee1be529ecd6dc638723\",\"dweb:/ipfs/QmUxSM2ePxorxRNFxpxqDnRmGtQrwVMiezQsbxLCCkLL5x\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBFundingCycleBallot.sol\":{\"keccak256\":\"0x49553a56209237846bc400cf27f260824a6bd06fd8094a7eb5abb9de75779598\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://559372746f94f28b385bc336df263f583dca5377350645c0b28110b083bdb41a\",\"dweb:/ipfs/QmeQRYqPjXBQCtMKXSFtHVD2ewEPoUAPDxLh4oWTRSKbmx\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBFundingCycleStore.sol\":{\"keccak256\":\"0xaead823851433be0c2ddc8f8086813e6cd647de3a1bc0f7570a5d6b38c378b5a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7f11fd52ba9ef67b40811d8a2298ae8b69447d2565b3f1069cbb8f0f13bc65e7\",\"dweb:/ipfs/QmVbBzpTxZWar9xvj6x1vW91hJDv2iPVq7aG6waMxaHUPQ\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBMigratable.sol\":{\"keccak256\":\"0xc81053e4b4754fc510aa04fecd3ab1460f01e3e27761e7a8c94f631a978ae127\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4c57ab7d0c0e6d9be798055d68b6f253421458b3beb38d0a3596da104000ca9e\",\"dweb:/ipfs/QmXn1CaffHoP2s43vkUszihdNk1TdfAxejngfdk2VmBVFU\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBPayDelegate.sol\":{\"keccak256\":\"0xa797de18b69eceba117e1f0b3810cf3cc2d2791417d580a5bdc510d1b868ab26\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://36b214c091c62c54d22cbedb606c29919cb56f1c29acf9c397c948247a29dcc0\",\"dweb:/ipfs/QmSzxHs8xNFqNfxZb1igvPHk7vXA5vUsGQ6AMfJ8jx8Ktu\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBPaymentTerminal.sol\":{\"keccak256\":\"0xb7826f5ed609359ce322c09e83236c47ba385df1c3cad3607e56fd0a2e00eee2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cbb0de0e73f73a04fcfc8f08cab3588b6d608cf5268af737cff6a530f6062c95\",\"dweb:/ipfs/QmPGb8aEbZNHNnrCvuGH52RLvV3kjL3agxQiFrjHoLHaup\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBPayoutRedemptionPaymentTerminal.sol\":{\"keccak256\":\"0x5cd280eda38ee2d6e50604576e9260a788bf89b55dd7801a3ed1e8f876920450\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7e50be3e9084db6382c5e91ad8c987056f51843e7b47a1434c25c4ff5995fe7b\",\"dweb:/ipfs/QmehWK9i3jqfvFELs6cGr32HH5mpM72y15Xzs5kMH1JBqa\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBPayoutTerminal.sol\":{\"keccak256\":\"0xbb556a74e4f82e9d65c3d1c40120bc57487440844b7bcf8c66935748aeab2dbd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fd59266c7f11194505b5727e21f230ba1c035869af69c1115491a18986b6cfed\",\"dweb:/ipfs/QmUDjp4KcKy4AMSUxVzuQybxEHfuzFCjrfGFmC2ydThEU1\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBPriceFeed.sol\":{\"keccak256\":\"0x57c71282fec1b34b00cf991ffed2e36031c393e35bfa7ca5d723eb6572fb7122\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f51c97ac194d3120a2fb5428eeeff759b75b7cbc5708465afc914619016a7c9b\",\"dweb:/ipfs/QmemTqsGqoPqG97EsdRTMAbB6RfCz8CJxGYPNnDTV6LJ2t\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBPrices.sol\":{\"keccak256\":\"0x82a175b1f4b95b506c98406576cd59cbe04615e3df24f9cf3587b61b8ee323b1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5493e394cf47fca51a4091f1e6d285cc9e4ff9916e5bdfb8e174fe652a2b9833\",\"dweb:/ipfs/QmTXafZatcjYbNMpUYYk1AWNZLkRFK7VVdAYYudGf4z3HJ\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBProjects.sol\":{\"keccak256\":\"0x7cfc021d0bd7e73b1ba8f4845d7d35e3419d6a14d3d25ca3a8010e7f91062fe4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ff265e13e60da56b93104260ed69ab01153437ec2af9d453781f22ca295eaef9\",\"dweb:/ipfs/QmfGCSLX2Wy26ojf4U12udsdtjSSacbLcZGwCjTw7MjWF8\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBRedemptionDelegate.sol\":{\"keccak256\":\"0x172d2c0be65e72e54f71ae521907067f0fa30e8ca05c4f88826903208aa437e2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://266a32bd8feea10051a4e243e14692c62e99de7048cda2f541998b4cc64cbd51\",\"dweb:/ipfs/QmPfqsbSZdpQee4WbisK9ZnZRrXbUVvSpbfnrEKGfjzz9N\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBRedemptionTerminal.sol\":{\"keccak256\":\"0xe26a6a03468401b802ae5328b39a266f53b9331a1c077fcbf7719d10ba74ff44\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://dae771e2abe46134bb23e5eebc30ebebb09a0677a8827f89a51e84902176cfb8\",\"dweb:/ipfs/QmRqF3cdeB46PfYb6bGeFKQetjBJHaJHGV47kTbtMMsoEp\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBSingleTokenPaymentTerminal.sol\":{\"keccak256\":\"0xf6e78323caa9af7bbf024f44b2032a83fed0394e0b3a242a6346e73c85b2e46f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://63c9f3f0db323bd5492c76da3ae2bae7895e287a824729d125bfb650121d576c\",\"dweb:/ipfs/QmPWohiNJvv6JtH8yAtqomiwVheEvKXY4SfHjL98vd2mQY\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBSingleTokenPaymentTerminalStore.sol\":{\"keccak256\":\"0xd78929c9371fd7895b829ef5e4ad4b3786523c3580ac3f6f5f25d2b5941c0dd3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1b6afe1de26dec89d7f9b456586ae83e4f51e967ed65c44d809d33a298cd183c\",\"dweb:/ipfs/QmavNYeXKJQyuQQLQuCgAL9GWsKvhd6wKgivtZjhXePSaN\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBSplitAllocator.sol\":{\"keccak256\":\"0x5efb6f51fc161f42ff58989386ad99028e4039a0ba897d66f358c3dfcf686105\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://171df7cf5285170894d7d7d00ecb14271204b55d330fa65e1bf9ebfb21741c29\",\"dweb:/ipfs/QmXBmzjVVgGd1hZoStw2qoypJnqyWgYeMXMLyYS7f6Zonu\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBSplitsStore.sol\":{\"keccak256\":\"0x66dab3dd394e318b850401ca92c2963b906cc0ad5562fa5d4f6f850175d1c77a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://948dae4e7eddc75f32fe75b25f97a7bad0e7b335a8a5a8dfd81b532dd325dd27\",\"dweb:/ipfs/QmZY1s7r85NWVdqhmUE71Pkuo7CPk8SMgAwUrj8bLpTaWC\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBToken.sol\":{\"keccak256\":\"0xe8969210417736c85d71101bf1c0bd8ebbf9d1e62a93e758148bd5709a6c7097\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://214c67c2ebeabd1b412ac9b0b6de4c02765c8311a3dc258568a2aa7322d58fb7\",\"dweb:/ipfs/QmeEbk8YWRVtMpxWQGfYbMrgYc2qsPhQF5jpufK26RrCXY\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBTokenStore.sol\":{\"keccak256\":\"0x98459e3af050d41dfeffdc97f1c93330207ba450f8ff3613224b49a89eeca9c6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0e98bda797088b1bb2a756eaed911ab12b092ffdad5467e82650bfa9bf8dd046\",\"dweb:/ipfs/QmbuKq4xSC8LL62smwrHWCWKiWawEu8Ne2n7q8DhKHKvtD\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBTokenUriResolver.sol\":{\"keccak256\":\"0xd267fd8ca7c21c2c71794acdb9a98314c33a35fc559e0bf0897a6686d196d174\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://aa7053d4300ed1374f3f993e6e2163d0a05ee780e4e99eb007b55eabc93c724e\",\"dweb:/ipfs/QmYZAUn7VCwqpDWYZNCXLNYMRQpD334YgPRiGCfxQApzuT\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBDidPayData.sol\":{\"keccak256\":\"0xf3c664309b37790f16047ae97b0459889ae0242dfcde7fc8902c8d10c7f8e6b6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ea74b762604ffa0e45181d8ec31b130198546014f6360d15076af79952bc5874\",\"dweb:/ipfs/QmdukMbucvU75BpK4TsYKoqjpQ2Nhs9yjFVzcKGkG3SpSV\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBDidRedeemData.sol\":{\"keccak256\":\"0xe2c401f39723a7ce915b8bef328744c66daaf57460843964b941456c2258a412\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c3bddd802ff895aa54f047d2385c7c253f9e0cd5b23d4d84439c1590e7e66ccb\",\"dweb:/ipfs/QmXdSDWgEWMtJDqMhHrBCZnBM4qETXRPteB1wEGZBRxuUb\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBFee.sol\":{\"keccak256\":\"0xf4759ff41fe7f1db0fd1ccc7b2a326b239389fd8d69df9b9ed5e1d5926f6fe38\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://55796903c879372a459a0eddfa333bc903d6cedb66125787d13ef7eea5c53cc6\",\"dweb:/ipfs/QmZNsajvSxGc6859Jy2ZC6Dk6oy66Y9if9ETcpFa2xZkHP\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBFundAccessConstraints.sol\":{\"keccak256\":\"0x85ebaa57b788cbdedc7a3d0eec4892eda5d79db7c1a6103797f10d0d989775b2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1a911a9d1d0a6f0e475854838877d2d3ae606028381c2aef7fac192a33e3d329\",\"dweb:/ipfs/QmTih57fwyaXdjvXCrG9BbdayD6H2AHQrYkuL4v4rYhMyF\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBFundingCycle.sol\":{\"keccak256\":\"0xcdd3ac9b6fa67e62ada88d09b73bc35ade1cd77d43db712289266a788928b4c2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8ba0be407022bbeb0e9272884653209ee262b8a4e00ffbba1298c3b119feccba\",\"dweb:/ipfs/QmbtLQzSN3hut4jYVsYPiYDfRkDdGkZmTWBnV2wJKrdM3K\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBFundingCycleData.sol\":{\"keccak256\":\"0x2aa6368bf4dfc5797e8b02a978293de0c777fae2658de2c825a103587240f3b0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2d7a980ab9b67ad1569d4407b747903cab668a332214117f5ad44feb50af0a3a\",\"dweb:/ipfs/QmSuEzmrmDSihrTKYCk8miq7VQi7WD6jmQePkjDyzt7UpC\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBFundingCycleMetadata.sol\":{\"keccak256\":\"0x783604440cac8d176332eab28166f188ee5c230378c08cfc95fea4f7187dc77d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://81409f9675aabd5ece88efbf08d1acb5581c2aac5b6394824f575f5f2edb5788\",\"dweb:/ipfs/QmPWdUztAEssCEnuFFkj74kNFEfVUxbNFmD5GmVB2Qvj1h\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBGlobalFundingCycleMetadata.sol\":{\"keccak256\":\"0x05d85530305fec6d6eca54cdbc2cd9110cbda0146598032b0203aa4b622944ff\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ec56eff6784c7b60ebc3098037573d8ece138794a9a58ebe8412e75927e984cd\",\"dweb:/ipfs/QmdkEeE6JDyCiV3YBKf7h3FymEHCAHHAtBokUkJwFWVPSf\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBGroupedSplits.sol\":{\"keccak256\":\"0x80be1b220da4ac04851ea540ebb94c1ec2b0442ec5bd1e88fdf78a56becd8b5a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b73e5da7d38bfadd565c202aa1a5a6c08a51542699e8e3683b8888009bc62563\",\"dweb:/ipfs/QmUNTy4XVvfAMqP7wCjj84deTvCehkBL1diZoWkyMCVsPw\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBPayDelegateAllocation.sol\":{\"keccak256\":\"0xb4e558dc62231d89e9b48998012577d22c3e52b58e23401f22d9096827f6ea0c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b6617a7479709d2a68fbc6686c9087fd7339ffcbb4823010287eb2ad979f23dd\",\"dweb:/ipfs/QmVT66SXpY9h5sD8nJq7VALbfWdeHwUxAeBPymaHg1TMNM\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBProjectMetadata.sol\":{\"keccak256\":\"0x90ad7b1014c0a9f945fe7a2efde9d5de41e40574fa27969070b1d2ff52033ea0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1fafc65a9fd74605b7d6c6f0a92b3237a8e3efdd160affb8c117bad00dcf9494\",\"dweb:/ipfs/QmQkcVt11WLqrxHVrcDCF6dNxzg2kKHEghAgSbfLF6CHkt\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBRedemptionDelegateAllocation.sol\":{\"keccak256\":\"0x10c29d33dd0d875a0d4692a2b9a9355c2ebf433cc06a9a60253d4366b60d4d31\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://76614755cf61b78b3d3263ddcbf7c7146986374e4cdf5cc2abb67c523d957142\",\"dweb:/ipfs/QmVNGDmTCcfYxgbA83yURstmAU7vtAtjTh9zNFRwKMmTH1\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBSplit.sol\":{\"keccak256\":\"0xc80a16606da8abf76d0f73abc38aee041e24f29342c1939018f70c286e89f105\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d257df1f322904fdbf34a0d28880cc96a1ba3905d19488d83156a7d3476d820f\",\"dweb:/ipfs/QmP6WFuoK6ePEQ2zxRnpu1kWDdFSUTGaEV57eZ4gs9FqC8\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBSplitAllocationData.sol\":{\"keccak256\":\"0x39f5c41bd31d36774744698ac94484b6cab62d7038df2f29d947668959782e63\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cf81d025aa0f6f93bdcd0b863730f7c574de7c3c4a595ba88e342f46c4b724e4\",\"dweb:/ipfs/QmaQ1frbYciPVV1Qmsfmgts9fgbXKZLQ8jGf9XRikHSmci\"]},\"node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBTokenAmount.sol\":{\"keccak256\":\"0x4a778e779ba257ba5638c5469e07a4d21b55a3128d56db5a0fdfacb1f3301c51\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fdb8302e06c5b4e1e91d204ed735d8d5db5bb3648200c144d7c545678010a44d\",\"dweb:/ipfs/QmTpffbt3FShkk8LDjsonVGnecbbNMUL8QHYQM7AFcMa54\"]},\"node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56\",\"dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3\"]},\"node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"src/Empty.sol\":{\"keccak256\":\"0x8c564f430d6ef9b5369484e7a498b4d3a414e0ccefc702489473f405384e36ad\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a634476acf3d3e50e8170091c8874413e5060fcea9d87134f0d8c8855456deb\",\"dweb:/ipfs/QmeqKgsYZZV9f7TdFT1MAg2DBYyXukqPRY4R8KFC3dTrrq\"]},\"test/Fork.t.sol\":{\"keccak256\":\"0x18df97fc1be567541849bf09afae2c1144ab85f8631b7aeeefe3faa3fbbabe42\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b7eed44c27c18de41084c4a3a7f929e30edd46bdb9b67c67be28581674c298b4\",\"dweb:/ipfs/QmRnpqEPB6AJW7o4B72cczABR1nkzpbvism2wD1eMi36pR\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_address",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256[]",
+              "name": "val",
+              "type": "uint256[]",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_array",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "int256[]",
+              "name": "val",
+              "type": "int256[]",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_array",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address[]",
+              "name": "val",
+              "type": "address[]",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_array",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_bytes",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "",
+              "type": "bytes32",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_bytes32",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "int256",
+              "name": "",
+              "type": "int256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_int",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "val",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_address",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "val",
+              "type": "uint256[]",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_array",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "int256[]",
+              "name": "val",
+              "type": "int256[]",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_array",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "address[]",
+              "name": "val",
+              "type": "address[]",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_array",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "val",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_bytes",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes32",
+              "name": "val",
+              "type": "bytes32",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_bytes32",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "int256",
+              "name": "val",
+              "type": "int256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "decimals",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_decimal_int",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "val",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "decimals",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_decimal_uint",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "int256",
+              "name": "val",
+              "type": "int256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_int",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "string",
+              "name": "val",
+              "type": "string",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_string",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "key",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "val",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_named_uint",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_string",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "log_uint",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "logs",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "IS_TEST",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "failed",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setUp"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "testTest"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@jbx-protocol/=node_modules/@jbx-protocol/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@paulrberg/=node_modules/@paulrberg/",
+        ":ds-test/=lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/",
+        ":prb-math/=node_modules/prb-math/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "test/Fork.t.sol": "EmptyTest_Fork"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/ds-test/src/test.sol": {
+        "keccak256": "0xd4cc3f57e7af003954200ec4ee92e8f189885cba55ae9cf87e7a59985d8e963e",
+        "urls": [
+          "bzz-raw://64df22826aa96e9c9eaebb698f5940ecafe95d72782b60b8f6fd68f6cd023bda",
+          "dweb:/ipfs/QmSJGqC4GyyHdMUc2ViatN6wKZNBiaxRzntKH7JwM2UQ8R"
+        ],
+        "license": "GPL-3.0-or-later"
+      },
+      "lib/forge-std/src/Base.sol": {
+        "keccak256": "0x88b585aa59e3e902707a99ca0e59a85adbe623c138b6410e6c8b536de965089a",
+        "urls": [
+          "bzz-raw://5e199ff9217b07e9f59f72cc4b85a301bb37ce9cda7aea8ed30369e60d747450",
+          "dweb:/ipfs/QmSmsTeuzawFLCmyVCKntQYfnXvjRcLLrvtapeVJ73hUUg"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdAssertions.sol": {
+        "keccak256": "0x33e455816737368f5e6379b8d3d24704e9ad75129351b25ef662839d81644262",
+        "urls": [
+          "bzz-raw://6c94eabfa5bce4698279240a46b1167c063306267b355680921f6474dd8ec649",
+          "dweb:/ipfs/QmVEFpsP2ccYUbyKHNRNELve8g7CFRYLLLJTSsQjMn2vfw"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdChains.sol": {
+        "keccak256": "0xcc3da026001a33a622acab639e9b517fb8695595a927e04e5905ae085890dd5e",
+        "urls": [
+          "bzz-raw://d21956628088a2efee2ecc1b4ae1ce262dcc56c1d9f884fae9981d2333ede99b",
+          "dweb:/ipfs/QmdschSxVDKX2w3QcqhTRa9XfAyAytDS9kkWY8DYyE6pbR"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdCheats.sol": {
+        "keccak256": "0x27c6de283cd8e16c3afc47e1219955b4de917faa90d08f2fdfa67acd34a64ab8",
+        "urls": [
+          "bzz-raw://948e3ded108e03a5bc4b5cfee639895cff96748f4fa769964326e387d3750495",
+          "dweb:/ipfs/QmVPLEJQbKRbRWuBGtACkiWYkgd2cZvCqMyjbbGmawhLwg"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdError.sol": {
+        "keccak256": "0xce23c8ef835f3e9163487858105ebef195f9d42de5ae79e56417cfe66914c701",
+        "urls": [
+          "bzz-raw://e6c82a6bf10b9c9d92a0dbba09a88adab28ffe7c3a23bd83eb13ceff1358681b",
+          "dweb:/ipfs/QmQR6HQ7QGGeH8TPXrFz9vSb7wvoCnwmuBJ4vGpCmLmPb6"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdJson.sol": {
+        "keccak256": "0xd0f8d1886007276d0af4a197670b711aac0d583b926a71f321debe4e92180514",
+        "urls": [
+          "bzz-raw://d2ba4a2cc2cab807e72e5a4229d08e234980a46e96c642ecf1dfafa5e0d199c3",
+          "dweb:/ipfs/QmRwLCagD4gjkWr3XfL6JBLtV7K8rU3VFfrBnvT7pALDw1"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdMath.sol": {
+        "keccak256": "0x2937c68a288dbb54c9bb4209119817ea197ffbed21167c493f14dcbbc327c399",
+        "urls": [
+          "bzz-raw://a222d841d2d7e9bb92cf1fb0018a2b8f56d7829a7cab0dba8aa1ca6e7ef693a8",
+          "dweb:/ipfs/QmUvKzRrjPthS5m4rKrs7zGq38xgjWRrQpKMLQJrHkAgX6"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdStorage.sol": {
+        "keccak256": "0x5a0b30c49be6f9380a2cee0f227b51a984f8b75f6e28e28560eee14d1f1bc681",
+        "urls": [
+          "bzz-raw://e2f1b6aa8fa11d044a8a1ed92dee3a8c1e82c8d955972fb16dcd9a829d4d5ddd",
+          "dweb:/ipfs/QmPhgwgED3nZioET7kuK1xQfQrnuzKjtKyiH6YaCAiFHNd"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/StdUtils.sol": {
+        "keccak256": "0x6253d3be4a8c975a97fed6d4bbd3ef2bb436eb1b6002a0b42c07b4d99e931ed8",
+        "urls": [
+          "bzz-raw://6ced003a77268ca44768af0954e177543c6652a5c13c213940dd1dc988e07c10",
+          "dweb:/ipfs/QmbPUB2bZZEhZHFqVLn26FMz323DHWc2LjKbndf9Zh84rE"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/Test.sol": {
+        "keccak256": "0xf4af87a604a5189d491c3e4cead9edfe78e63c94bc006fe475340a4a51dd2917",
+        "urls": [
+          "bzz-raw://981b97a727f38849ff7ffec4bf17964f6fc562134128b39914e85159e7295406",
+          "dweb:/ipfs/QmUqLQtsDg5yEVD8szFV2D4RN61YGcBB2fDStxxnCe9ark"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/Vm.sol": {
+        "keccak256": "0x9f5b969304be23b7d48c5ff8184db6d272aed5f9f70ab98db7f1bccd92683146",
+        "urls": [
+          "bzz-raw://967a1b5bf30ef0f6dcdbf779c520f6c505e1c99565139d9ca36f15e1b126feaa",
+          "dweb:/ipfs/QmUCoVrXJK6roJBFSE51TtqBAWrd6py2pJShGHEisixnEU"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/console.sol": {
+        "keccak256": "0xbbdc11ec3a00e6b8c6c76e7f0ea46581239faee116324de4184dd0af011dd837",
+        "urls": [
+          "bzz-raw://10581f46c044a7561d25d8ea203f4e89e13a807b40bf9d87520f69407447de42",
+          "dweb:/ipfs/QmSFVUzcDB9QtNyjJ5fLzi3kqKhtEbDD7TZMgbzJ9wiC63"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/console2.sol": {
+        "keccak256": "0x3a9f913b929362c5ae23101a19d72df5f8dc4e357ff895e6d546c9e549117273",
+        "urls": [
+          "bzz-raw://5ac891596c301064567a367cccf41a89d4803612819c3bd9e830adeda330e4c0",
+          "dweb:/ipfs/QmacNFCYH9fnhRoRSYBzApC7byhs5p9LoGCvBDBdzPmjqN"
+        ],
+        "license": "MIT"
+      },
+      "lib/forge-std/src/interfaces/IMulticall3.sol": {
+        "keccak256": "0x1313e079d13b9f3a47177eff1d226c41b0b51c0802c248d47d038eb65a084307",
+        "urls": [
+          "bzz-raw://2b51e2203055cda450dc04ce55644f209f67e208fc143a1f118cff66de010f20",
+          "dweb:/ipfs/QmVtQjmG6YnHaDt81TvJM74TvzEh3SULR3HyzxVQFM59xZ"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/enums/JBBallotState.sol": {
+        "keccak256": "0x891fcac63470398b3a11239da7feba6b07d640809fcefd2404303b823d7378f8",
+        "urls": [
+          "bzz-raw://6e6adfceaf284b669a8c1cbcf2da7f18ab31a2d1066f9db8bc914349e7401de7",
+          "dweb:/ipfs/QmXLHVRPPZdXUkgAHQbHUtEzAvCJk1P6rJ7wrwfTcfW6fw"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBAllowanceTerminal.sol": {
+        "keccak256": "0x139d7628da9fc8510f53482d592cd4074d21c0cb6d72510ff2743076f3b17533",
+        "urls": [
+          "bzz-raw://9a24aae1fe774b6568e108ccc7b8805a4b0f2c02e3f5fb0d9fb8ff15d1670647",
+          "dweb:/ipfs/QmcmZ3y3aUXWKdGXJ7kZvbYcs2x3RakUh2kLqFtnzU129S"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBController.sol": {
+        "keccak256": "0xb1ee4b41f2a06f28f69c74cb729b8964f2e75f3c545a68f85bd9082b5575bc85",
+        "urls": [
+          "bzz-raw://160aef4e645dde9524564b2bd302e7c766bdf1f67c4fa58516ed59d1dbb7c2a6",
+          "dweb:/ipfs/QmaTpyWKi4itYaaxTKU6JUarJHRmxCMP65cp2NJ6ejJDZW"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBDirectory.sol": {
+        "keccak256": "0x715321646db00514d1355ed43c40cd3f01e94959552fd07797b315d9c49cdb1d",
+        "urls": [
+          "bzz-raw://c34c9e1c727ffc63dd42fb6e6ffb3116c8ba15d6a322a300f10f29478974768d",
+          "dweb:/ipfs/QmYToaGrbMyyWAuyepYcDd8M6KcmosY8AWhT3uJmPM6Pvy"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBFeeGauge.sol": {
+        "keccak256": "0x8e19959617191320fe1210760860e668a57319258c0c74fcfabac829ae0222c0",
+        "urls": [
+          "bzz-raw://3dd8a4e26f3abc19f1b0580b02d894bd91d31f8d72d8ee1be529ecd6dc638723",
+          "dweb:/ipfs/QmUxSM2ePxorxRNFxpxqDnRmGtQrwVMiezQsbxLCCkLL5x"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBFundingCycleBallot.sol": {
+        "keccak256": "0x49553a56209237846bc400cf27f260824a6bd06fd8094a7eb5abb9de75779598",
+        "urls": [
+          "bzz-raw://559372746f94f28b385bc336df263f583dca5377350645c0b28110b083bdb41a",
+          "dweb:/ipfs/QmeQRYqPjXBQCtMKXSFtHVD2ewEPoUAPDxLh4oWTRSKbmx"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBFundingCycleStore.sol": {
+        "keccak256": "0xaead823851433be0c2ddc8f8086813e6cd647de3a1bc0f7570a5d6b38c378b5a",
+        "urls": [
+          "bzz-raw://7f11fd52ba9ef67b40811d8a2298ae8b69447d2565b3f1069cbb8f0f13bc65e7",
+          "dweb:/ipfs/QmVbBzpTxZWar9xvj6x1vW91hJDv2iPVq7aG6waMxaHUPQ"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBMigratable.sol": {
+        "keccak256": "0xc81053e4b4754fc510aa04fecd3ab1460f01e3e27761e7a8c94f631a978ae127",
+        "urls": [
+          "bzz-raw://4c57ab7d0c0e6d9be798055d68b6f253421458b3beb38d0a3596da104000ca9e",
+          "dweb:/ipfs/QmXn1CaffHoP2s43vkUszihdNk1TdfAxejngfdk2VmBVFU"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBPayDelegate.sol": {
+        "keccak256": "0xa797de18b69eceba117e1f0b3810cf3cc2d2791417d580a5bdc510d1b868ab26",
+        "urls": [
+          "bzz-raw://36b214c091c62c54d22cbedb606c29919cb56f1c29acf9c397c948247a29dcc0",
+          "dweb:/ipfs/QmSzxHs8xNFqNfxZb1igvPHk7vXA5vUsGQ6AMfJ8jx8Ktu"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBPaymentTerminal.sol": {
+        "keccak256": "0xb7826f5ed609359ce322c09e83236c47ba385df1c3cad3607e56fd0a2e00eee2",
+        "urls": [
+          "bzz-raw://cbb0de0e73f73a04fcfc8f08cab3588b6d608cf5268af737cff6a530f6062c95",
+          "dweb:/ipfs/QmPGb8aEbZNHNnrCvuGH52RLvV3kjL3agxQiFrjHoLHaup"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBPayoutRedemptionPaymentTerminal.sol": {
+        "keccak256": "0x5cd280eda38ee2d6e50604576e9260a788bf89b55dd7801a3ed1e8f876920450",
+        "urls": [
+          "bzz-raw://7e50be3e9084db6382c5e91ad8c987056f51843e7b47a1434c25c4ff5995fe7b",
+          "dweb:/ipfs/QmehWK9i3jqfvFELs6cGr32HH5mpM72y15Xzs5kMH1JBqa"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBPayoutTerminal.sol": {
+        "keccak256": "0xbb556a74e4f82e9d65c3d1c40120bc57487440844b7bcf8c66935748aeab2dbd",
+        "urls": [
+          "bzz-raw://fd59266c7f11194505b5727e21f230ba1c035869af69c1115491a18986b6cfed",
+          "dweb:/ipfs/QmUDjp4KcKy4AMSUxVzuQybxEHfuzFCjrfGFmC2ydThEU1"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBPriceFeed.sol": {
+        "keccak256": "0x57c71282fec1b34b00cf991ffed2e36031c393e35bfa7ca5d723eb6572fb7122",
+        "urls": [
+          "bzz-raw://f51c97ac194d3120a2fb5428eeeff759b75b7cbc5708465afc914619016a7c9b",
+          "dweb:/ipfs/QmemTqsGqoPqG97EsdRTMAbB6RfCz8CJxGYPNnDTV6LJ2t"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBPrices.sol": {
+        "keccak256": "0x82a175b1f4b95b506c98406576cd59cbe04615e3df24f9cf3587b61b8ee323b1",
+        "urls": [
+          "bzz-raw://5493e394cf47fca51a4091f1e6d285cc9e4ff9916e5bdfb8e174fe652a2b9833",
+          "dweb:/ipfs/QmTXafZatcjYbNMpUYYk1AWNZLkRFK7VVdAYYudGf4z3HJ"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBProjects.sol": {
+        "keccak256": "0x7cfc021d0bd7e73b1ba8f4845d7d35e3419d6a14d3d25ca3a8010e7f91062fe4",
+        "urls": [
+          "bzz-raw://ff265e13e60da56b93104260ed69ab01153437ec2af9d453781f22ca295eaef9",
+          "dweb:/ipfs/QmfGCSLX2Wy26ojf4U12udsdtjSSacbLcZGwCjTw7MjWF8"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBRedemptionDelegate.sol": {
+        "keccak256": "0x172d2c0be65e72e54f71ae521907067f0fa30e8ca05c4f88826903208aa437e2",
+        "urls": [
+          "bzz-raw://266a32bd8feea10051a4e243e14692c62e99de7048cda2f541998b4cc64cbd51",
+          "dweb:/ipfs/QmPfqsbSZdpQee4WbisK9ZnZRrXbUVvSpbfnrEKGfjzz9N"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBRedemptionTerminal.sol": {
+        "keccak256": "0xe26a6a03468401b802ae5328b39a266f53b9331a1c077fcbf7719d10ba74ff44",
+        "urls": [
+          "bzz-raw://dae771e2abe46134bb23e5eebc30ebebb09a0677a8827f89a51e84902176cfb8",
+          "dweb:/ipfs/QmRqF3cdeB46PfYb6bGeFKQetjBJHaJHGV47kTbtMMsoEp"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBSingleTokenPaymentTerminal.sol": {
+        "keccak256": "0xf6e78323caa9af7bbf024f44b2032a83fed0394e0b3a242a6346e73c85b2e46f",
+        "urls": [
+          "bzz-raw://63c9f3f0db323bd5492c76da3ae2bae7895e287a824729d125bfb650121d576c",
+          "dweb:/ipfs/QmPWohiNJvv6JtH8yAtqomiwVheEvKXY4SfHjL98vd2mQY"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBSingleTokenPaymentTerminalStore.sol": {
+        "keccak256": "0xd78929c9371fd7895b829ef5e4ad4b3786523c3580ac3f6f5f25d2b5941c0dd3",
+        "urls": [
+          "bzz-raw://1b6afe1de26dec89d7f9b456586ae83e4f51e967ed65c44d809d33a298cd183c",
+          "dweb:/ipfs/QmavNYeXKJQyuQQLQuCgAL9GWsKvhd6wKgivtZjhXePSaN"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBSplitAllocator.sol": {
+        "keccak256": "0x5efb6f51fc161f42ff58989386ad99028e4039a0ba897d66f358c3dfcf686105",
+        "urls": [
+          "bzz-raw://171df7cf5285170894d7d7d00ecb14271204b55d330fa65e1bf9ebfb21741c29",
+          "dweb:/ipfs/QmXBmzjVVgGd1hZoStw2qoypJnqyWgYeMXMLyYS7f6Zonu"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBSplitsStore.sol": {
+        "keccak256": "0x66dab3dd394e318b850401ca92c2963b906cc0ad5562fa5d4f6f850175d1c77a",
+        "urls": [
+          "bzz-raw://948dae4e7eddc75f32fe75b25f97a7bad0e7b335a8a5a8dfd81b532dd325dd27",
+          "dweb:/ipfs/QmZY1s7r85NWVdqhmUE71Pkuo7CPk8SMgAwUrj8bLpTaWC"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBToken.sol": {
+        "keccak256": "0xe8969210417736c85d71101bf1c0bd8ebbf9d1e62a93e758148bd5709a6c7097",
+        "urls": [
+          "bzz-raw://214c67c2ebeabd1b412ac9b0b6de4c02765c8311a3dc258568a2aa7322d58fb7",
+          "dweb:/ipfs/QmeEbk8YWRVtMpxWQGfYbMrgYc2qsPhQF5jpufK26RrCXY"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBTokenStore.sol": {
+        "keccak256": "0x98459e3af050d41dfeffdc97f1c93330207ba450f8ff3613224b49a89eeca9c6",
+        "urls": [
+          "bzz-raw://0e98bda797088b1bb2a756eaed911ab12b092ffdad5467e82650bfa9bf8dd046",
+          "dweb:/ipfs/QmbuKq4xSC8LL62smwrHWCWKiWawEu8Ne2n7q8DhKHKvtD"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBTokenUriResolver.sol": {
+        "keccak256": "0xd267fd8ca7c21c2c71794acdb9a98314c33a35fc559e0bf0897a6686d196d174",
+        "urls": [
+          "bzz-raw://aa7053d4300ed1374f3f993e6e2163d0a05ee780e4e99eb007b55eabc93c724e",
+          "dweb:/ipfs/QmYZAUn7VCwqpDWYZNCXLNYMRQpD334YgPRiGCfxQApzuT"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBDidPayData.sol": {
+        "keccak256": "0xf3c664309b37790f16047ae97b0459889ae0242dfcde7fc8902c8d10c7f8e6b6",
+        "urls": [
+          "bzz-raw://ea74b762604ffa0e45181d8ec31b130198546014f6360d15076af79952bc5874",
+          "dweb:/ipfs/QmdukMbucvU75BpK4TsYKoqjpQ2Nhs9yjFVzcKGkG3SpSV"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBDidRedeemData.sol": {
+        "keccak256": "0xe2c401f39723a7ce915b8bef328744c66daaf57460843964b941456c2258a412",
+        "urls": [
+          "bzz-raw://c3bddd802ff895aa54f047d2385c7c253f9e0cd5b23d4d84439c1590e7e66ccb",
+          "dweb:/ipfs/QmXdSDWgEWMtJDqMhHrBCZnBM4qETXRPteB1wEGZBRxuUb"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBFee.sol": {
+        "keccak256": "0xf4759ff41fe7f1db0fd1ccc7b2a326b239389fd8d69df9b9ed5e1d5926f6fe38",
+        "urls": [
+          "bzz-raw://55796903c879372a459a0eddfa333bc903d6cedb66125787d13ef7eea5c53cc6",
+          "dweb:/ipfs/QmZNsajvSxGc6859Jy2ZC6Dk6oy66Y9if9ETcpFa2xZkHP"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBFundAccessConstraints.sol": {
+        "keccak256": "0x85ebaa57b788cbdedc7a3d0eec4892eda5d79db7c1a6103797f10d0d989775b2",
+        "urls": [
+          "bzz-raw://1a911a9d1d0a6f0e475854838877d2d3ae606028381c2aef7fac192a33e3d329",
+          "dweb:/ipfs/QmTih57fwyaXdjvXCrG9BbdayD6H2AHQrYkuL4v4rYhMyF"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBFundingCycle.sol": {
+        "keccak256": "0xcdd3ac9b6fa67e62ada88d09b73bc35ade1cd77d43db712289266a788928b4c2",
+        "urls": [
+          "bzz-raw://8ba0be407022bbeb0e9272884653209ee262b8a4e00ffbba1298c3b119feccba",
+          "dweb:/ipfs/QmbtLQzSN3hut4jYVsYPiYDfRkDdGkZmTWBnV2wJKrdM3K"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBFundingCycleData.sol": {
+        "keccak256": "0x2aa6368bf4dfc5797e8b02a978293de0c777fae2658de2c825a103587240f3b0",
+        "urls": [
+          "bzz-raw://2d7a980ab9b67ad1569d4407b747903cab668a332214117f5ad44feb50af0a3a",
+          "dweb:/ipfs/QmSuEzmrmDSihrTKYCk8miq7VQi7WD6jmQePkjDyzt7UpC"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBFundingCycleMetadata.sol": {
+        "keccak256": "0x783604440cac8d176332eab28166f188ee5c230378c08cfc95fea4f7187dc77d",
+        "urls": [
+          "bzz-raw://81409f9675aabd5ece88efbf08d1acb5581c2aac5b6394824f575f5f2edb5788",
+          "dweb:/ipfs/QmPWdUztAEssCEnuFFkj74kNFEfVUxbNFmD5GmVB2Qvj1h"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBGlobalFundingCycleMetadata.sol": {
+        "keccak256": "0x05d85530305fec6d6eca54cdbc2cd9110cbda0146598032b0203aa4b622944ff",
+        "urls": [
+          "bzz-raw://ec56eff6784c7b60ebc3098037573d8ece138794a9a58ebe8412e75927e984cd",
+          "dweb:/ipfs/QmdkEeE6JDyCiV3YBKf7h3FymEHCAHHAtBokUkJwFWVPSf"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBGroupedSplits.sol": {
+        "keccak256": "0x80be1b220da4ac04851ea540ebb94c1ec2b0442ec5bd1e88fdf78a56becd8b5a",
+        "urls": [
+          "bzz-raw://b73e5da7d38bfadd565c202aa1a5a6c08a51542699e8e3683b8888009bc62563",
+          "dweb:/ipfs/QmUNTy4XVvfAMqP7wCjj84deTvCehkBL1diZoWkyMCVsPw"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBPayDelegateAllocation.sol": {
+        "keccak256": "0xb4e558dc62231d89e9b48998012577d22c3e52b58e23401f22d9096827f6ea0c",
+        "urls": [
+          "bzz-raw://b6617a7479709d2a68fbc6686c9087fd7339ffcbb4823010287eb2ad979f23dd",
+          "dweb:/ipfs/QmVT66SXpY9h5sD8nJq7VALbfWdeHwUxAeBPymaHg1TMNM"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBProjectMetadata.sol": {
+        "keccak256": "0x90ad7b1014c0a9f945fe7a2efde9d5de41e40574fa27969070b1d2ff52033ea0",
+        "urls": [
+          "bzz-raw://1fafc65a9fd74605b7d6c6f0a92b3237a8e3efdd160affb8c117bad00dcf9494",
+          "dweb:/ipfs/QmQkcVt11WLqrxHVrcDCF6dNxzg2kKHEghAgSbfLF6CHkt"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBRedemptionDelegateAllocation.sol": {
+        "keccak256": "0x10c29d33dd0d875a0d4692a2b9a9355c2ebf433cc06a9a60253d4366b60d4d31",
+        "urls": [
+          "bzz-raw://76614755cf61b78b3d3263ddcbf7c7146986374e4cdf5cc2abb67c523d957142",
+          "dweb:/ipfs/QmVNGDmTCcfYxgbA83yURstmAU7vtAtjTh9zNFRwKMmTH1"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBSplit.sol": {
+        "keccak256": "0xc80a16606da8abf76d0f73abc38aee041e24f29342c1939018f70c286e89f105",
+        "urls": [
+          "bzz-raw://d257df1f322904fdbf34a0d28880cc96a1ba3905d19488d83156a7d3476d820f",
+          "dweb:/ipfs/QmP6WFuoK6ePEQ2zxRnpu1kWDdFSUTGaEV57eZ4gs9FqC8"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBSplitAllocationData.sol": {
+        "keccak256": "0x39f5c41bd31d36774744698ac94484b6cab62d7038df2f29d947668959782e63",
+        "urls": [
+          "bzz-raw://cf81d025aa0f6f93bdcd0b863730f7c574de7c3c4a595ba88e342f46c4b724e4",
+          "dweb:/ipfs/QmaQ1frbYciPVV1Qmsfmgts9fgbXKZLQ8jGf9XRikHSmci"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@jbx-protocol/juice-contracts-v3/contracts/structs/JBTokenAmount.sol": {
+        "keccak256": "0x4a778e779ba257ba5638c5469e07a4d21b55a3128d56db5a0fdfacb1f3301c51",
+        "urls": [
+          "bzz-raw://fdb8302e06c5b4e1e91d204ed735d8d5db5bb3648200c144d7c545678010a44d",
+          "dweb:/ipfs/QmTpffbt3FShkk8LDjsonVGnecbbNMUL8QHYQM7AFcMa54"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+        "keccak256": "0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68",
+        "urls": [
+          "bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56",
+          "dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      },
+      "src/Empty.sol": {
+        "keccak256": "0x8c564f430d6ef9b5369484e7a498b4d3a414e0ccefc702489473f405384e36ad",
+        "urls": [
+          "bzz-raw://5a634476acf3d3e50e8170091c8874413e5060fcea9d87134f0d8c8855456deb",
+          "dweb:/ipfs/QmeqKgsYZZV9f7TdFT1MAg2DBYyXukqPRY4R8KFC3dTrrq"
+        ],
+        "license": "MIT"
+      },
+      "test/Fork.t.sol": {
+        "keccak256": "0x18df97fc1be567541849bf09afae2c1144ab85f8631b7aeeefe3faa3fbbabe42",
+        "urls": [
+          "bzz-raw://b7eed44c27c18de41084c4a3a7f929e30edd46bdb9b67c67be28581674c298b4",
+          "dweb:/ipfs/QmRnpqEPB6AJW7o4B72cczABR1nkzpbvism2wD1eMi36pR"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "test/Fork.t.sol",
+    "id": 38511,
+    "exportedSymbols": {
+      "DSTest": [
+        1786
+      ],
+      "Empty": [
+        35152
+      ],
+      "EmptyTest_Fork": [
+        38510
+      ],
+      "IERC165": [
+        34934
+      ],
+      "IERC721": [
+        34922
+      ],
+      "IJBAllowanceTerminal": [
+        26531
+      ],
+      "IJBController": [
+        26931
+      ],
+      "IJBDirectory": [
+        27071
+      ],
+      "IJBFeeGauge": [
+        27081
+      ],
+      "IJBFundingCycleBallot": [
+        27105
+      ],
+      "IJBFundingCycleStore": [
+        27201
+      ],
+      "IJBMigratable": [
+        27211
+      ],
+      "IJBPayDelegate": [
+        27226
+      ],
+      "IJBPaymentTerminal": [
+        27296
+      ],
+      "IJBPayoutRedemptionPaymentTerminal": [
+        27629
+      ],
+      "IJBPayoutTerminal": [
+        27649
+      ],
+      "IJBPriceFeed": [
+        27659
+      ],
+      "IJBPrices": [
+        27703
+      ],
+      "IJBProjects": [
+        27782
+      ],
+      "IJBRedemptionDelegate": [
+        27797
+      ],
+      "IJBRedemptionTerminal": [
+        27821
+      ],
+      "IJBSingleTokenPaymentTerminal": [
+        27842
+      ],
+      "IJBSingleTokenPaymentTerminalStore": [
+        28048
+      ],
+      "IJBSplitAllocator": [
+        28063
+      ],
+      "IJBSplitsStore": [
+        28119
+      ],
+      "IJBToken": [
+        28195
+      ],
+      "IJBTokenStore": [
+        28391
+      ],
+      "IJBTokenUriResolver": [
+        28401
+      ],
+      "JBBallotState": [
+        26509
+      ],
+      "JBDidPayData": [
+        28427
+      ],
+      "JBDidRedeemData": [
+        28451
+      ],
+      "JBFee": [
+        28462
+      ],
+      "JBFundAccessConstraints": [
+        28479
+      ],
+      "JBFundingCycle": [
+        28502
+      ],
+      "JBFundingCycleData": [
+        28515
+      ],
+      "JBFundingCycleMetadata": [
+        28556
+      ],
+      "JBGlobalFundingCycleMetadata": [
+        28565
+      ],
+      "JBGroupedSplits": [
+        28575
+      ],
+      "JBPayDelegateAllocation": [
+        28584
+      ],
+      "JBProjectMetadata": [
+        28591
+      ],
+      "JBRedemptionDelegateAllocation": [
+        28600
+      ],
+      "JBSplit": [
+        28619
+      ],
+      "JBSplitAllocationData": [
+        28636
+      ],
+      "JBTokenAmount": [
+        28647
+      ],
+      "StdAssertions": [
+        3129
+      ],
+      "StdChains": [
+        3793
+      ],
+      "StdCheats": [
+        5754
+      ],
+      "StdStorage": [
+        6661
+      ],
+      "StdUtils": [
+        8848
+      ],
+      "Test": [
+        8890
+      ],
+      "TestBase": [
+        1846
+      ],
+      "Vm": [
+        10180
+      ],
+      "console": [
+        18244
+      ],
+      "console2": [
+        26340
+      ],
+      "stdError": [
+        5820
+      ],
+      "stdJson": [
+        6487
+      ],
+      "stdMath": [
+        6629
+      ],
+      "stdStorage": [
+        8094
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1742:86",
+    "nodes": [
+      {
+        "id": 38418,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:86",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 38419,
+        "nodeType": "ImportDirective",
+        "src": "58:28:86",
+        "nodes": [],
+        "absolutePath": "lib/forge-std/src/Test.sol",
+        "file": "forge-std/Test.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38511,
+        "sourceUnit": 8891,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 38420,
+        "nodeType": "ImportDirective",
+        "src": "87:81:86",
+        "nodes": [],
+        "absolutePath": "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBController.sol",
+        "file": "@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBController.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38511,
+        "sourceUnit": 26932,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 38421,
+        "nodeType": "ImportDirective",
+        "src": "169:80:86",
+        "nodes": [],
+        "absolutePath": "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBDirectory.sol",
+        "file": "@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBDirectory.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38511,
+        "sourceUnit": 27072,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 38422,
+        "nodeType": "ImportDirective",
+        "src": "250:88:86",
+        "nodes": [],
+        "absolutePath": "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBFundingCycleStore.sol",
+        "file": "@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBFundingCycleStore.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38511,
+        "sourceUnit": 27202,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 38423,
+        "nodeType": "ImportDirective",
+        "src": "339:102:86",
+        "nodes": [],
+        "absolutePath": "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBPayoutRedemptionPaymentTerminal.sol",
+        "file": "@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBPayoutRedemptionPaymentTerminal.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38511,
+        "sourceUnit": 27630,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 38424,
+        "nodeType": "ImportDirective",
+        "src": "442:79:86",
+        "nodes": [],
+        "absolutePath": "node_modules/@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBProjects.sol",
+        "file": "@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBProjects.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38511,
+        "sourceUnit": 27783,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 38425,
+        "nodeType": "ImportDirective",
+        "src": "523:26:86",
+        "nodes": [],
+        "absolutePath": "src/Empty.sol",
+        "file": "../src/Empty.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38511,
+        "sourceUnit": 35153,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 38510,
+        "nodeType": "ContractDefinition",
+        "src": "551:1222:86",
+        "nodes": [
+          {
+            "id": 38430,
+            "nodeType": "VariableDeclaration",
+            "src": "589:26:86",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "JBController",
+            "nameLocation": "603:12:86",
+            "scope": 38510,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IJBController_$26931",
+              "typeString": "contract IJBController"
+            },
+            "typeName": {
+              "id": 38429,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 38428,
+                "name": "IJBController",
+                "nameLocations": [
+                  "589:13:86"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 26931,
+                "src": "589:13:86"
+              },
+              "referencedDeclaration": 26931,
+              "src": "589:13:86",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IJBController_$26931",
+                "typeString": "contract IJBController"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 38433,
+            "nodeType": "VariableDeclaration",
+            "src": "621:24:86",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "JBDirectory",
+            "nameLocation": "634:11:86",
+            "scope": 38510,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IJBDirectory_$27071",
+              "typeString": "contract IJBDirectory"
+            },
+            "typeName": {
+              "id": 38432,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 38431,
+                "name": "IJBDirectory",
+                "nameLocations": [
+                  "621:12:86"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 27071,
+                "src": "621:12:86"
+              },
+              "referencedDeclaration": 27071,
+              "src": "621:12:86",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IJBDirectory_$27071",
+                "typeString": "contract IJBDirectory"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 38436,
+            "nodeType": "VariableDeclaration",
+            "src": "651:40:86",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "JBFundingCycleStore",
+            "nameLocation": "672:19:86",
+            "scope": 38510,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IJBFundingCycleStore_$27201",
+              "typeString": "contract IJBFundingCycleStore"
+            },
+            "typeName": {
+              "id": 38435,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 38434,
+                "name": "IJBFundingCycleStore",
+                "nameLocations": [
+                  "651:20:86"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 27201,
+                "src": "651:20:86"
+              },
+              "referencedDeclaration": 27201,
+              "src": "651:20:86",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IJBFundingCycleStore_$27201",
+                "typeString": "contract IJBFundingCycleStore"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 38439,
+            "nodeType": "VariableDeclaration",
+            "src": "697:48:86",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "JBEthTerminal",
+            "nameLocation": "732:13:86",
+            "scope": 38510,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IJBPayoutRedemptionPaymentTerminal_$27629",
+              "typeString": "contract IJBPayoutRedemptionPaymentTerminal"
+            },
+            "typeName": {
+              "id": 38438,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 38437,
+                "name": "IJBPayoutRedemptionPaymentTerminal",
+                "nameLocations": [
+                  "697:34:86"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 27629,
+                "src": "697:34:86"
+              },
+              "referencedDeclaration": 27629,
+              "src": "697:34:86",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IJBPayoutRedemptionPaymentTerminal_$27629",
+                "typeString": "contract IJBPayoutRedemptionPaymentTerminal"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 38442,
+            "nodeType": "VariableDeclaration",
+            "src": "751:22:86",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "JBProjects",
+            "nameLocation": "763:10:86",
+            "scope": 38510,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IJBProjects_$27782",
+              "typeString": "contract IJBProjects"
+            },
+            "typeName": {
+              "id": 38441,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 38440,
+                "name": "IJBProjects",
+                "nameLocations": [
+                  "751:11:86"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 27782,
+                "src": "751:11:86"
+              },
+              "referencedDeclaration": 27782,
+              "src": "751:11:86",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IJBProjects_$27782",
+                "typeString": "contract IJBProjects"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 38496,
+            "nodeType": "FunctionDefinition",
+            "src": "780:890:86",
+            "nodes": [],
+            "body": {
+              "id": 38495,
+              "nodeType": "Block",
+              "src": "804:866:86",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "hexValue": "68747470733a2f2f7270632e616e6b722e636f6d2f657468",
+                        "id": 38448,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "834:26:86",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_7948f13e9ed0a6ae0420714ce50b67c59d48274fc69b4e5dca9456dd4359cb74",
+                          "typeString": "literal_string \"https://rpc.ankr.com/eth\""
+                        },
+                        "value": "https://rpc.ankr.com/eth"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_7948f13e9ed0a6ae0420714ce50b67c59d48274fc69b4e5dca9456dd4359cb74",
+                          "typeString": "literal_string \"https://rpc.ankr.com/eth\""
+                        }
+                      ],
+                      "expression": {
+                        "id": 38445,
+                        "name": "vm",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "814:2:86",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Vm_$10180",
+                          "typeString": "contract Vm"
+                        }
+                      },
+                      "id": 38447,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "817:16:86",
+                      "memberName": "createSelectFork",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 10082,
+                      "src": "814:19:86",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_string_memory_ptr_$returns$_t_uint256_$",
+                        "typeString": "function (string memory) external returns (uint256)"
+                      }
+                    },
+                    "id": 38449,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "814:47:86",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 38450,
+                  "nodeType": "ExpressionStatement",
+                  "src": "814:47:86"
+                },
+                {
+                  "expression": {
+                    "id": 38462,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 38451,
+                      "name": "JBController",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38430,
+                      "src": "965:12:86",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IJBController_$26931",
+                        "typeString": "contract IJBController"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "arguments": [
+                            {
+                              "arguments": [
+                                {
+                                  "hexValue": "2e2f6e6f64655f6d6f64756c65732f406a62782d70726f746f636f6c2f6a756963652d636f6e7472616374732d76332f6465706c6f796d656e74732f6d61696e6e65742f4a42436f6e74726f6c6c65722e6a736f6e",
+                                  "id": 38457,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "string",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "1056:87:86",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_stringliteral_e9927dfbcdc9e04184aa5bcc79ab765c86416d4e7b42e1a04286695ce6758368",
+                                    "typeString": "literal_string \"./node_modules/@jbx-protocol/juice-contracts-v3/deployments/mainnet/JBController.json\""
+                                  },
+                                  "value": "./node_modules/@jbx-protocol/juice-contracts-v3/deployments/mainnet/JBController.json"
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_stringliteral_e9927dfbcdc9e04184aa5bcc79ab765c86416d4e7b42e1a04286695ce6758368",
+                                    "typeString": "literal_string \"./node_modules/@jbx-protocol/juice-contracts-v3/deployments/mainnet/JBController.json\""
+                                  }
+                                ],
+                                "expression": {
+                                  "id": 38455,
+                                  "name": "vm",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 1839,
+                                  "src": "1044:2:86",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_contract$_Vm_$10180",
+                                    "typeString": "contract Vm"
+                                  }
+                                },
+                                "id": 38456,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberLocation": "1047:8:86",
+                                "memberName": "readFile",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 9316,
+                                "src": "1044:11:86",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_external_view$_t_string_memory_ptr_$returns$_t_string_memory_ptr_$",
+                                  "typeString": "function (string memory) view external returns (string memory)"
+                                }
+                              },
+                              "id": 38458,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "nameLocations": [],
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1044:100:86",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            },
+                            {
+                              "hexValue": "61646472657373",
+                              "id": 38459,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "string",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1162:9:86",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_421683f821a0574472445355be6d2b769119e8515f8376a1d7878523dfdecf7b",
+                                "typeString": "literal_string \"address\""
+                              },
+                              "value": "address"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              },
+                              {
+                                "typeIdentifier": "t_stringliteral_421683f821a0574472445355be6d2b769119e8515f8376a1d7878523dfdecf7b",
+                                "typeString": "literal_string \"address\""
+                              }
+                            ],
+                            "expression": {
+                              "id": 38453,
+                              "name": "stdJson",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6487,
+                              "src": "1007:7:86",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_stdJson_$6487_$",
+                                "typeString": "type(library stdJson)"
+                              }
+                            },
+                            "id": 38454,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "1015:11:86",
+                            "memberName": "readAddress",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 6064,
+                            "src": "1007:19:86",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_pure$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$_t_address_$",
+                              "typeString": "function (string memory,string memory) pure returns (address)"
+                            }
+                          },
+                          "id": 38460,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1007:178:86",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 38452,
+                        "name": "IJBController",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26931,
+                        "src": "980:13:86",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IJBController_$26931_$",
+                          "typeString": "type(contract IJBController)"
+                        }
+                      },
+                      "id": 38461,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "980:215:86",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IJBController_$26931",
+                        "typeString": "contract IJBController"
+                      }
+                    },
+                    "src": "965:230:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IJBController_$26931",
+                      "typeString": "contract IJBController"
+                    }
+                  },
+                  "id": 38463,
+                  "nodeType": "ExpressionStatement",
+                  "src": "965:230:86"
+                },
+                {
+                  "expression": {
+                    "id": 38475,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 38464,
+                      "name": "JBEthTerminal",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38439,
+                      "src": "1206:13:86",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IJBPayoutRedemptionPaymentTerminal_$27629",
+                        "typeString": "contract IJBPayoutRedemptionPaymentTerminal"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "arguments": [
+                            {
+                              "arguments": [
+                                {
+                                  "hexValue": "2e2f6e6f64655f6d6f64756c65732f406a62782d70726f746f636f6c2f6a756963652d636f6e7472616374732d76332f6465706c6f796d656e74732f6d61696e6e65742f4a424554485061796d656e745465726d696e616c2e6a736f6e",
+                                  "id": 38470,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "string",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "1340:95:86",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_stringliteral_9d99342bf4ed58e635b9da9c8d8c95f4f3d10c34d182c890a40aa08a76ce760e",
+                                    "typeString": "literal_string \"./node_modules/@jbx-protocol/juice-contracts-v3/deployments/mainnet/JBETHPaymentTerminal.json\""
+                                  },
+                                  "value": "./node_modules/@jbx-protocol/juice-contracts-v3/deployments/mainnet/JBETHPaymentTerminal.json"
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_stringliteral_9d99342bf4ed58e635b9da9c8d8c95f4f3d10c34d182c890a40aa08a76ce760e",
+                                    "typeString": "literal_string \"./node_modules/@jbx-protocol/juice-contracts-v3/deployments/mainnet/JBETHPaymentTerminal.json\""
+                                  }
+                                ],
+                                "expression": {
+                                  "id": 38468,
+                                  "name": "vm",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 1839,
+                                  "src": "1307:2:86",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_contract$_Vm_$10180",
+                                    "typeString": "contract Vm"
+                                  }
+                                },
+                                "id": 38469,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberLocation": "1310:8:86",
+                                "memberName": "readFile",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 9316,
+                                "src": "1307:11:86",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_external_view$_t_string_memory_ptr_$returns$_t_string_memory_ptr_$",
+                                  "typeString": "function (string memory) view external returns (string memory)"
+                                }
+                              },
+                              "id": 38471,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "nameLocations": [],
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1307:146:86",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            },
+                            {
+                              "hexValue": "61646472657373",
+                              "id": 38472,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "string",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1471:9:86",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_421683f821a0574472445355be6d2b769119e8515f8376a1d7878523dfdecf7b",
+                                "typeString": "literal_string \"address\""
+                              },
+                              "value": "address"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              },
+                              {
+                                "typeIdentifier": "t_stringliteral_421683f821a0574472445355be6d2b769119e8515f8376a1d7878523dfdecf7b",
+                                "typeString": "literal_string \"address\""
+                              }
+                            ],
+                            "expression": {
+                              "id": 38466,
+                              "name": "stdJson",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6487,
+                              "src": "1270:7:86",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_stdJson_$6487_$",
+                                "typeString": "type(library stdJson)"
+                              }
+                            },
+                            "id": 38467,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "1278:11:86",
+                            "memberName": "readAddress",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 6064,
+                            "src": "1270:19:86",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_pure$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$_t_address_$",
+                              "typeString": "function (string memory,string memory) pure returns (address)"
+                            }
+                          },
+                          "id": 38473,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1270:224:86",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 38465,
+                        "name": "IJBPayoutRedemptionPaymentTerminal",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27629,
+                        "src": "1222:34:86",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IJBPayoutRedemptionPaymentTerminal_$27629_$",
+                          "typeString": "type(contract IJBPayoutRedemptionPaymentTerminal)"
+                        }
+                      },
+                      "id": 38474,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1222:282:86",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IJBPayoutRedemptionPaymentTerminal_$27629",
+                        "typeString": "contract IJBPayoutRedemptionPaymentTerminal"
+                      }
+                    },
+                    "src": "1206:298:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IJBPayoutRedemptionPaymentTerminal_$27629",
+                      "typeString": "contract IJBPayoutRedemptionPaymentTerminal"
+                    }
+                  },
+                  "id": 38476,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1206:298:86"
+                },
+                {
+                  "expression": {
+                    "id": 38481,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 38477,
+                      "name": "JBDirectory",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38433,
+                      "src": "1515:11:86",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IJBDirectory_$27071",
+                        "typeString": "contract IJBDirectory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "expression": {
+                          "id": 38478,
+                          "name": "JBController",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 38430,
+                          "src": "1529:12:86",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_IJBController_$26931",
+                            "typeString": "contract IJBController"
+                          }
+                        },
+                        "id": 38479,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1542:9:86",
+                        "memberName": "directory",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 26698,
+                        "src": "1529:22:86",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_view$__$returns$_t_contract$_IJBDirectory_$27071_$",
+                          "typeString": "function () view external returns (contract IJBDirectory)"
+                        }
+                      },
+                      "id": 38480,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1529:24:86",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IJBDirectory_$27071",
+                        "typeString": "contract IJBDirectory"
+                      }
+                    },
+                    "src": "1515:38:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IJBDirectory_$27071",
+                      "typeString": "contract IJBDirectory"
+                    }
+                  },
+                  "id": 38482,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1515:38:86"
+                },
+                {
+                  "expression": {
+                    "id": 38487,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 38483,
+                      "name": "JBFundingCycleStore",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38436,
+                      "src": "1563:19:86",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IJBFundingCycleStore_$27201",
+                        "typeString": "contract IJBFundingCycleStore"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "expression": {
+                          "id": 38484,
+                          "name": "JBController",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 38430,
+                          "src": "1585:12:86",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_IJBController_$26931",
+                            "typeString": "contract IJBController"
+                          }
+                        },
+                        "id": 38485,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1598:17:86",
+                        "memberName": "fundingCycleStore",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 26680,
+                        "src": "1585:30:86",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_view$__$returns$_t_contract$_IJBFundingCycleStore_$27201_$",
+                          "typeString": "function () view external returns (contract IJBFundingCycleStore)"
+                        }
+                      },
+                      "id": 38486,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1585:32:86",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IJBFundingCycleStore_$27201",
+                        "typeString": "contract IJBFundingCycleStore"
+                      }
+                    },
+                    "src": "1563:54:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IJBFundingCycleStore_$27201",
+                      "typeString": "contract IJBFundingCycleStore"
+                    }
+                  },
+                  "id": 38488,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1563:54:86"
+                },
+                {
+                  "expression": {
+                    "id": 38493,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 38489,
+                      "name": "JBProjects",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38442,
+                      "src": "1627:10:86",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IJBProjects_$27782",
+                        "typeString": "contract IJBProjects"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "expression": {
+                          "id": 38490,
+                          "name": "JBController",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 38430,
+                          "src": "1640:12:86",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_IJBController_$26931",
+                            "typeString": "contract IJBController"
+                          }
+                        },
+                        "id": 38491,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1653:8:86",
+                        "memberName": "projects",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 26674,
+                        "src": "1640:21:86",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_view$__$returns$_t_contract$_IJBProjects_$27782_$",
+                          "typeString": "function () view external returns (contract IJBProjects)"
+                        }
+                      },
+                      "id": 38492,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1640:23:86",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IJBProjects_$27782",
+                        "typeString": "contract IJBProjects"
+                      }
+                    },
+                    "src": "1627:36:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IJBProjects_$27782",
+                      "typeString": "contract IJBProjects"
+                    }
+                  },
+                  "id": 38494,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1627:36:86"
+                }
+              ]
+            },
+            "functionSelector": "0a9254e4",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setUp",
+            "nameLocation": "789:5:86",
+            "parameters": {
+              "id": 38443,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "794:2:86"
+            },
+            "returnParameters": {
+              "id": 38444,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "804:0:86"
+            },
+            "scope": 38510,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 38509,
+            "nodeType": "FunctionDefinition",
+            "src": "1676:95:86",
+            "nodes": [],
+            "body": {
+              "id": 38508,
+              "nodeType": "Block",
+              "src": "1703:68:86",
+              "nodes": [],
+              "statements": [
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "arguments": [],
+                            "expression": {
+                              "argumentTypes": [],
+                              "expression": {
+                                "id": 38502,
+                                "name": "JBController",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 38430,
+                                "src": "1738:12:86",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_contract$_IJBController_$26931",
+                                  "typeString": "contract IJBController"
+                                }
+                              },
+                              "id": 38503,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberLocation": "1751:9:86",
+                              "memberName": "directory",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 26698,
+                              "src": "1738:22:86",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_external_view$__$returns$_t_contract$_IJBDirectory_$27071_$",
+                                "typeString": "function () view external returns (contract IJBDirectory)"
+                              }
+                            },
+                            "id": 38504,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "1738:24:86",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IJBDirectory_$27071",
+                              "typeString": "contract IJBDirectory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_IJBDirectory_$27071",
+                              "typeString": "contract IJBDirectory"
+                            }
+                          ],
+                          "id": 38501,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "1730:7:86",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": {
+                            "id": 38500,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "1730:7:86",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 38505,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1730:33:86",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 38499,
+                      "name": "log_address",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 13,
+                      "src": "1718:11:86",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 38506,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1718:46:86",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 38507,
+                  "nodeType": "EmitStatement",
+                  "src": "1713:51:86"
+                }
+              ]
+            },
+            "functionSelector": "3dd21e5c",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testTest",
+            "nameLocation": "1685:8:86",
+            "parameters": {
+              "id": 38497,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1693:2:86"
+            },
+            "returnParameters": {
+              "id": 38498,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1703:0:86"
+            },
+            "scope": 38510,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 38426,
+              "name": "Test",
+              "nameLocations": [
+                "578:4:86"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 8890,
+              "src": "578:4:86"
+            },
+            "id": 38427,
+            "nodeType": "InheritanceSpecifier",
+            "src": "578:4:86"
+          }
+        ],
+        "canonicalName": "EmptyTest_Fork",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          38510,
+          8890,
+          1846,
+          1843,
+          8848,
+          5754,
+          5365,
+          3793,
+          3129,
+          1786
+        ],
+        "name": "EmptyTest_Fork",
+        "nameLocation": "560:14:86",
+        "scope": 38511,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 86
+}
