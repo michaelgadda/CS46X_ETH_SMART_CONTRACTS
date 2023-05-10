@@ -1,7 +1,6 @@
-# juice-contract-template
-Template used to code juicy solidity stuff - includes forge, libs, etc. 
-
-This template is a good starting point for building solidity extensions to the Juicebox Protocol. Forking this template may help you to avoid submodule related dependency issues down the road.
+# ALL OUR CONTRACTS ARE LOCATED IN /SRC
+ 
+This template is a good starting point for building solidity extensions to the Juicebox Protocol - includes forge, libs, etc. Forking this template may help you to avoid submodule related dependency issues down the road.
 
 Do not push straight on main, rather create a new branch and open a PR - your reviewer will love you for this.
 
