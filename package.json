@@ -4,6 +4,7 @@
   "dependencies": {
     "@jbx-protocol/juice-contracts-v3": "^3.1.1",
     "@openzeppelin/contracts": "^4.8.1",
+    "@openzeppelin/contracts-upgradeable": "^4.8.3",
     "@paulrberg/contracts": "^4.0.0"
   },
   "devDependencies": {

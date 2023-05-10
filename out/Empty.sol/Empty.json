@@ -1,0 +1,209 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "empty",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x6080604052348015600f57600080fd5b50606580601d6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063f2a75fe414602d575b600080fd5b00fea264697066735822122027fcaa9f7ff36c68d76bc68c22c7d70675d428d01e9b5d1e9ac50b06117155b764736f6c63430008130033",
+    "sourceMap": "58:73:80:-:0;;;79:16;;;;;;;;;;58:73;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063f2a75fe414602d575b600080fd5b00fea264697066735822122027fcaa9f7ff36c68d76bc68c22c7d70675d428d01e9b5d1e9ac50b06117155b764736f6c63430008130033",
+    "sourceMap": "58:73:80:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;101:28;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "empty()": "f2a75fe4"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"empty\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/Empty.sol\":\"Empty\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@jbx-protocol/=node_modules/@jbx-protocol/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@paulrberg/=node_modules/@paulrberg/\",\":ds-test/=lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":prb-math/=node_modules/prb-math/\"]},\"sources\":{\"src/Empty.sol\":{\"keccak256\":\"0x8c564f430d6ef9b5369484e7a498b4d3a414e0ccefc702489473f405384e36ad\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a634476acf3d3e50e8170091c8874413e5060fcea9d87134f0d8c8855456deb\",\"dweb:/ipfs/QmeqKgsYZZV9f7TdFT1MAg2DBYyXukqPRY4R8KFC3dTrrq\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "empty"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@jbx-protocol/=node_modules/@jbx-protocol/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@paulrberg/=node_modules/@paulrberg/",
+        ":ds-test/=lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/",
+        ":prb-math/=node_modules/prb-math/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/Empty.sol": "Empty"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/Empty.sol": {
+        "keccak256": "0x8c564f430d6ef9b5369484e7a498b4d3a414e0ccefc702489473f405384e36ad",
+        "urls": [
+          "bzz-raw://5a634476acf3d3e50e8170091c8874413e5060fcea9d87134f0d8c8855456deb",
+          "dweb:/ipfs/QmeqKgsYZZV9f7TdFT1MAg2DBYyXukqPRY4R8KFC3dTrrq"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/Empty.sol",
+    "id": 35153,
+    "exportedSymbols": {
+      "Empty": [
+        35152
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:100:80",
+    "nodes": [
+      {
+        "id": 35143,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:80",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 35152,
+        "nodeType": "ContractDefinition",
+        "src": "58:73:80",
+        "nodes": [
+          {
+            "id": 35147,
+            "nodeType": "FunctionDefinition",
+            "src": "79:16:80",
+            "nodes": [],
+            "body": {
+              "id": 35146,
+              "nodeType": "Block",
+              "src": "93:2:80",
+              "nodes": [],
+              "statements": []
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 35144,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "90:2:80"
+            },
+            "returnParameters": {
+              "id": 35145,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "93:0:80"
+            },
+            "scope": 35152,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 35151,
+            "nodeType": "FunctionDefinition",
+            "src": "101:28:80",
+            "nodes": [],
+            "body": {
+              "id": 35150,
+              "nodeType": "Block",
+              "src": "127:2:80",
+              "nodes": [],
+              "statements": []
+            },
+            "functionSelector": "f2a75fe4",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "empty",
+            "nameLocation": "110:5:80",
+            "parameters": {
+              "id": 35148,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "115:2:80"
+            },
+            "returnParameters": {
+              "id": 35149,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "127:0:80"
+            },
+            "scope": 35152,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Empty",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          35152
+        ],
+        "name": "Empty",
+        "nameLocation": "67:5:80",
+        "scope": 35153,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 80
+}
