@@ -1,55 +1,69 @@
 pragma solidity >=0.7.0 <0.9.0;
 
-contract Lending { 
-    struct individualInvestor {
-        address payable InvestorAddress;
-        attachedInfratructure attachedInf;
+contract Lending {
+    struct IndividualInvestor {
+        address payable investorAddress;
+        AttachedInfrastructure attachedInf;
         uint totalAmountInvested;
-        uint ownedEquityPerc; 
+        uint ownedEquityPerc;
     }
 
-    struct contractor {
+    struct Contractor {
         address payable contractorAddress;
-        attachedInfratructure attachedInf;
+        AttachedInfrastructure attachedInf;
     }
 
-    struct attachedInfratructure {
-        invdividualInvestor[]: investors, 
-        cotractor[] contractors, 
-        infrastructureId, 
-        uint: totalInvestmentPrincipleValue,
-        uint: totalRevenueGeneratedFromInf, 
-        uint: withdrawableFunds, 
-        uint: withdrawedFunds, 
-        uint: currentFunds, 
-        uint: totalTokensReleased
-
+    struct AttachedInfrastructure {
+        IndividualInvestor[] investors;
+        Contractor[] contractors;
+        uint infrastructureId;
+        uint totalInvestmentPrincipalValue;
+        uint totalRevenueGeneratedFromInf;
+        uint withdrawableFunds;
+        uint withdrawnFunds;
+        uint currentFunds;
+        uint totalTokensReleased;
     }
-    constructor()  {
-            owner = msg.sender;
-        }
 
+    address private owner;
+    AttachedInfrastructure private infrastructure;
 
-    function deposit(address walletAddress) payable public {}
+    constructor() {
+        owner = msg.sender;
+    }
 
-    function sellEquity(uint: percToSell) {}
+    function deposit() payable public {}
 
-    function buyEQuity(uint: percToBuy) {}
+    function sellEquity(uint percToSell) public {}
 
-    function checkEquityValue() public returns(uint) {}
+    function buyEquity(uint percToBuy) public {}
 
-    function withdrawFunds(uint amountToWithdraw) public() {}
-    
-    function getTotalREvenueGenerated() public {}
+    function checkEquityValue() public view returns (uint) {}
 
-    function getTotalInvestmentPrincipleValue() public {}
+    function withdrawFunds(uint amountToWithdraw) public {
+        require(amountToWithdraw <= infrastructure.withdrawableFunds, "Insufficient withdrawable funds");
+        require(amountToWithdraw <= address(this).balance, "Contract does not have enough balance");
+        
+        infrastructure.withdrawableFunds -= amountToWithdraw;
+        infrastructure.withdrawnFunds += amountToWithdraw;
+        infrastructure.currentFunds -= amountToWithdraw;
+        
+        msg.sender.transfer(amountToWithdraw);
+    }
 
-    function getAllInvestors() {}
+    function getTotalRevenueGenerated() public view returns (uint) {
+        return infrastructure.totalRevenueGeneratedFromInf;
+    }
 
-    function getAllContractors() {}
+    function getTotalInvestmentPrincipalValue() public view returns (uint) {
+        return infrastructure.totalInvestmentPrincipalValue;
+    }
 
+    function getAllInvestors() public view returns (IndividualInvestor[] memory) {
+        return infrastructure.investors;
+    }
 
-
-
-
+    function getAllContractors() public view returns (Contractor[] memory) {
+        return infrastructure.contractors;
+    }
 }
