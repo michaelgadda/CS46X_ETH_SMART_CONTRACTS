@@ -1,0 +1,16 @@
+{
+  "name": "cs46x_eth_smart_contracts-main",
+  "version": "1.0.0",
+  "description": "Run this in project folder",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "3": "^2.1.0",
+    "web": "^0.0.2"
+  }
+}
