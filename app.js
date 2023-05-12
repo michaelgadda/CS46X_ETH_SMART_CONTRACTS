@@ -708,19 +708,6 @@ async function lendLoan(loanId) {
         console.log('Error: Failed to lend loan.');
     }
 }
-const Web3 = require('web3');
-const provider = new Web3.providers.HttpProvider('https://mainnet.infura.io');
-//const web3 = new Web3(provider);
-const investmentsABI = require('./investmentsABI.json');
-const investmentsAddress = '?';
-const investmentsContract = new web3.eth.Contract(investmentsABI, investmentsAddress);
-investmentsContract.methods.getInvestorBalance('?').call()
-  .then((balance) => {
-    console.log(`Investor balance is ${balance}`);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
 
 
 init();
