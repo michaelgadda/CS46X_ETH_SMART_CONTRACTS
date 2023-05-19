@@ -805,6 +805,29 @@ async function remainingLoanBalance(loanId) {
     }
 }
 
+async function remainingInterestBalance(loanId) {
+    const accounts = await web3.eth.getAccounts();
+
+    // Reference the "remainingInterestBalance" function from smart contract
+    const remainingInterestBalance = contractInstance.methods.remainingInterestBalance(loanId);
+
+    // Call the "remainingInterestBalance" function
+    try {
+        const gasEstimate = await remainingInterestBalance.estimateGas({ from: accounts[0], value: web3.utils.toWei('100', 'ether') });
+        const receipt = await remainingInterestBalance.send({ from: accounts[0], gas: gasEstimate, value: web3.utils.toWei('100', 'ether') });
+        console.log('Transaction receipt:', receipt);
+
+        // Check if the event is present in the transaction receipt
+        if (receipt.events.Lended) {
+            console.log('Remaining interest balance located:', receipt.events.receipt.returnValues);
+        } else {
+            console.log('Error: Event not found in the transaction receipt.');
+        }
+    } catch (error) {
+        console.error(error);
+        console.log('Error: Failed to find the remaining interest balance.');
+    }
+}
 
 
 init();
