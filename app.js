@@ -712,10 +712,10 @@ async function lendLoan(loanId) {
 async function repayInstallment(loanId) {
     const accounts = await web3.eth.getAccounts();
 
-    // Reference the "lendLoan" function from smart contract
-    const lendLoanFunction = contractInstance.methods.lendLoan(loanId);
+    // Reference the "repayInstallment" function from smart contract
+    const repayInstallment = contractInstance.methods.repayInstallment(loanId);
 
-    // Call the "lendLoan" function
+    // Call the "repayInstallment" function
     try {
         const gasEstimate = await repayInstallment.estimateGas({ from: accounts[0], value: web3.utils.toWei('100', 'ether') });
         const receipt = await repayInstallment.send({ from: accounts[0], gas: gasEstimate, value: web3.utils.toWei('100', 'ether') });
@@ -723,7 +723,7 @@ async function repayInstallment(loanId) {
 
         // Check if the event is present in the transaction receipt
         if (receipt.events.Lended) {
-            console.log('installment repaid:', receipt.events.Lended.returnValues);
+            console.log('Installment repaid:', receipt.events.Lended.returnValues);
         } else {
             console.log('Error: Event not found in the transaction receipt.');
         }
@@ -736,28 +736,50 @@ async function repayInstallment(loanId) {
 async function repayInterest(loanId) {
     const accounts = await web3.eth.getAccounts();
 
-    // Reference the "lendLoan" function from smart contract
-    const lendLoanFunction = contractInstance.methods.repay(loanId);
+    // Reference the "repayInterest" function from smart contract
+    const repayInterest = contractInstance.methods.repayInterest(loanId);
 
-    // Call the "lendLoan" function
+    // Call the "repayInterest" function
     try {
-        const gasEstimate = await repayInstallment.estimateGas({ from: accounts[0], value: web3.utils.toWei('100', 'ether') });
-        const receipt = await repayInstallment.send({ from: accounts[0], gas: gasEstimate, value: web3.utils.toWei('100', 'ether') });
+        const gasEstimate = await repayInterest.estimateGas({ from: accounts[0], value: web3.utils.toWei('100', 'ether') });
+        const receipt = await repayInterest.send({ from: accounts[0], gas: gasEstimate, value: web3.utils.toWei('100', 'ether') });
         console.log('Transaction receipt:', receipt);
 
         // Check if the event is present in the transaction receipt
         if (receipt.events.Lended) {
-            console.log('installment repaid:', receipt.events.Lended.returnValues);
+            console.log('Intrest repaid:', receipt.events.receipt.returnValues);
         } else {
             console.log('Error: Event not found in the transaction receipt.');
         }
     } catch (error) {
         console.error(error);
-        console.log('Error: Failed to repay installment.');
+        console.log('Error: Failed to repay intrest.');
     }
 }
 
+async function balanceOf() {
+    const accounts = await web3.eth.getAccounts();
 
+    // Reference the "balanceOf" function from smart contract
+    const balanceOf = contractInstance.methods.balanceOf(loanId);
+
+    // Call the "balanceOf" function
+    try {
+        const gasEstimate = await balanceOf.estimateGas({ from: accounts[0], value: web3.utils.toWei('100', 'ether') });
+        const receipt = await balanceOf.send({ from: accounts[0], gas: gasEstimate, value: web3.utils.toWei('100', 'ether') });
+        console.log('Transaction receipt:', receipt);
+
+        // Check if the event is present in the transaction receipt
+        if (receipt.events.Lended) {
+            console.log('balance located:', receipt.events.receipt.returnValues);
+        } else {
+            console.log('Error: Event not found in the transaction receipt.');
+        }
+    } catch (error) {
+        console.error(error);
+        console.log('Error: Failed to find the balance.');
+    }
+}
 
 
 
