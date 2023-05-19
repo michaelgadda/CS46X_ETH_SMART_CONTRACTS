@@ -1,0 +1,23 @@
+{
+  "name": "cs46x_eth_smart_contracts",
+  "version": "1.0.0",
+  "description": "Run this in project folder",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piedude1717/CS46X_ETH_SMART_CONTRACTS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piedude1717/CS46X_ETH_SMART_CONTRACTS/issues"
+  },
+  "homepage": "https://github.com/piedude1717/CS46X_ETH_SMART_CONTRACTS#readme",
+  "dependencies": {
+    "web3": "^1.10.0"
+  }
+}

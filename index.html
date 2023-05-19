@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain-based Smart Contracts for Infrastructure Funding</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul class="navlist">
+          <li class="navitem"><a href="informationpage.html">Information Page</a></li>
+        </ul>
+      </nav>
+
+
+    <div id="header"></div>
+
+
+    <button id="getAddressButton">Get Smart Contract Address</button>
+    <div id="scAddress"></div>
+
+    const web3 = new Web3('https://mainnet.infura.io/v3/your-project-id'); // Replace with your Infura project ID or local node URL
+
+    const contractAddress = '0x123456789abcdef123456789abcdef123456789'; // Replace with your contract address
+    const contractABI = [/* Replace with your contract ABI */];
+
+    const contract = new web3.eth.Contract(contractABI, contractAddress);
+
+
+    <h2>Create Loan</h2>
+    <form>
+        <label for="lendeeAddress">Lendee Address:</label>
+        <input type="text" id="lendeeAddress" name="lendeeAddress">
+
+        <label for="loanAmount">Loan Amount (ETH):</label>
+        <input type="number" id="loanAmount" name="loanAmount">
+
+        <label for="interestRate">Interest Rate (%):</label>
+        <input type="number" id="interestRate" name="interestRate">
+
+        <label for="loanPeriod">Loan Period (seconds):</label>
+        <input type="number" id="loanPeriod" name="loanPeriod">
+
+        <label for="loanInstallmentPeriod">Loan Installment Period (installments):</label>
+        <input type="number" id="loanInstallmentPeriod" name="loanInstallmentPeriod">
+
+        <button type="button" id="createLoanButton">Create Loan</button>
+        <lenders class="sol"></lenders>
+        <app class="js"></app>
+    </form>
+    
+    <h2>Get My Active Loans</h2>
+    <button id="getMyActiveLoansButton">Get My Active Loans</button>
+    <div id="myActiveLoans"></div>
+
+
+
+    <div class="loan-form-container">
+    <h3>Lend Loan</h3>
+    <form>
+        <div class="form-group">
+            <label for="loanId">Loan ID:</label>
+            <input type="text" id="loanId" />
+            <button id="lendLoanButton">Lend Loan</button>
+        </div>
+    </form>
+    <p id="lendLoanResult"></p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.3/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.3/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
