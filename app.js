@@ -876,4 +876,52 @@ async function remainingTimeForLoan(loanId) {
         console.log('Error: Failed to find the remaining time for loan.');
     }
 }
+
+async function checkPaidBalance(loanId) {
+    const accounts = await web3.eth.getAccounts();
+
+    // Reference the "checkPaidBalance" function from smart contract
+    const checkPaidBalance = checkPaidBalance.methods.checkPaidBalance(loanId);
+
+    // Call the "checkPaidBalance" function
+    try {
+        const gasEstimate = await checkPaidBalance.estimateGas({ from: accounts[0], value: web3.utils.toWei('100', 'ether') });
+        const receipt = await checkPaidBalance.send({ from: accounts[0], gas: gasEstimate, value: web3.utils.toWei('100', 'ether') });
+        console.log('Transaction receipt:', receipt);
+
+        // Check if the event is present in the transaction receipt
+        if (receipt.events.Lended) {
+            console.log('paid balance located:', receipt.events.receipt.returnValues);
+        } else {
+            console.log('Error: Event not found in the transaction receipt.');
+        }
+    } catch (error) {
+        console.error(error);
+        console.log('Error: Failed to find the paid balance.');
+    }
+}
+
+async function repayCustAmountLoan(loanId) {
+    const accounts = await web3.eth.getAccounts();
+
+    // Reference the "repayCustAmountLoan" function from smart contract
+    const repayCustAmountLoan = repayCustAmountLoan.methods.repayCustAmountLoan(loanId);
+
+    // Call the "repayCustAmountLoan" function
+    try {
+        const gasEstimate = await repayCustAmountLoan.estimateGas({ from: accounts[0], value: web3.utils.toWei('100', 'ether') });
+        const receipt = await repayCustAmountLoan.send({ from: accounts[0], gas: gasEstimate, value: web3.utils.toWei('100', 'ether') });
+        console.log('Transaction receipt:', receipt);
+
+        // Check if the event is present in the transaction receipt
+        if (receipt.events.Lended) {
+            console.log('Repaid custom amount for loan:', receipt.events.receipt.returnValues);
+        } else {
+            console.log('Error: Event not found in the transaction receipt.');
+        }
+    } catch (error) {
+        console.error(error);
+        console.log('Error: Failed to repay cutom amount for loan.');
+    }
+}
 init();
