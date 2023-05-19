@@ -829,5 +829,28 @@ async function remainingInterestBalance(loanId) {
     }
 }
 
+async function remainingTimeForCurrentInstallment(loanId) {
+    const accounts = await web3.eth.getAccounts();
+
+    // Reference the "remainingTimeForCurrentInstallment" function from smart contract
+    const remainingTimeForCurrentInstallment = contractInstance.methods.remainingTimeForCurrentInstallment(loanId);
+
+    // Call the "remainingTimeForCurrentInstallment" function
+    try {
+        const gasEstimate = await remainingTimeForCurrentInstallment.estimateGas({ from: accounts[0], value: web3.utils.toWei('100', 'ether') });
+        const receipt = await remainingTimeForCurrentInstallment.send({ from: accounts[0], gas: gasEstimate, value: web3.utils.toWei('100', 'ether') });
+        console.log('Transaction receipt:', receipt);
+
+        // Check if the event is present in the transaction receipt
+        if (receipt.events.Lended) {
+            console.log('Remaining time for current installment located:', receipt.events.receipt.returnValues);
+        } else {
+            console.log('Error: Event not found in the transaction receipt.');
+        }
+    } catch (error) {
+        console.error(error);
+        console.log('Error: Failed to find the remaining time for current installment.');
+    }
+}
 
 init();
