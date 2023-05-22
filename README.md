@@ -24,3 +24,17 @@ Metamask Extension (https://metamask.io/download/)
 
 Etherscan Goreli Testnet (https://goerli.etherscan.io/)
 
+Solidity (https://docs.soliditylang.org/en/v0.8.17/installing-solidity.html)
+
+Yarn (https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable)
+
+Alchemy Web3 (https://www.npmjs.com/package/@alch/alchemy-web3)
+
+Node.js (https://nodejs.org/en/download)
+
+# Architecture Diagrams
+
+![image](https://github.com/michaelgadda/CS46X_ETH_SMART_CONTRACTS/assets/62987541/252b31f7-fc98-426d-9686-4f0b7ff2e7d6)
+
+
+
