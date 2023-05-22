@@ -38,10 +38,9 @@ Node.js (https://nodejs.org/en/download)
 
 # Roadmap
 ○ Done so Far:
-
-○ Design project protocol + token requirements & develop our dApp.
+ ○ Design project protocol + token requirements & develop our dApp.
  
-○ Implement protocols for the lending process between lenders & public
+ ○ Implement protocols for the lending process between lenders & public
    contractors.
   
  ○ Model how retail investors will receive incentives from providing liquidity to
@@ -53,12 +52,12 @@ Node.js (https://nodejs.org/en/download)
 
 ● Future Milestones:
   
-■ Tokens can be transacted through our dApp network to access certain
+ ■ Tokens can be transacted through our dApp network to access certain
     tolled infrastructure (i.e. road tolls, bridges, ferries, etc).
   
-■ Integrate additional DeFi loan protocols
+ ■ Integrate additional DeFi loan protocols
  
-■ Explore tokenomic models & bonding curves
+ ■ Explore tokenomic models & bonding curves
   
-■ Implement cross-chain investment bridge protocols
+ ■ Implement cross-chain investment bridge protocols
 
