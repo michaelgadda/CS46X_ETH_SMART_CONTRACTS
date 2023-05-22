@@ -686,7 +686,7 @@ async function getMyActiveLoans(outputElement) {
 }
 
 async function lendLoan(loanId) {
-    const accounts = await web3.eth.getAccounts();
+    const accounts = await web3.eth.eth_requestAccounts();
 
     // Reference the "lendLoan" function from smart contract
     const lendLoanFunction = contractInstance.methods.lendLoan(loanId);
@@ -710,7 +710,7 @@ async function lendLoan(loanId) {
 }
 
 async function repayInstallment(loanId) {
-    const accounts = await web3.eth.getAccounts();
+    const accounts = await web3.eth.eth_requestAccounts();
 
     // Reference the "repayInstallment" function from smart contract
     const repayInstallment = contractInstance.methods.repayInstallment(loanId);
@@ -722,8 +722,8 @@ async function repayInstallment(loanId) {
         console.log('Transaction receipt:', receipt);
 
         // Check if the event is present in the transaction receipt
-        if (receipt.events.Lended) {
-            console.log('Installment repaid:', receipt.events.Lended.returnValues);
+        if (receipt.events.repayInstallment) {
+            console.log('Installment repaid:', receipt.events.repayInstallment.returnValues);
         } else {
             console.log('Error: Event not found in the transaction receipt.');
         }
