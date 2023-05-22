@@ -32,7 +32,7 @@ Alchemy Web3 (https://www.npmjs.com/package/@alch/alchemy-web3)
 
 Node.js (https://nodejs.org/en/download)
 
-# Architecture Diagrams
+# Architecture Diagram
 
 ![image](https://github.com/michaelgadda/CS46X_ETH_SMART_CONTRACTS/assets/62987541/252b31f7-fc98-426d-9686-4f0b7ff2e7d6)
 
