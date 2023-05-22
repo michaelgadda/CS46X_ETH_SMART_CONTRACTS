@@ -19,3 +19,8 @@ Now to run the program run in prject folder:
 
 live-server
 
+# Dependencies
+Metamask Extension (https://metamask.io/download/)
+
+Etherscan Goreli Testnet (https://goerli.etherscan.io/)
+
