@@ -5,19 +5,19 @@ Our primary objective is to eliminate delays and minimize cost overruns in the d
 # How to run the project
 Run this in project folder
 
-npm init -y
+1. npm init -y
 
-npm install
+2. npm install
 
-npm install web3
+3. npm install web3
 
 Run this globally(not in project folder)
 
-npm install -g live-server
+4. npm install -g live-server
 
 Now to run the program run in prject folder:
 
-live-server
+5. live-server
 
 # Dependencies
 Metamask Extension (https://metamask.io/download/)
