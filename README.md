@@ -36,6 +36,10 @@ Node.js (https://nodejs.org/en/download)
 
 ![image](https://github.com/michaelgadda/CS46X_ETH_SMART_CONTRACTS/assets/62987541/252b31f7-fc98-426d-9686-4f0b7ff2e7d6)
 
+# Demo Project Funding Request
+![image](https://github.com/michaelgadda/CS46X_ETH_SMART_CONTRACTS/assets/62987541/2ae3dc2d-88d7-4994-98b9-bb1a185f9f32)
+
+
 # Roadmap
 ○ Done so Far:
  
